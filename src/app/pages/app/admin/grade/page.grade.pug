@@ -1,0 +1,8 @@
+.app-page-admin-grade(fxLayout="column", fxFlex)
+    div(fxLayout="row", fxLayoutAlign="center center")
+        h3(fxFlex) {{'page.admin.gradeManagement.title' | translate}}
+        div
+            button(mat-button, mat-raised-button, (click)="editGrade()") {{'page.admin.gradeManagement.createGrade' | translate}}
+
+    div
+        app-table([data]="grades", [dataHeader]="gradesDataHeader", (create)="editGrade($event)", (remove)="deleteGrade($event)")

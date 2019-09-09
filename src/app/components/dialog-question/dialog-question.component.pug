@@ -1,0 +1,23 @@
+mat-dialog-content
+    h3 {{'dialog.question.title' | translate}}
+    br
+    div([formGroup]="askForm", fxLayout="column")
+        b {{'dialog.question.authorsName' | translate}}: {{question?.author?.lastName}} {{question?.author?.name}}
+        div(fxLayout="row")
+            div(fxFlex) {{'table.subject' |translate}}: {{question.subject.name[translate.currentLang]}}
+            div(fxFlex, *ngIf="question.grade") {{'table.grade' |translate}}: {{question.grade?.category}} ({{question.grade?.level}})
+        h4.inner-html(fxFlexOffset="15px", [innerHtml]="question.question | safeHtml")
+        h5(fxFlexOffset="15px", *ngFor='let answer of question.answers')
+            b {{answer.updatedAt | date:'dd-MM-yyyy, HH:mm'}} {{answer.sender.name}} {{answer.sender.lastName}}:
+                span.inner-html([innerHtml]="answer.message | safeHtml")
+        br
+        .field-group
+            //mat-form-field(fxFlex)
+                textarea(matInput, placeholder="{{'table.respondentAnswer' | translate}}", required, formControlName="respondentAnswer")
+                mat-error {{'errors.required' | translate}}
+            div([froalaEditor]="editOptions", formControlName="message")
+        br
+    mat-dialog-actions
+        button(mat-raised-button, color="primary", [disabled]="!askForm.valid", (click)="submitForm()") {{'form.save' | translate}}
+        button(mat-raised-button, color="primary", (click)="resolveQuestion()") {{'form.resolve' | translate}}
+        button(mat-button, (click)="selfClose()") {{'form.cancel' | translate}}

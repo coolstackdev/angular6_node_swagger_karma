@@ -1,0 +1,13 @@
+mat-dialog-content
+    h3 {{'form.headers.quizResult' | translate}}
+    br
+    div(*ngFor="let answer of answers; let i = index", fxLayout="column")
+        b(fxFlexOffset="5px") {{'form.quizResult.question' | translate}} {{i+1}}.
+        p([innerHtml]="answer.title")
+        p {{'form.quizResult.answer' | translate}}: {{answer.answer}}
+        p {{'form.quizResult.isCorrect' | translate}}: {{answer.correct}}
+        mat-divider
+    br
+    p {{'form.quizResult.correctAnswer' | translate}} {{correctAnswers}} {{'form.quizResult.outOf' | translate}} {{answers.length}} {{answers.length > 1 ? translate.instant('form.quizResult.countQuestions') : translate.instant('form.quizResult.countQuestion') }}
+mat-dialog-actions
+    button(mat-button, (click)="selfClose()") {{'form.close' | translate}}

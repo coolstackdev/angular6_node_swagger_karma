@@ -1,0 +1,23 @@
+mat-dialog-content
+    h3 {{'form.headers.grade' | translate}}
+    br
+    div([formGroup]="gradeForm", fxLayout="column")
+        .field-group(fxLayout="row")
+            mat-form-field(fxFlex)
+                input(matInput, placeholder="{{'table.category' | translate}}", required, formControlName="category", type="text")
+                mat-error {{'errors.required' | translate}}
+        .field-group(fxLayout="row")
+            mat-form-field(fxFlex)
+                input(matInput, placeholder="{{'table.level' | translate}}", required, formControlName="level", type="text")
+                mat-error {{'errors.required' | translate}}
+        .field-group(fxLayout="row", fxLayoutAlign="space-around center" )
+            mat-form-field
+                input(matInput, placeholder="{{'form.minAge' | translate}}", required, formControlName="min", type="number", max="{{gradeForm?.value?.max}}", [customMax]="gradeForm?.value?.max")
+                mat-error(*ngIf="gradeForm.controls['min'].errors && (gradeForm.controls['min'].dirty || gradeForm.controls['min'].touched)") {{gradeForm.controls['min']?.hasError('required') ? ('errors.required' | translate) : gradeForm.controls['min']?.errors['customMax']}}
+            mat-form-field(fxFlexOffset="5px")
+                input(matInput, placeholder="{{'form.maxAge' | translate}}", required, formControlName="max", type="number", min="{{gradeForm?.value?.min}}", [customMin]="gradeForm?.value?.min")
+                mat-error(*ngIf="gradeForm.controls['max'].errors && (gradeForm.controls['max'].dirty || gradeForm.controls['max'].touched)") {{gradeForm.controls['max']?.hasError('required') ? ('errors.required' | translate) : gradeForm.controls['max']?.errors['customMin']}}
+        br
+mat-dialog-actions
+    button(mat-raised-button, color="primary", [disabled]="!gradeForm.valid || !gradeForm.dirty", (click)="submitForm()") {{'form.save' | translate}}
+    button(mat-button, (click)="selfClose()") {{'form.cancel' | translate}}

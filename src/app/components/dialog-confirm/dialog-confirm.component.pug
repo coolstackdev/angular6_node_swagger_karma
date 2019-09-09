@@ -1,0 +1,6 @@
+h2(mat-dialog-title) {{title | translate}}
+mat-dialog-content
+    p {{message | translate}}
+mat-dialog-actions
+    button(mat-button, [mat-dialog-close]='true') {{'form.yes'|translate}}
+    button(mat-button, [mat-dialog-close]='false') {{'form.no'|translate}}

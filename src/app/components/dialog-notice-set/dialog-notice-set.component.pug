@@ -1,0 +1,20 @@
+h2(mat-dialog-title) {{'dialog.notice.title' | translate}}
+mat-dialog-content
+    form([formGroup]="noticeForm", fxLayout="column")
+        mat-form-field
+            mat-select(placeholder="{{'form.type'|translate}}", formControlName="type")
+                mat-option(*ngFor="let type of noticeTypes", [value]="type._id") {{type.description}}
+        mat-form-field(fxFlex)
+            input(matInput, placeholder="{{'form.title' | translate}}", formControlName="title", type="text", required)
+            mat-error {{'errors.required' | translate}}
+
+        p {{'form.notice' | translate}}
+        div([froalaEditor]="editOptions", formControlName="message", required )
+
+        br
+        //mat-form-field(fxFlex)
+        //    input(matInput, placeholder="{{'form.notice' | translate}}", formControlName="message", type="text", required)
+        //    mat-error {{'errors.required' | translate}}
+mat-dialog-actions
+    button(mat-raised-button, color="primary", (click)="selfClose(true, noticeForm.value)", [disabled]="!noticeForm.valid || !noticeForm.dirty") {{'form.save' | translate}}
+    button(mat-button, (click)="selfClose(false, noticeForm.value)") {{'form.cancel' | translate}}

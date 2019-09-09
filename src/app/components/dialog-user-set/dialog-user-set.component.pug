@@ -1,0 +1,62 @@
+mat-dialog-content
+    h3 {{'dialog.user.title' | translate}}
+    br
+    div([formGroup]="userForm", fxLayout="column")
+        .field-group(fxLayout="row")
+            mat-form-field(fxFlex)
+                input(matInput, placeholder="{{'form.username' | translate}}", required, formControlName="username", type="text")
+                mat-error {{'errors.required' | translate}}
+            mat-form-field(fxFlex, fxFlexOffset="5px")
+                input(matInput, placeholder="{{'form.email' | translate}}", required, formControlName="email", type="text")
+                mat-error {{'errors.required' | translate}}
+        .field-group(fxLayout="row")
+            mat-form-field(fxFlex)
+                input(matInput, placeholder="{{'form.name' | translate}}", required, formControlName="name", type="text")
+                mat-error {{'errors.required' | translate}}
+            mat-form-field(fxFlex, fxFlexOffset="5px")
+                input(matInput, placeholder="{{'form.lastName' | translate}}", required, formControlName="lastName", type="text")
+                mat-error {{'errors.required' | translate}}
+        mat-form-field
+            mat-select(placeholder="{{'form.role'|translate}}", required, formControlName="role")
+                mat-option(*ngFor="let role of roles", [value]="role._id") {{role.name | translate}}
+            mat-error {{'errors.required'|translate}}
+        mat-form-field(*ngIf="this.userForm.controls['role'].value === '5b6c24c36a4972074885c206'")
+            mat-select(placeholder="{{'form.subjects'|translate}}", formControlName="subjects", [multiple]="true")
+                mat-option(*ngFor="let subject of subjects", [value]="subject._id") {{subject.subjectName}}
+        mat-form-field(*ngIf="this.userForm.controls['role'].value !== '5b6c24c36a4972074885c206' && this.userForm.controls['role'].value !== '5b6c24c36a4972074885c204'")
+            input(matInput, placeholder="{{'form.school' | translate}}", formControlName="school", type="text", [matAutocomplete]="autoSchool")
+            mat-error {{'errors.required'|translate}}
+            mat-autocomplete(#autoSchool="matAutocomplete", [displayWith]="displayFn.bind(this, 'schools')")
+                mat-option(*ngFor="let school of filteredSchools | async", [value]="school._id") {{school.name}} {{isExists(school.number) ? school?.number : ''}}
+        .field-group(fxLayout="row")
+            mat-form-field(fxFlex=20)
+                mat-select.userForm__select-code(formControlName="countryCode")
+                    mat-option(value="code", disabled) +Code
+                    mat-option(*ngFor="let code of codeCountry", [value]="code.name") {{code.value}}
+            mat-form-field(fxFlex=80, fxFlexOffset="5px")
+                input(matInput, placeholder="{{'form.phone' | translate}}", required, formControlName ="phone", type="tel")
+
+        //mat-form-field(*ngIf="this.userForm.controls['role'].value !== '5b6c24c36a4972074885c206' && this.userForm.controls['role'].value !== '5b6c24c36a4972074885c204'")
+        //    input(matInput, placeholder="{{'form.referral' | translate}}", formControlName="referral", type="text", [matAutocomplete]="autoReferral")
+        //    mat-error {{'errors.required'|translate}}
+        //    mat-autocomplete(#autoReferral="matAutocomplete", [displayWith]="displayFn.bind(this, 'referrals')")
+        //        mat-option(*ngFor="let referral of filteredReferrals | async", [value]="referral._id") {{referral.name}}
+
+        button(mat-raised-button, (click)="changePassword()", color="primary", *ngIf="user && !userForm.contains('password')") Change password
+
+        ng-template([ngIf]="userForm.contains('password')")
+            br
+            .field-group(fxLayout="row")
+                mat-form-field(fxFlex)
+                    input(matInput, placeholder="{{'form.newPassword' | translate}}", formControlName="password", type="password")
+
+                mat-form-field(fxFlex, fxFlexOffset="5px")
+                    input(matInput, placeholder="{{'form.confirmPassword' | translate}}", formControlName="confirmPassword", type="password")
+                    mat-error(*ngIf="userForm.controls['confirmPassword']?.errors?.noPassMatch") {{'page.forgotPassword.notMatch' | translate}}
+
+        br
+
+
+mat-dialog-actions
+    button(mat-raised-button, (click)="createUser()", color="primary", [disabled]="!userForm.valid || !userForm.dirty") {{'form.save' | translate}}
+    button(mat-button, (click)="selfClose()") {{'form.cancel' | translate}}

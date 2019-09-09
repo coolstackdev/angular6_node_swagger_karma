@@ -1,0 +1,740 @@
+{
+    "errors": {
+        "invalid_duplicate_mongodb_save": "Cette adresse électronique ou ce nom d'utilisateur existe déjà dans la base de données.",
+        "required": "Obligatoire",
+        "cityPattern": "Le nom de la ville ne doit pas contenir de chiffres",
+        "login": {
+            "required": "Ce champ est obligatoire",
+            "invalid_authorization_userNotFound": "Utilisateur inexistant",
+            "invalid_authorization_password": "Mot de passe incorrect",
+            "null": "",
+            "minMoreThanMaxError": "L'âge minimum doit être inférieur au maximum",
+            "minMaxEqualsError": "L'âge minimum ne peut pas être égal à l'âge maximum"
+        },
+        "forgotPassword": {
+            "error_empty_email_username_fields": "Nom d'utilisateur ou email inexistant",
+            "invalid_token": "jwt a expiré"
+        },
+        "subscriptions": {
+            "promo_code_not_found": "Ce code promotionnel est invalide",
+            "cancel_promise_chain": "Cancel promise chain",
+            "cancel_enter_pin": "Annuler le code PIN"
+        },
+        "invalid_code_is_not_used": "Vous avez déjà une demande active",
+        "error_not_enough_points": "Nombre de points insuffisant",
+        "error_email_already_taken": "Cette adresse Email est déjà utilisée",
+        "invalid_email": "S'il vous plaît, utilisez une adresse email conforme",
+        "error_username_already_taken": "Ce nom d'utilisateur est déjà utilisé",
+        "server_error": "Hum, une erreur s'est produite, merci de réessayer",
+        "invalid_authorization_userDeleted": "L'utilisateur a été supprimé",
+        "invalid_authorization_userNotFound": "Utilisateur inexistant",
+        "invalid_users_not_found": "Impossible de trouver ces utilisateurs",
+        "invalid_duplicate_promocode": "Désolé, vous avez déjà utilisé ce code promotionnel",
+        "payment_success": "Paiement effectué avec succès!",
+        "payment_canceled": "Paiement annulé",
+        "invalid_wrong_promocode": "Désolé, ce code promotionnel est invalide"
+    },
+    "role": {
+        "student": "Élève",
+        "teacher": "Enseignant",
+        "admin": "Admin"
+    },
+    "form": {
+        "callbackCost": "Coût de la demande de rappel",
+        "questionCost": "Coût d'une question posée au Professeur",
+        "headers": {
+            "grade": "Gestion des classes",
+            "callback": "Gestion des rappels",
+            "quizResult": "Résultats des QCM"
+        },
+        "filterAll": "Filtrer toutes les colonnes",
+        "save": "Enregistrer",
+        "send": "Envoyer",
+        "cancel": "Annuler",
+        "done": "OK",
+        "title": "Titre",
+        "submit": {
+            "title": "Envoyer",
+            "titleSure": "Êtes-vous sûr?",
+            "dataLost": "Toutes les données seront perdues",
+            "undone": "Cette action ne peut pas être annulée"
+        },
+        "variant": {
+            "free": "Champ libre",
+            "options": "Questions à choix unique",
+            "multiple": "Questions aux choix multiples",
+            "boolean": "Vrai ou Faux",
+            "free-multiple": "Question à plusieurs champs libres",
+            "free-multipleDescription": "Veuillez renseigner les champs corrects comme suit: (Réponse1; Réponse2;...).",
+            "match": "correspondances"
+        },
+        "quizResult": {
+            "question": "Question",
+            "countQuestion": "question",
+            "countQuestions": "questions",
+            "answer": "réponse",
+            "isCorrect": "La réponse est-elle correcte ?",
+            "correctAnswer": "Réponses correctes:",
+            "outOf": "Points obtenus"
+        },
+        "close": "Fermer",
+        "value": "Valeur",
+        "yes": "Oui",
+        "no": "Non",
+        "username": "Nom d'utilisateur",
+        "name": "Nom",
+        "lastName": "Nom de famille",
+        "email": "Email",
+        "role": "Rôle",
+        "school": "Établissement",
+        "number": "Numéro de téléphone",
+        "country": "Pays",
+        "city": "Ville",
+        "address": "Addresse",
+        "contactPerson": "Personne à contacter",
+        "contactName": "Nom du contact",
+        "contactPosition": "Poste occupé par le contact",
+        "contactPhone": "Numéro du contact",
+        "contactEmail": "Email du contact",
+        "subject": "Nom de la matière",
+        "select-subject": "Sélectionner une matière",
+        "subjects": "Selectionner la matière",
+        "description": "Description",
+        "translationKey": "clé de traduction",
+        "minAge": "Age Minimum",
+        "maxAge": "Age maximum",
+        "subjectIcon": "Icône de la matière",
+        "referral": "Référence",
+        "quiz": "QCM",
+        "student": "Élève",
+        "timeForPassing": "Temps écoulé pour compléter le Quiz (en minutes)",
+        "code": "Code",
+        "user": "utilisateur",
+        "type": "Type",
+        "duration": "Durée",
+        "validTo": "Valide jusqu'au",
+        "status": "Status",
+        "costWeek": "Coût hebdomadaire",
+        "costMonth": "Coût mensuel",
+        "costYear": "Coût annuel",
+        "points": "Points",
+        "promoCode": "Code promo",
+        "price": "Tarif",
+        "currency": "Devise",
+        "repeatable": "Reconductible",
+        "dueTo": "Valide jusqu'au",
+        "callback": {
+            "title": "Remplir le formularie de rappel",
+            "accessTitle": "Vous avez déjà demandé à être rappelé, merci de patienter. Un de nos enseignants sera avec vous dans quelques instants."
+        },
+        "subjectNameEn": "Matière (Anglais)",
+        "subjectNameFr": "Matière (Français)",
+        "phone": "Numéro de Téléphone",
+        "notice": "Notice",
+        "resolve": "Résolu",
+        "unresolve": "Non résolu",
+        "newPassword": "Nouveau mot de passe",
+        "confirmPassword": "Confirmer le mot de passe"
+    },
+    "table": {
+        "pageIsLoading": "La page est en cours de chargement, merci de patienter",
+        "noData": "Données inexistantes",
+        "id": "ID",
+        "name": "Nom",
+        "level": "Niveau",
+        "email": "Email",
+        "version": "Version",
+        "actions": "Actions",
+        "lastName": "Nom de famille",
+        "idNumber": "numéro d'identification",
+        "customer": "Client",
+        "reviewedBy": "Revu par",
+        "createdAt": "Date de création",
+        "updatedAt": "Date de mise à jour",
+        "category": "Catégorie",
+        "school-number": "numéro de l'établissement",
+        "country": "pays",
+        "city": "ville",
+        "address": "Addresse",
+        "grade": "Classe",
+        "lesson-title": "Titre",
+        "lesson-subtitle": "Sous-titre",
+        "lesson-content": "Contenu de la leçon",
+        "sections": "Sections de leçon",
+        "subject": "matière",
+        "description": "Description",
+        "quizTitle": "Titre du QCM",
+        "quizSubtitle": "Sous-titre du QCM",
+        "assignedTo": "Assigné à",
+        "timeForQuiz": "Temps estimé (minutes)",
+        "accessCode": "Code d'accès",
+        "finished": "Terminé",
+        "questions": "Questions",
+        "question": "Question",
+        "respondentAnswer": "Réponse",
+        "author": "Auteur",
+        "code": "Code",
+        "user": "utilisateur",
+        "type": "Type",
+        "status": "Status",
+        "statusCallback": "Status",
+        "subjects": "Matières",
+        "duration": "Durée",
+        "validTo": "Valide jusqu'au",
+        "username": "Nom d'utilisateur",
+        "userPhone": "numéro de téléphone de l'utilisateur",
+        "price": "Tarif",
+        "points": "Points",
+        "promoCode": "Code promo",
+        "cashFlow": "Cash Flow",
+        "currency": "Devise",
+        "repeatable": "Paiement reconductible",
+        "offlineCode": "Code",
+        "costWeek": "Coût hebdomadaire",
+        "costMonth": "Coût mensuel",
+        "costYear": "Coût annuel",
+        "dueTo": "dû pour",
+        "received": "Paiement reçu",
+        "callDate": "Date et heure de l'appel",
+        "phone": "Numéro de téléphone",
+        "title": "Titre",
+        "activatedByUser": "Activé par l'utilisateur",
+        "reason": "Raison",
+        "company": "Compagnie",
+        "notice": "Notice",
+        "icon": "Icône",
+        "isDeleted": "Effacé",
+        "school": "School",
+        "caller": "Enseignat",
+        "file": "Fichier",
+        "questionsCorrect": "Résultat du quiz, %"
+    },
+    "page": {
+        "signUp": {
+            "title": "Inscription",
+            "email": "Email",
+            "username": "Nom d'utilisateur",
+            "password": "Mot de passe",
+            "grade": "Classe",
+            "signUp": "Inscription",
+            "agreementPart1": "En vous inscrivant, vous confirmez que vous avez lu et accepté les",
+            "agreementPart2": "Termes et Conditions",
+            "agreementPart3": "et la",
+            "agreementPart4": "Politique de confidentialité."
+        },
+        "forgotPassword": {
+            "title": "Mot de passe oublié",
+            "successNotification": "Un email vient de vous être acheminé afin que vous puissiez réinitialiser votre mot de passe!",
+            "confirmPassword": "Confirmer le mot de passe",
+            "notMatch": "Le mot de passe ne correspond pas",
+            "passRequired": "Mot de passe est obligatoire",
+            "confirmPassRequired": "La confirmation du mot de passe est obligatoire",
+            "minLength": "Le mot de passe doit contenir plus de 4 caractères",
+            "usernameRequired": "Champ requis",
+            "passwordChanged": "Le mot de passe a été changé"
+        },
+        "admin": {
+            "userManagement": {
+                "title": "Gestion des utilisateurs",
+                "createUser": "Créer un utilisateur"
+            },
+            "schoolManagement": {
+                "title": "Gestion des établissements",
+                "createSchool": "Créer un établissement"
+            },
+            "subjectManagement": {
+                "title": "Gestion des matières",
+                "createSubject": "Créer une matière",
+                "subjects" : "Matières",
+                "primarySubjects" : "Matières Primaires"
+            },
+            "gradeManagement": {
+                "title": "Gestion des classes",
+                "createGrade": "Créer une classe"
+            },
+            "subscriptions": {
+                "title": "Plans de souscription",
+                "createSubscription": "Créer un plan"
+            },
+            "offline-payments": {
+                "title": "Paiements hors ligne",
+                "nonActivePayments": "Paiements inactifs",
+                "activePayments": "Paiements actifs",
+                "createCompany": "Créer une compagnie"
+            },
+            "orange-payments": {
+                "title": "Paiments Orange Money",
+                "nonActivePayments": "Paiements inactifs",
+                "activePayments": "Paiements actifs"
+            },
+            "paypal-payments": {
+                "title": "Paiments PayPal",
+                "nonActivePayments": "Paiements inactifs",
+                "activePayments": "Paiements actifs"
+            },
+            "settings": {
+                "title": "Paramètres",
+                "save": "Enregistrer",
+                "callbackLimit": "Limite de la demande de rappel",
+                "pricePerPoint": "Tarif par point",
+                "facebookLink": "Lien Facebook",
+                "twitterLink": "Lien Twitter",
+                "rateAppAndroid": "Lien de taux Android",
+                "rateAppIOS": "Lien de taux IOS",
+                "recommendApp": "Lien recommandé",
+                "appVersion": "Version de l'application",
+                "value": "Valeur",
+                "referralCredits": "Crédits de parrainage",
+                "points": "Points",
+                "percents": "Pourcentages"
+            },
+            "notice-board": {
+                "title": "Tableau d'affichage",
+                "create": "Créer une alerte"
+            },
+            "ideas-bugs": {
+                "title": "Suggestion et Bugs",
+                "ideas": "Suggestion",
+                "bugs": "Bugs"
+            }
+        },
+        "app": {
+            "home": "Accueil",
+            "admin": "Panneau d'administration",
+            "lessons": "leçons",
+            "quizz": "QCM",
+            "quizzes": "Quiz (QCM)",
+            "groups": "Groupes",
+            "inbox": "Boîte de réception",
+            "students-list": "Liste des élèves",
+            "exams": "Gestion des examens",
+            "homework": "Devoirs",
+            "question": "Questions",
+            "ask-teacher": "Demande au prof",
+            "chat-management": "Gestion du tchat",
+            "comingSoon": "Arrive bientôt.."
+        },
+        "dashboard": {
+            "averageScore": "Score Moyenne",
+            "lessonsDoneToday": "QCM effectués aujourd'hui",
+            "lessonsDoneTotal": "Total des QCM",
+            "scoreTable": {
+                "header": "TOP 10 DU JOUR",
+                "column1": "Position",
+                "column2": "Nom",
+                "column3": "Points"
+            }
+        },
+        "lessons": {
+            "title": "Gestions des leçons",
+            "createLesson": "Créer une leçon"
+        },
+        "lesson-set": {
+            "header": "Créer une leçon",
+            "title": "Titre de la leçon",
+            "subtitle": "Sous-titre de la leçon",
+            "sections": "sections de la leçon",
+            "sectionsAdd": "Ajouter une section",
+            "homework": "Devoirs de maison",
+            "homeworkAdd": "Ajouter un devoir",
+            "addHomeWorkOption": "Ajouter une réponse",
+            "variant": "Variante de la question",
+            "subject": "Selectionner une matière",
+            "grade": "Selectionner une classe",
+            "value": "Options de l'entrée",
+            "optionDescription": "Description de l'option",
+            "answer": "Réponse à la question",
+            "answerDescription": "Description de la réponse"
+        },
+        "quizzes": {
+            "title": "Gestion des QCM",
+            "createQuiz": "Créer un QCM"
+        },
+        "quiz-set": {
+            "header": "Créer un QCM",
+            "title": "Titre du QCM",
+            "subtitle": "Sous-titre du QCM",
+            "subject": "Selectionner une matière",
+            "grade": "Selectionner une classe",
+            "grades": "Selectionner une classes",
+            "questions": "Questions",
+            "questionTitle": "Titre de la question",
+            "questionAdd": "Ajouter une question",
+            "options": "Options du QCM",
+            "optionsAdd": "Ajouter des options",
+            "points": "Points du QCM",
+            "numberOfQuestions": "Nombre de questions",
+            "questionsMore": "Ajoutez une question"
+        },
+        "homework": {
+            "header": "Assignation des devoirs",
+            "assignQuiz": "Créer un nouveau devoir maison"
+        },
+        "exams": {
+            "header": "Assigner un examen",
+            "assignQuiz": "Créer un nouvel examen"
+        },
+        "question": {
+            "header": "Demande au prof",
+            "tabSearch": "Rechercher de nouvelles questions",
+            "tabResolved": "Questions résolues",
+            "tabHistory": "Examiner les réponses",
+            "update": "Rafraîchir la page"
+        },
+        "my-questions": {
+            "send": "Envoyer"
+        },
+        "logout": "Déconnexion",
+        "login": {
+            "username": "E-mail ou nom d'utilisateur",
+            "password": "Mot de passe",
+            "login": "Connexion",
+            "loginWith": "Ou se connecter avec",
+            "passwordRestore": "Mot de passe oublié?",
+            "noAccount": "Vous n'avez pas de compte?"
+        },
+        "callbackManagement": {
+            "title": "Gestionnaire des rappels",
+            "createCallback": "Créer un rappel"
+        }
+    },
+    "dialog": {
+        "profile": {
+            "profile_success_updated": "Votre profil a été mis a jour",
+            "error": {
+                "school_empty": "Le nom de l'école est obligatoire afin de compléter votre profil.",
+                "phone_empty": "Le numéro de téléphone est obligatoire afin de compléter votre profil."
+            }
+        },
+        "homework": {
+            "title": "Attribuer un devoir à un élève"
+        },
+        "exams": {
+            "title": "Attribuer un examen à un élève"
+        },
+        "question": {
+            "title": "Réponse à la question",
+            "authorsName": "Nom de l'auteur",
+            "answer": "Réponse"
+        },
+        "fileUpload": {
+            "success": "Le fichier a été importé avec succès!",
+            "failure": "Une erreur s'est produite lors de l'importation du fichier. S'il vous plaît, essayez de nouveau."
+        },
+        "callback": {
+            "request": {
+                "text-1": "Vous allez envoyer la demande de rappel en ",
+                "text-2": ", cela consommera ",
+                "text-3": " points qui seront mis en suspend jusqu'à ce qu'un de nos enseignants vous rappelle :)."
+            }
+        },
+        "ask-teacher": {
+            "request": {
+                "text-1": "Vous allez poser une question en ",
+                "text-2": ", cela consommera ",
+                "text-3": " points qui seront mis en suspend jusqu'à ce qu'un de nos enseignants vous rappelle :)."
+            }
+        },
+        "subscription": {
+            "statuses": {
+                "waitingForPayment": "En attente du paiement",
+                "paymentVerification": "Vérification du paiement en attente",
+                "subscriptionActivated": "Abonnement activé"
+            },
+            "subscribe_to_subject": {
+                "text-1": "Confirmer l'inscription en {{subject}} pour {{amount}} points par {{period}}?"
+            },
+            "set": "Créer un plan"
+        },
+        "orangePayment": {
+            "header": "Paiment Orange",
+            "subHeader": "Cela enverra un SMS au +22791101066",
+            "message": "Cette transaction vous sera facturée."
+        },
+        "orangePaymentConfirm": {
+            "header": "Veuillez s'il vous plaît entrer le code PIN"
+        },
+        "alert": {
+            "btn": {
+                "ok": "Ok",
+                "cancel": "Annuler",
+                "send": "Envoyer"
+            }
+        },
+        "school": {
+            "title": "Paramètres écoles"
+        },
+        "subject": {
+            "title": "Paramètres matières"
+        },
+        "company": {
+            "title": "Créer une compagnie"
+        },
+        "user": {
+            "title": "Paramètres utilisateurs"
+        },
+        "notice": {
+            "title": "Créer une alerte"
+        }
+    },
+    "subject": {
+        "math": "Mathematiques",
+        "history": "Histoire"
+    },
+    "application": {
+        "tabs": {
+            "tab": {
+                "ask_teacher": "Prof",
+                "lesson": "Leçons",
+                "callback": "Rappel",
+                "info": "Infos"
+            }
+        },
+        "terms": {
+            "title": "Termes et Conditions"
+        },
+        "privacy": {
+            "title": "Politique de confidentialité"
+        },
+        "notifications": {
+            "title": "Notifications"
+        },
+        "login": {
+            "username": "E-mail ou nom d'utilisateur",
+            "password": "Mot de passe",
+            "login": "Connexion",
+            "loginWith": "Se connecter avec",
+            "passwordRestore": "Mot de passe oublié?",
+            "noAccount": "Vous n'avez pas de compte?"
+        },
+        "signUp": {
+            "title": "Inscription",
+            "email": "Email",
+            "username": "Nom d'utilisateur",
+            "password": "Mot de passe",
+            "grade": "Classe",
+            "phoneNumber": "Numéro de téléphone",
+            "signUp": "Inscription",
+            "language": "Langue",
+            "referral": "Numéro de votre ami",
+            "addReferral": "Avez vous été invité?",
+            "name": "Nom & prénom"
+        },
+        "forgotPassword": {
+            "title": "Mot de passe oublié",
+            "username": "E-mail ou nom d'utilisateur",
+            "done": "OK",
+            "success_notification": "Un email vient de vous être acheminé afin que vous puissiez réinitialiser votre mot de passe!"
+        },
+        "home": {
+            "title": "Accueil",
+            "points": "Point(s)",
+            "editProfile": "Modifier le Profil",
+            "your_average_score": "Mon score moyen",
+            "lessons_done_today": "Leçons complétées aujourd'hui",
+            "total_lessons_done": "Total des leçons complétées",
+            "start_lesson": "Commencer une leçon",
+            "rating": {
+                "pos": "Position",
+                "name": "Nom",
+                "point": "Points",
+                "score": "Score"
+            },
+            "groups": "Mes groupes",
+            "seeAll": "Voir tout",
+            "rank": "Rang",
+            "score": "Score",
+            "sharing": "Inviter un ami",
+            "share_message": "Matno? Télécharge vite cette application! Je me fais aider par des profs 7j/7 en plus ils offrent des bourses."
+        },
+        "homework": {
+            "title": "Devoirs et résultats",
+            "code": "Code du devoir",
+            "submit": "Envoyer"
+        },
+        "quiz_result": {
+            "title": "Devoirs et résultats",
+            "time_to_complete_test": "Temps requis pour effectuer le test",
+            "more_quizzes": "Plus de QCM"
+        },
+        "quiz": {
+            "notFound": "Devoir ou examen inexistant",
+            "timeout": ":( Le temps est écoulé",
+            "homework": "Devoirs",
+            "exam": "Examen",
+            "question": "Question",
+            "answerInput": "Veuillez sasir votre réponse",
+            "answerSelect": "Veuillez sélectionner votre réponse",
+            "answerSubmit": "Envoyer",
+            "answerNext": "Suivant",
+            "stop": "Terminer"
+        },
+        "quizzes": {
+            "title": "QCM",
+            "not_active_subscription": "Vous n'avez aucun abonnement actif. Veuillez vous abonner à une ou plusieurs matières pour avoir accès aux QCM."
+        },
+        "question": {
+            "title": "Demande au prof",
+            "titleForm": "Demande au prof - Nouvelle question",
+            "subject": "Matière",
+            "question": "Veuillez saisir votre question",
+            "submit": "Envoyer la question",
+            "reviewQuestions": "Revoir les réponses précédentes",
+            "not_active_questions": "Vous n'avez pas de questions actives.",
+            "not_active_subscription": "Vous devez vous abonner à une matière pour voir des leçons. Veuillez s'il vous plaît acheter des points via la section abonnements.",
+            "emptyQuestions": "Vous n'avez pas encore posé de question. Cliquez sur l'icône en haut à droite pour poser une question."
+        },
+        "lesson": {
+            "title": "Leçon",
+            "sectionPrevious": "Précédent",
+            "sectionNext": "Suivant",
+            "incompleteLesson": "Leçon inachevée",
+            "completeLesson": "Terminer la leçon"
+        },
+        "lessons": {
+            "title": "Leçons",
+            "not_active_lessons": "Vous devez vous abonner à une matière pour poser une question. Veuillez s'il vous plaît effectuer des QCM pour accumuler des points ou acheter des points via la section abonnements."
+        },
+        "profile": {
+            "title": "Gérer le profil",
+            "username": "Nom d'utilisateur",
+            "name": "Nom",
+            "lastName": "Nom de famille",
+            "email": "E-mail",
+            "grade": "Classe",
+            "school": "Établissement",
+            "confirm": "confirmer",
+            "language": "Langue",
+            "phoneNumber": "Numéro de téléphone"
+        },
+        "subscriptions": {
+            "title": "Abonnements",
+            "success_paySubscriptionOffline_notification": "Nous avons bien reçu votre code de validation, il sera validé dans les prochaines 24h, merci de patienter s'il vous plaît.",
+            "tab": {
+                "history": {
+                    "title": "Liste des transactions",
+                    "balance": "Points disponibles",
+                    "canceled": "Annulé",
+                    "hold": "En attente",
+                    "verification": "En vérification",
+                    "active": "Actif",
+                    "invitation": "Bonus invitation",
+                    "invite_part1": "Bonus",
+                    "invite_part2": "invité"
+                },
+                "subscriptions": {
+                    "title": "S'abonner à une matière",
+                    "balance": "Points disponibles",
+                    "order_new_subscr": "Commander de nouveaux abonnements"
+                },
+                "points": {
+                    "title": "Acheter des points",
+                    "payment_method": "Veuillez choisir votre mode de paiement",
+                    "promo_code": "Cliquez ici pour entrer votre code Promotionnel",
+                    "offline_code": "Cliquez ici pour entrer le code du reçu",
+                    "identifier": "Identifiant",
+                    "offlineCompanies": "Agences de transferts",
+                    "offlinePayment": "Mode de paiement hors ligne",
+                    "company": "Compagnie",
+                    "customPoints": "Acheter des points",
+                    "numberOfPoints": "Veuillez saisir le nombre de points",
+                    "price": "Tarif",
+                    "pointsCalculator": "Calculer le nombre de points",
+                    "submit": "Valider",
+                    "point": "Points",
+                    "points-info": "Veuillez entrer le nombre de points que vous souhaitez acheter",
+                    "promo_code_success_part-1": "Votre compte vient d'être crédité de",
+                    "promo_code_success_part-2": "Fcfa, vous pouvez désormais souscrire à une matière",
+                    "offlinePaymentSuccess": "Nous avons reçu votre requête. Vous recevrez une notification dès que votre paiement sera validé. Généralement cela peut prendre 4 à 6 heures"
+                }
+            }
+        },
+        "callback": {
+            "title": "Demander un rappel",
+            "name": "Nom",
+            "email": "Email",
+            "phone": "Numéro de téléphone",
+            "time": "Heure de rappel",
+            "date": "Jour du rappel",
+            "reason": "Raison de la demande d'appel",
+            "timezone": "Mon fuseau horaire",
+            "header1": "Vous avez besoin d'au moins ",
+            "header2": " points pour utiliser cette fonctionnalité. Vous pouvez gagner des points soit en effectuant des QCM ou en achetant des points via la section abonnements.",
+            "cancel_callback": "Annuler la demande de rappel",
+            "not_active_subscription": "Vous n'avez aucun abonnement actif. Abonnez-vous à une ou plusieurs matières pour avoir accès à la demande de rappel.",
+            "callback_sent": {
+                "title": "Veuillez patienter,",
+                "text": "Un de nos enseignants vous appellera dans quelques instants..."
+            }
+        },
+        "welcome": {
+            "start": "commencer"
+        },
+        "inbox": {
+            "title": "Boîte de réception"
+        },
+        "groups": {
+            "title": "Groupes",
+            "you_navigated_here_from": "Vous avez navigué ici depuis"
+        },
+        "add_new_card": {
+            "title": "Ajouter une nouvelle carte"
+        },
+        "more_info": {
+            "title": "Plus d'informations",
+            "your_feedback": "Votre feedback",
+            "ideas": "Idées et suggestions?",
+            "problem": "Signaler un problème",
+            "social": "Réseaux sociaux",
+            "follow_fb": "Suivez nous sur facebook",
+            "follow_tw": "Suivez nous sur twitter",
+            "recommend": "Recommander cette application",
+            "rate": "Noter l'application"
+        },
+        "send_message": {
+            "idea": "Idées et suggestions?",
+            "problem": "Signaler un problème",
+            "submit": "Envoyer"
+        },
+        "logout": "Déconnexion",
+        "week": "Semaine",
+        "month": "Mois",
+        "year": "An",
+        "paypal": "Paypal",
+        "orange": "Orange Money",
+        "correct": "Vrai",
+        "wrong": "Faux",
+        "yes": "Oui",
+        "no": "Non",
+        "completed": "Terminé",
+        "top": "Top",
+        "today": "Aujourd'hui",
+        "done": "Ok",
+        "for": "Pour",
+        "old_version": "Vous utilisez une ancienne version de l'application, veuillez la mettre à jour via le store.",
+        "notification": {
+            "newHomework": "Vous avez un nouveau devoir",
+            "newExam": "Vous avez un nouvel examen",
+            "balanceChange": "Votre solde de points a été changé",
+            "offlineBalanceChange": "Votre solde de points a été modifié suite à un paiement fait en agence",
+            "questionAnswer": "Youpi! le prof a répondu à votre question",
+            "subscriptionEnd": "Votre abonnement expire bientôt",
+            "noticeCreated": "There is an important notice for VirtuProfs user"
+        },
+        "customMin": "Le nombre maximal ne peut être inférieur à minimum",
+        "customMax": "Le nombre minimal ne peut pas être supérieur au maximum",
+        "notice_board": {
+            "title": "Promo et Infos"
+        }
+    },
+    "event": {
+        "nothing": "Pas de mise à jour",
+        "type": {
+            "homework": "Devoirs",
+            "exam": "Examen"
+        },
+        "action": {
+            "create": "Créer"
+        }
+    }
+}

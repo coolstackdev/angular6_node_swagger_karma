@@ -1,0 +1,21 @@
+mat-dialog-content
+    h3 {{'form.headers.callback' | translate}}
+    br
+    div([formGroup]="callbackForm", fxLayout="column")
+        mat-form-field(fxFlex)
+            mat-select(placeholder="{{'form.status' | translate}}", required, formControlName="status")
+                mat-option(*ngFor="let status of statuses", [value]="status") {{status}}
+            mat-error {{'errors.required' | translate}}
+        mat-form-field(fxFlex)
+            input(matInput, placeholder="{{'table.callDate' | translate}}", required, formControlName="calldate")
+            mat-error {{'errors.required' | translate}}
+        mat-form-field(fxFlex)
+            input(matInput, placeholder="{{'table.name' | translate}}", required, formControlName="userFullName", type="text")
+            mat-error {{'errors.required' | translate}}
+        mat-form-field(fxFlex)
+            input(matInput, placeholder="{{'table.phone' | translate}}", required, formControlName="userPhone", type="text")
+            mat-error {{'errors.required' | translate}}
+    br
+mat-dialog-actions
+    button(mat-raised-button, color="primary", [disabled]="!callbackForm.valid || !callbackForm.dirty", (click)="submitForm()") {{'form.save' | translate}}
+    button(mat-button, (click)="selfClose()") {{'form.cancel' | translate}}

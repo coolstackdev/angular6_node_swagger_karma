@@ -1,0 +1,5 @@
+.app-page-admin-user-rang-list(fxLayout="column", fxFlex)
+    div(fxLayout="row", fxLayoutAlign="center center")
+        h3(fxFlex) {{'page.admin.userRankList.title' | translate}}
+    div
+        app-table([data]="top", [dataHeader]="usersRangDataHeader", (remove)="deleteUser($event)")

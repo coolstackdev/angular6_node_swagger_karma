@@ -1,0 +1,23 @@
+.login-page
+    form(fxLayout="column", fxLayoutAlign="center center", [formGroup]="form", name="loginForm", (ngSubmit)="login()")
+        object.logo(type="image/svg+xml", data="./assets/icons/logo.svg")
+        div(fxLayout="row", fxLayoutAlign="center center")
+            mat-icon(svgIcon="email_white")
+            mat-form-field(fxFlexOffset="10px")
+                mat-icon(matSuffix) &nbsp;
+                input(matInput,  placeholder="{{'page.login.username' | translate}}", required, formControlName="username")
+                mat-error {{'errors.login.' + loginValidationErr('username') | translate}}
+        div(fxLayout="row", fxLayoutAlign="center center")
+            mat-icon(svgIcon="lock_white")
+            mat-form-field(fxFlexOffset="10px")
+                mat-icon(matSuffix, svgIcon="visibility", (click)="makePasswordVisible()")
+                input(matInput, placeholder="{{'page.login.password' | translate}}", required, formControlName="password", [type]="isVisible?'text':'password'")
+                mat-error {{'errors.login.' + loginValidationErr('password') | translate}}
+        button(fxFlexOffset="30px", mat-button, mat-raised-button, type="submit", class="login-buttons") {{'page.login.login' | translate}}
+        p(translate="page.login.loginWith", class="mat-h3", fxFlexOffset="25px")
+        .social-network-buttons(fxLayout="row", fxFlexOffset="10px")
+            button.login-theme(color="primary", type="button", mat-fab)
+                mat-icon.login-theme(color="primary", svgIcon="facebook", (click)="socialLogin('facebook')")
+            button.login-theme(color="primary", type="button", mat-fab, fxFlexOffset="25px", (click)="socialLogin('google')")
+                mat-icon(svgIcon="gmail")
+        button.login-theme(fxFlexOffset="50px", mat-button, color="primary", routerLink="/forgot-password") {{'page.login.passwordRestore' | translate}}

@@ -1,0 +1,22 @@
+.app-page-admin-settings(fxLayout="column", fxFlex)
+    //app-callback-limit((changeCallbackLimit)="submitForm($event)", [callbackLimit]="settings?.callbackLimit?.value", *ngIf="settings.callbackLimit")
+    app-refill-points((changeRefillPoints)="submitForm($event)", [pricePerPoint]="settings?.pricePerPoint?.value", *ngIf="settings?.pricePerPoint")
+    app-social-settings((changeSocialSettings)="submitForm($event)", [val]="settings?.facebookLink.text", [key]="'facebookLink'", *ngIf="settings?.facebookLink")
+    app-social-settings((changeSocialSettings)="submitForm($event)", [val]="settings?.twitterLink.text", [key]="'twitterLink'", *ngIf="settings?.twitterLink")
+    app-social-settings((changeSocialSettings)="submitForm($event)", [val]="settings?.rateAppAndroid.text", [key]="'rateAppAndroid'", *ngIf="settings?.rateAppAndroid")
+    app-social-settings((changeSocialSettings)="submitForm($event)", [val]="settings?.rateAppIOS.text", [key]="'rateAppIOS'", *ngIf="settings?.rateAppIOS")
+    app-social-settings((changeSocialSettings)="submitForm($event)", [val]="settings?.recommendApp.text", [key]="'recommendApp'", *ngIf="settings?.recommendApp")
+    app-social-settings((changeSocialSettings)="submitForm($event)", [val]="settings?.appVersion.text", [key]="'appVersion'", *ngIf="settings?.appVersion")
+
+    ng-template([ngIf]="settings?.referralAmount")
+        label(fxFlexOffset="25px") {{'page.admin.settings.referralCredits' | translate}}
+        form([formGroup]="referralCredits", fxLayout="row", fxLayoutAlign="space-between center", (ngSubmit)="setReferral()")
+            div
+                mat-radio-group(formControlName="type", fxLayout="column" )
+                    mat-radio-button(value="value") {{'page.admin.settings.points' | translate}}
+                    mat-radio-button(value="percent") {{'page.admin.settings.percents' | translate}}
+                mat-form-field(fxFlexOffset="15px")
+                    input(matInput, placeholder="{{'page.admin.settings.value' | translate}}", required, formControlName="value", type="number", min="0")
+
+            button(fxFlexOffset="15px", mat-button, mat-raised-button, color="primary", type="submit") {{'page.admin.settings.save' | translate}}
+

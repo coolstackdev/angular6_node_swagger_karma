@@ -1,0 +1,7 @@
+.app-admin(fxLayout="row")
+    mat-nav-list.navigation-container(fxFlex="20")
+        mat-list-item(*ngFor="let item of menu", [routerLink]="item.link", routerLinkActive="active")
+            mat-icon(color="primary") {{item.icon}}
+            span(fxFlexOffset="15px") {{item.name | translate}}
+    .wrap-container(fxFlex="80")
+        router-outlet

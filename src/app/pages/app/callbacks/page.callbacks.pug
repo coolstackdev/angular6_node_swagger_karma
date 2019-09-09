@@ -1,0 +1,11 @@
+.app-page-callbacks.padding(fxLayout="column", fxFlex)
+    div(fxLayout="row", fxLayoutAlign="center center")
+        h3(fxFlex) {{'page.callbackManagement.title' | translate}}
+
+    button(mat-raised-button, (click)="getCallbacks()", style="align-self: flex-end;")
+        mat-icon(color="dark-primary-text") refresh
+        span {{'page.question.update' | translate}}
+        //div
+        //    button(mat-button, mat-raised-button, (click)="editCallback()") {{'page.callbackManagement.createCallback' | translate}}
+    div
+        app-table([data]="callbacks", [dataHeader]="callbacksDataHeader", (create)="editCallback($event)")

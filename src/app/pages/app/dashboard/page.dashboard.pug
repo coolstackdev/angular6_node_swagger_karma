@@ -1,0 +1,25 @@
+//.padding {{'page.app.comingSoon' | translate}}
+
+<mat-grid-list rowHeight="5:3">
+    <mat-grid-title><h3 class="numberOfStudents">Number of students registered today: {{countToday}}</h3></mat-grid-title>
+    <mat-grid-tile class="displayInformation">
+        <div id="chartContainer" style="height: 370px; width: 100%;">
+        </div>
+        <mat-card>
+            <mat-card-content>
+                <mat-form-field class="datePicker">
+                <input matInput [matDatepicker]="picker1" placeholder="Choose a start date" ng-change="" [(ngModel)] = "startDate">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+                </mat-form-field>
+                <mat-form-field class="datePicker">
+                <input matInput [matDatepicker]="picker2" placeholder="Choose a end date" ng-change="" [(ngModel)] = "endDate">
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+                </mat-form-field>
+                button(mat-raised-button, color="primary", (click)="showChartByDate(startDate, endDate)") Toggle Dates
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
+

@@ -1,0 +1,43 @@
+mat-form-field
+    input(matInput, placeholder="{{'form.filterAll'|translate}}", (ngModelChange)="filterItems($event)", [ngModel]="filter")
+data-table.table(*ngIf="itemResource.length", [items]="items", [sortBy]="'index'", [sortAsc]="true", [itemCount]="itemCount", (reload)="reloadItems($event)", [indexColumn]="false", [selectOnRowClick]="true", (rowDoubleClick)="doubleClick.emit($event.row.item)")
+    data-table-column(*ngFor="let dhItem of dataHeader", header="{{dhItem.header === 'index' ? '№' : (dhItem.header | translate)}}", [property]="dhItem.property", [sortable]="dhItem.sortable")
+        ng-template(#dataTableCell, let-item="item", *ngIf="dhItem.header !== 'table.notice' && dhItem.header !== 'table.icon'&& dhItem.header !== 'table.file' && dhItem.header !== 'table.question' && dhItem.header !== 'table.actions' && dhItem.header !== 'table.status' && dhItem.header !== 'table.repeatable' && dhItem.header !== 'table.createdAt' && dhItem.header !== 'table.updatedAt' && dhItem.header !== 'table.validTo' && dhItem.header !== 'table.dueTo' && dhItem.header !== 'table.dataOfActivation' && dhItem.header !== 'table.dateOfTransaction' && dhItem.header !== 'table.callDate'")
+            span {{item[dhItem.property]}}
+        ng-template(#dataTableCell, let-item="item", *ngIf="dhItem.header === 'table.notice'")
+            span.resize-img([innerHtml]="item[dhItem.property] | safeHtml")
+        ng-template(#dataTableCell, let-item="item", *ngIf="dhItem.header === 'table.icon'")
+            img.table__icon([src]="item[dhItem.property] || '../../assets/icons/photo-camera.svg'")
+        ng-template(#dataTableCell, let-item="item", *ngIf="dhItem.header === 'table.question'")
+            span.resize-img([innerHtml]="item[dhItem.property] | safeHtml")
+        ng-template(#dataTableCell, let-item="item", *ngIf="dhItem.header === 'table.file'")
+            a([download]="item[dhItem.property]", [href]="item[dhItem.property]", *ngIf="item[dhItem.property]")
+                img.table__img([src]="item[dhItem.property]")
+        ng-template(#dataTableCell, let-item="item", *ngIf="dhItem.header === 'table.createdAt' || dhItem.header === 'table.updatedAt' || dhItem.header === 'table.dataOfActivation' || dhItem.header === 'table.dateOfTransaction'")
+            span {{item[dhItem.property] | date: 'dd-MM-yyyy, H:mm'}}
+        ng-template(#dataTableCell, let-item="item", *ngIf="dhItem.header === 'table.callDate'")
+            span {{item[dhItem.property.calldate] | date:'dd-MM-yyyy'}} {{item[dhItem.property.calltime]}}
+            // span {{item[dhItem.property] | date: 'short'}}
+        ng-template(#dataTableCell, let-item="item", *ngIf="dhItem.header === 'table.validTo' || dhItem.header === 'table.dueTo'")
+            span {{item[dhItem.property] | date: 'dd-MM-yyyy'}}
+        ng-template(#dataTableCell, let-item="item", *ngIf="dhItem.header === 'table.status'")
+            mat-slide-toggle([checked]="item.status", (change)="itemStatusChanged(item, $event)", disabled)
+        ng-template(#dataTableCell, let-item="item", *ngIf="dhItem.header === 'table.repeatable'")
+            mat-slide-toggle([checked]="item.repeatable", disabled)
+        ng-template(#dataTableCell, let-item="item", *ngIf="dhItem.header === 'table.actions'")
+            button(mat-icon-button, (click)="create.emit(item)", *ngIf="dhItem.actions.indexOf('create')>-1", [disabled]="item.finished")
+                mat-icon create
+            button(mat-icon-button, (click)="setCash.emit(item)", *ngIf="dhItem.actions.indexOf('set-cash')>-1")
+                mat-icon monetization_on
+            button(mat-icon-button, (click)="copy.emit(item)", *ngIf="dhItem.actions.indexOf('copy')>-1")
+                mat-icon content_copy
+            button(mat-icon-button, (click)="apply.emit(item)", *ngIf="dhItem.actions.indexOf('apply')>-1")
+                mat-icon how_to_reg
+            button(mat-icon-button, (click)="send.emit(item)", *ngIf="dhItem.actions.indexOf('send')>-1")
+                mat-icon send
+            button(mat-icon-button, (click)="review.emit(item)", *ngIf="dhItem.actions.indexOf('review')>-1")
+                mat-icon open_in_new
+            button(mat-icon-button, (click)="remove.emit(item)", *ngIf="dhItem.actions.indexOf('remove')>-1", [disabled]="item.finished")
+                mat-icon delete
+div(*ngIf="!itemResource.length && finished") {{'table.noData' | translate}}
+mat-progress-bar(*ngIf="!itemResource.length && !finished", mode="indeterminate", color="warn")

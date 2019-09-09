@@ -1,0 +1,2707 @@
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: VirtuProfs
+basePath: /api
+host: localhost:5100
+schemes:
+  - http
+  - https
+# format of bodies a client can send (Content-Type)
+consumes:
+  - application/json
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+securityDefinitions:
+  passport:
+    type: apiKey
+    in: header
+    name: Authorization
+  admin:
+    type: apiKey
+    in: header
+    name: Authorization
+  teacher:
+    type: apiKey
+    in: header
+    name: Authorization
+paths:
+  /swagger:
+    x-swagger-pipe: swagger_raw
+  /filereference:
+    x-swagger-router-controller: FileReference
+    post:
+      operationId: createFileReference
+      summary: create File Reference on s3
+      tags:
+        - fileReference
+      security:
+        - passport: []
+      consumes:
+        - multipart/form-data
+      # parameters:
+        # - name: file
+          # in: formData
+          # type: file
+          # required: false
+          # description: File to upload as file reference
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /login:
+    x-swagger-router-controller: Authorization
+    post:
+      operationId: login
+      summary: Login
+      tags:
+        - authorization
+      parameters:
+        - in: body
+          name: user
+          description: User Authorization
+          schema:
+            type: object
+            required:
+              - username
+              - password
+            properties:
+              username:
+                type: string
+              password:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /login/facebook:
+    x-swagger-router-controller: Authorization
+    post:
+      operationId: facebook
+      summary: Facebook Social Login
+      tags:
+        - authorization
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            type: object
+  /login/google:
+    x-swagger-router-controller: Authorization
+    post:
+      operationId: google
+      summary: Google Social Login
+      tags:
+        - authorization
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            type: object
+  /signup:
+    x-swagger-router-controller: Authorization
+    post:
+      operationId: signup
+      summary: Signup
+      tags:
+        - authorization
+      parameters:
+        - in: body
+          name: user
+          description: User Authorization
+          schema:
+            type: object
+            required:
+              - password
+              - phone
+            properties:
+              email:
+                type: string
+              username:
+                type: string
+              password:
+                type: string
+              phone:
+                type: string
+              schoolName:
+                type: string
+              school:
+                type: string
+              countryCode: 
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /forgot:
+    x-swagger-router-controller: Authorization
+    post:
+      operationId: forgot
+      summary: Generate link for restoring forgot password
+      tags:
+        - authorization
+      parameters:
+        - name: username
+          in: body
+          description: User unique ID
+          schema:
+            type: object
+            required:
+              - username
+            properties:
+              username:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /forgot/password:
+    x-swagger-router-controller: Authorization
+    post:
+      operationId: forgotRestore
+      summary: Restore forgotten password
+      tags:
+        - authorization
+      parameters:
+        - name: data
+          in: body
+          description: User unique ID
+          schema:
+            type: object
+            required:
+              - token
+              - pw
+            properties:
+              token:
+                type: string
+              pw:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /confirm:
+    x-swagger-router-controller: Authorization
+    post:
+      produces:
+        - application/json
+      operationId: confirm
+      summary: Confirm
+      tags:
+        - authorization
+      parameters:
+        - in: query
+          name: token
+          type: string
+          description: token for confirm registration
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /top:
+    x-swagger-router-controller: UserController
+    get:
+      operationId: topStudents
+      summary: Get top students
+      parameters:
+        - in: query
+          name: top
+          type: number
+      security:
+        - admin: []
+        - teacher: []
+        - passport: []
+      tags:
+        - user
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /roles:
+    x-swagger-router-controller: RoleController
+    get:
+      operationId: getRoles
+      summary: Get roles
+      tags:
+        - roles
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /role:
+    x-swagger-router-controller: RoleController
+    get:
+      operationId: getRole
+      summary: Get a role
+      tags:
+        - roles
+      security:
+        - admin: []
+        - teacher: []
+        - passport: []
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /paypal/webhook:
+    x-swagger-router-controller: PaymentController
+    post:
+      operationId: paypalWebhook
+      summary: Get payment
+      tags:
+        - payment
+      parameters:
+        - name: payment
+          in: body
+          description: payment info
+          schema:
+            type: object
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /paypal/transaction:
+    x-swagger-router-controller: PaymentController
+    post:
+      operationId: savePaypalTransaction
+      summary: Save transaction
+      tags:
+        - payment
+      security:
+        - passport: []
+      parameters:
+        - name: payment
+          in: body
+          description: payment info
+          schema:
+            type: object
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /users:
+    x-swagger-router-controller: UserController
+    get:
+      operationId: getUsers
+      summary: Get all users
+      security:
+        - admin: []
+        - teacher: []
+      tags:
+        - user
+      parameters:
+        - name: types
+          in: query
+          type: string
+          items:
+            type: string
+          description: Get users by role
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+
+  /usersbydate:
+    x-swagger-router-controller: UserController
+    get:
+      operationId: getUsersByDate
+      summary: Get all users by date
+      security:
+        - admin: []
+        - teacher: []
+      tags:
+        - user
+      parameters:
+        - name: types
+          in: query
+          type: string
+          items:
+            type: string
+          description: Get users by date
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+            
+  /profile:
+    x-swagger-router-controller: UserController
+    get:
+      operationId: UserSuccess
+      summary: Get user success
+      security:
+        - passport: []
+      tags:
+        - user
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    post:
+      operationId: changePassword
+      summary: change user password
+      tags:
+        - user
+      security:
+        - admin: []
+      parameters:
+        - in: body
+          name: user
+          description: User edit
+          schema:
+            type: object
+            properties:
+              user:
+                type: string
+              password:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    put:
+      operationId: editUser
+      summary: edit user
+      tags:
+        - user
+      security:
+        - passport: []
+        - admin: []
+      parameters:
+        - in: body
+          name: user
+          description: User edit
+          schema:
+            type: object
+            properties:
+              username:
+                type: string
+              email:
+                type: string
+              school:
+                type: string
+              schoolName:
+                type: string
+              name:
+                type: string
+              lastName:
+                type: string
+              phone:
+                type: string
+              role:
+                type: string
+              language:
+                type: string
+              _id:
+                type: string
+              password:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /user:
+    x-swagger-router-controller: UserController
+    post:
+      operationId: createUser
+      summary: Set user
+      tags:
+        - user
+      security:
+        - admin: []
+      parameters:
+        - in: body
+          name: user
+          description: User set
+          schema:
+            type: object
+            required:
+              - username
+              - email
+              - name
+              - lastName
+              - role
+            properties:
+              _id:
+                type: string
+              username:
+                type: string
+              email:
+                type: string
+              school:
+                type: string
+              name:
+                type: string
+              phone:
+                type: string
+              lastName:
+                type: string
+              role:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    delete:
+      operationId: deleteUser
+      summary: Delete users profile
+      security:
+        - admin: []
+      tags:
+        - user
+      parameters:
+        - name: ids
+          in: query
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
+          description: Delete users by ID
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /schools:
+    x-swagger-router-controller: SchoolController
+    get:
+      operationId: getSchools
+      summary: Update school
+      tags:
+        - school
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /school:
+    x-swagger-router-controller: SchoolController
+    post:
+      operationId: setSchool
+      summary: Create or Update school
+      security:
+        - admin: []
+      tags:
+        - school
+      parameters:
+        - in: body
+          name: school
+          description: School object
+          schema:
+            $ref: "#/definitions/SetSchool"
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    delete:
+      operationId: deleteSchool
+      summary: Delete school
+      security:
+        - admin: []
+      tags:
+        - school
+      parameters:
+        - name: ids
+          in: query
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
+          description: Delete school by ID
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /school/search:
+    x-swagger-router-controller: SchoolController
+    get:
+      operationId: searchSchool
+      summary: Find school by name or address
+      # security:
+        # - admin: []
+      tags:
+        - school
+      parameters:
+        - name: filter
+          in: query
+          type: string
+          required: true
+          description: Query string for searching
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /grades:
+    x-swagger-router-controller: GradeController
+    get:
+      operationId: getGrades
+      summary: Get all grades
+      tags:
+        - grade
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /grade:
+    x-swagger-router-controller: GradeController
+    post:
+      operationId: setGrade
+      summary: Set grade
+      tags:
+        - grade
+      security:
+        - admin: []
+      parameters:
+        - in: body
+          name: grade
+          description: Grade set
+          schema:
+            type: object
+            required:
+              - category
+              - min
+              - max
+              - level
+            properties:
+              _id:
+                type: string
+              level:
+                type: string
+              category:
+                type: string
+              min:
+                type: number
+              max:
+                type: number
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    delete:
+      operationId: deleteGrades
+      summary: Delete grades
+      security:
+        - admin: []
+      tags:
+        - grade
+      parameters:
+        - name: ids
+          in: query
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
+          description: Delete grades by ID
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /categories:
+    x-swagger-router-controller: SubjectController
+    get:
+      operationId: getSubjectCategories
+      summary: Get all subjects categories
+      tags:
+        - subject
+      security:
+        - admin: []
+        - teacher: []
+        - passport: []
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /subjects:
+    x-swagger-router-controller: SubjectController
+    get:
+      operationId: getSubjects
+      summary: Get all Subjects
+      tags:
+        - subject
+      security:
+        - passport: []
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /subjects/manage:
+    x-swagger-router-controller: SubjectController
+    get:
+      operationId: getSubjectsManage
+      summary: Get all Subjects
+      tags:
+        - subject
+      security:
+        - admin: []
+        - teacher: []
+        - passport: []
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /subject:
+    x-swagger-router-controller: SubjectController
+    post:
+      operationId: setSubject
+      summary: Set subject
+      tags:
+        - subject
+      security:
+        - admin: []
+      parameters:
+        - in: body
+          name: subject
+          description: Subject set
+          schema:
+            type: object
+            required:
+              - name
+              - icon
+              - callbackCost
+              - questionCost
+              - accessByGrade
+            properties:
+              _id:
+                type: string
+              name:
+                type: object
+                required:
+                  - en
+                  - fr
+                properties:
+                  en:
+                    type: string
+                  fr:
+                    type: string
+              description:
+                type: string
+              icon:
+                type: string
+              cost:
+                type: number
+                minimum: 0
+              callbackCost:
+                type: number
+              questionCost:
+                type: number
+              accessByGrade:
+                type: array
+                items:
+                  type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    delete:
+      operationId: deleteSubjects
+      summary: Delete subjects
+      security:
+        - admin: []
+      tags:
+        - subject
+      parameters:
+        - name: ids
+          in: query
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
+          description: Delete subjects by ID
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /lessons/manage:
+    x-swagger-router-controller: LessonController
+    get:
+      operationId: manageLessons
+      summary: Get all own lessons
+      security:
+        - passport: []
+      tags:
+        - lesson
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /lessons/activity:
+    x-swagger-router-controller: LessonActivityController
+    get:
+      operationId: getLessonActivities
+      summary: getLessonActivities of user
+      tags:
+        - LessonActivity
+      security:
+        - passport: []
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /lesson:
+    x-swagger-router-controller: LessonController
+    get:
+      operationId: getLessons
+      summary: Get all lessons
+      security:
+        - admin: []
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    post:
+      operationId: setLesson
+      summary: Set lesson
+      security:
+        - teacher: []
+      tags:
+        - lesson
+      parameters:
+        - in: body
+          name: lesson
+          description: lesson set
+          schema:
+            type: object
+            required:
+              - grade
+              - subject
+              - title
+              - subtitle
+            properties:
+              _id:
+                type: string
+              grade:
+                type: array
+                items:
+                  type: string
+              subject:
+                type: string
+              title:
+                type: string
+              subtitle:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    delete:
+      operationId: deleteLessons
+      summary: Delete lessons
+      security:
+        - teacher: []
+      tags:
+        - lesson
+      parameters:
+        - name: ids
+          in: query
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
+          description: Delete lessons by ID
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /lesson/activity:
+    x-swagger-router-controller: LessonActivityController
+    get:
+      operationId: getLessonActivity
+      summary: getLessonActivity
+      tags:
+        - LessonActivity
+      security:
+        - passport: []
+      parameters:
+        - in: query
+          name: id
+          type: string
+          description: id of LessonActivity
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    put:
+      operationId: lessonDone
+      summary: Check LessonActivity
+      tags:
+        - LessonActivity
+      security:
+        - passport: []
+      parameters:
+        - in: body
+          name: lesson
+          description: LessonActivity set
+          schema:
+            type: object
+            required:
+              - lesson
+            properties:
+              lesson:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    post:
+      operationId: setLessonActivity
+      summary: Set LessonActivity
+      tags:
+        - LessonActivity
+      security:
+        - teacher: []
+        - passport: []
+      parameters:
+        - in: body
+          name: LessonActivity
+          description: LessonActivity set
+          schema:
+            type: object
+            required:
+              - lesson
+            properties:
+              lesson:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /lesson/statistic:
+    x-swagger-router-controller: LessonController
+    get:
+      operationId: lessonStatistic
+      security:
+        - passport: []
+      summary: Get lesson statistic
+      tags:
+        - lesson
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /lesson/{id}:
+    x-swagger-router-controller: LessonController
+    get:
+      operationId: getLesson
+      summary: Get a lesson by ID
+      parameters:
+        - in: path
+          name: id
+          description: ID of lesson
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /lessonbysubj:
+    x-swagger-router-controller: LessonController
+    get:
+      operationId: getLessonsBySubject
+      summary: Get lessons by subject
+      security:
+        - passport: []
+      tags:
+        - lesson
+      parameters:
+        - name: subject
+          in: query
+          type: string
+          description: Get quiz
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /quizzes/manage:
+    x-swagger-router-controller: QuizController
+    get:
+      operationId: manageQuizzes
+      summary: Get all own quizzes
+      security:
+        - teacher: []
+      tags:
+        - quiz
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /quizzes/verify:
+    x-swagger-router-controller: QuizController
+    get:
+      operationId: addOptions
+      summary: add options to new quizzez
+      security:
+        - admin: []
+      tags:
+        - quiz
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /quizzes/result:
+    x-swagger-router-controller: QuizAnswerController
+    get:
+      operationId: quizzesResults
+      summary: Get all own quizzes results
+      security:
+        - passport: []
+      tags:
+        - quiz
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /quiz:
+    x-swagger-router-controller: QuizController
+    get:
+      operationId: getQuizzes
+      summary: Get all quizzes
+      tags:
+        - quiz
+      parameters:
+        - name: types
+          in: query
+          type: string
+          items:
+            type: string
+          description: Get quiz
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    post:
+      operationId: setQuiz
+      summary: Set quiz
+      security:
+        - teacher: []
+      tags:
+        - quiz
+      parameters:
+        - in: body
+          name: quiz
+          description: Quiz set
+          schema:
+            type: object
+            required:
+              - grade
+              - subject
+              - points
+            properties:
+              _id:
+                type: string
+              name:
+                type: string
+              grade:
+                type: string
+              subject:
+                type: string
+              points:
+                type: number
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    delete:
+      operationId: deleteQuiz
+      summary: Delete quizzes
+      # security:
+        # - admin: []
+      tags:
+        - quiz
+      parameters:
+        - name: ids
+          in: query
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
+          description: Delete quizes by ID
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /quiz/parse:
+    x-swagger-router-controller: QuizController
+    post:
+      operationId: parseQuiz
+      summary: Set quiz
+      security:
+        - passport: []
+      tags:
+        - quiz
+      consumes:
+        - multipart/form-data
+      # parameters:
+       # - name: file
+         # in: formData
+          # type: file
+          # required: false
+          # description: File to upload as file reference
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /quiz/{id}:
+    x-swagger-router-controller: QuizController
+    get:
+      operationId: getQuiz
+      summary: Get a quiz by ID
+      parameters:
+        - name: id
+          in: path
+          description: ID of quiz
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /searchQuizzes:
+    x-swagger-router-controller: QuizController
+    get:
+      operationId: searchQuizzes
+      summary: Get quizzes by subject or grade
+      security:
+        - passport: []
+      tags:
+        - quiz
+      parameters:
+        - name: id
+          in: query
+          type: string
+          description: Subject or grade ID
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /quizanswers:
+    x-swagger-router-controller: QuizAnswerController
+    get:
+      operationId: getQuizAnswers
+      summary: Get all quizAnswrs
+      security:
+        - teacher: []
+      tags:
+        - quiz answer
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /quizanswer/exam:
+    x-swagger-router-controller: QuizAnswerController
+    post:
+      operationId: setQuizAnswerExam
+      summary: Create exams
+      tags:
+        - quiz answer
+      security:
+        - teacher: []
+        - passport: []
+      parameters:
+        - in: body
+          name: quizAnswer
+          description: Create exam
+          schema:
+            type: object
+            required:
+              - school
+              - grade
+            properties:
+              school:
+                type: string
+              timeEstimate:
+                type: number
+              dueTo:
+                type: string
+              grade:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    put:
+      operationId: editExam
+      summary: edit exam
+      tags:
+        - exam
+      security:
+        - teacher: []
+        - passport: []
+      parameters:
+        - in: body
+          name: exam
+          description: edit exam
+          schema:
+            type: object
+            required:
+              - _id
+            properties:
+              _id:
+                type: string
+              school:
+                type: string
+              timeEstimate:
+                type: number
+              dueTo:
+                type: string
+              grade:
+                type: string
+              quizzes:
+                type: array
+                items:
+                  type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /exams:
+    x-swagger-router-controller: QuizAnswerController
+    get:
+      operationId: getExams
+      summary: Get all exams
+      security:
+        - passport: []
+      tags:
+        - exam
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /accesscode:
+    x-swagger-router-controller: QuizAnswerController
+    get:
+      operationId: Get quiz answer on quiz page
+      summary: get quiz answer
+      security:
+        - passport: []
+      tags:
+        - quizanswer
+      parameters:
+        - name: user
+          in: query
+          type: string
+          description: Find quiz answer by user
+        - name: quiz
+          in: query
+          type: string
+          description: Find quiz answer by quiz
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /quizanswer:
+    x-swagger-router-controller: QuizAnswerController
+    get:
+      operationId: refresh
+      summary: refresh quizAnswer
+      security:
+        - passport: []
+      tags:
+        - quiz answer
+      parameters:
+        - name: code
+          in: query
+          type: string
+          items:
+            type: string
+          description: Get quiz
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    post:
+      operationId: setQuizAnswer
+      summary: Set QuizAnswer
+      tags:
+        - quiz answer
+      security:
+        - teacher: []
+        - passport: []
+      parameters:
+        - in: body
+          name: quizAnswer
+          description: QuizAnswer set
+          schema:
+            type: object
+            required:
+              - user
+            properties:
+              user:
+                type: string
+              author:
+                type: string
+              quiz:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    put:
+      operationId: updateQuizAnswer
+      summary: Update quizAnswer
+      tags:
+        - quiz answer
+      security:
+        - passport: []
+      parameters:
+        - in: body
+          name: quizAnswer
+          description: QuizAnswer object
+          schema:
+            type: object
+            required:
+              - _id
+            properties:
+              _id:
+                type: string
+              dueTo:
+                type: string
+              timeEstimate:
+                type: number
+              user:
+                type: string
+              quiz:
+                type: string
+              author:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    delete:
+      operationId: deleteQuizAnswers
+      summary: Delete quizAnswers
+      security:
+        - admin: []
+        - teacher: []
+      tags:
+        - quiz answer
+      parameters:
+        - name: ids
+          in: query
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
+          description: Delete quizAnswers by ID
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /quizanswer/{code}:
+    x-swagger-router-controller: QuizAnswerController
+    get:
+      operationId: getQuizAnswerByCode
+      summary: Get a quiz by code
+      tags:
+        - quiz answer
+      security:
+        - passport: []
+        - teacher: []
+      parameters:
+        - name: code
+          in: path
+          description: Code of quiz
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /referrals:
+    x-swagger-router-controller: ReferralController
+    get:
+      operationId: getReferrals
+      summary: Get all referrals
+      tags:
+        - referral
+      parameters:
+        - name: types
+          in: query
+          type: string
+          items:
+            type: string
+          description: Get refferals
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /referral:
+    x-swagger-router-controller: ReferralController
+    post:
+      operationId: setReferral
+      summary: Set referral
+      tags:
+        - referral
+      parameters:
+        - in: body
+          name: referral
+          description: Quiz referral
+          schema:
+            type: object
+            required:
+              - name
+            properties:
+              _id:
+                type: string
+              name:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    delete:
+      operationId: deleteReferral
+      summary: Delete referral
+      # security:
+        # - admin: []
+      tags:
+        - referral
+      parameters:
+        - name: ids
+          in: query
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
+          description: Delete referrals by ID
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /getquestion:
+    x-swagger-router-controller: QuestionController
+    get:
+      operationId: getQuestion
+      summary: Get question
+      security:
+        - passport: []
+      tags:
+        - question
+      parameters:
+        - name: id
+          in: query
+          type: string
+          items:
+            type: string
+          description: Get quiz
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /question:
+    x-swagger-router-controller: QuestionController
+    get:
+      operationId: getQuestions
+      summary: Get all questions
+      security:
+        - passport: []
+      tags:
+        - question
+      parameters:
+        - name: types
+          in: query
+          type: string
+          items:
+            type: string
+          description: Get questions
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    post:
+      operationId: setQuestion
+      summary: Set question
+      security:
+        - passport: []
+      tags:
+        - question
+      parameters:
+        - in: body
+          name: question
+          description: Question set
+          schema:
+            type: object
+            required:
+              - question
+              - subject
+            properties:
+              _id:
+                type: string
+              question:
+                type: string
+              subject:
+                type: string
+              grade:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /questionchat:
+    x-swagger-router-controller: QuestionController
+    get:
+      operationId: getQuestionChat
+      summary: Get all messages for Question
+      security:
+        - passport: []
+        - teacher: []
+      tags:
+        - question
+      parameters:
+        - name: id
+          in: query
+          type: string
+          items:
+            type: string
+          description: Get quiz
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /question/manage:
+    x-swagger-router-controller: QuestionController
+    get:
+      operationId: getQuestionSearch
+      summary: Get all questions
+      security:
+        - teacher: []
+      tags:
+        - question
+      parameters:
+        - name: resolved
+          in: query
+          type: string
+          items:
+            type: string
+          description: Get quiz
+        - name: answered
+          in: query
+          type: string
+          items:
+            type: string
+          description: Get quiz
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    post:
+      operationId: answerQuestion
+      security:
+        - teacher: []
+        - passport: []
+        - admin: []
+      tags:
+        - question
+      parameters:
+        - in: body
+          name: Question
+          description: Question set
+          schema:
+            type: object
+            required:
+              - question
+            properties:
+              message:
+                type: string
+              question:
+                type: string
+              resolved:
+                type: boolean
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /answers:
+    x-swagger-router-controller: QuestionController
+    get:
+      operationId: answeredByTeacher
+      summary: Get all questions
+      security:
+        - teacher: []
+      tags:
+        - question
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /group:
+    x-swagger-router-controller: ChatController
+    post:
+      operationId: createGroup
+      tags:
+        - chat
+      security:
+        - passport: []
+        - teacher: []
+        - admin: []
+      parameters:
+        - in: body
+          name: data
+          description: Create group for chating
+          schema:
+            type: object
+            required:
+              - members
+            properties:
+              members:
+                type: array
+                items:
+                  type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /chat:
+    x-swagger-router-controller: ChatController
+    get:
+      operationId: getMessages
+      summary: Get all user messages
+      tags:
+        - chat
+      security:
+        - passport: []
+        - teacher: []
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    post:
+      operationId: sendMessage
+      tags:
+        - chat
+      security:
+        - passport: []
+        - teacher: []
+      parameters:
+        - in: body
+          name: message
+          description: send message
+          schema:
+            type: object
+            required:
+              - message
+            properties:
+              recipient:
+                type: string
+              message:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /chats:
+    x-swagger-router-controller: ChatController
+    get:
+      operationId: getChats
+      summary: Get all user messages
+      tags:
+        - chat
+      security:
+        - passport: []
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+#  /sms/auth:
+#    x-swagger-router-controller: PaymentController
+#    post:
+#      operationId: smsAuthRequest
+#      tags:
+#        - payment
+#      security:
+#        - passport: []
+#      parameters:
+#        - in: body
+#          name: auth
+#          description: Phone number
+#          schema:
+#            type: object
+#            required:
+#              - phone
+#            properties:
+#              phone:
+#                type: string
+#              subscriptionId:
+#                type: string
+#      responses:
+#        "200":
+#          description: Successful response
+#          schema:
+#            $ref: "#/definitions/Response"
+#  /sms/auth/confirm:
+#    x-swagger-router-controller: PaymentController
+#    post:
+#      operationId: smsConfirmAuth
+#      tags:
+#        - payment
+#      security:
+#        - passport: []
+#      parameters:
+#        - in: body
+#          name: auth
+#          description: PIN code to confirm auth
+#          schema:
+#            type: object
+#            required:
+#              - phone
+#              - pin
+#            properties:
+#              phone:
+#                type: string
+#              pin:
+#                type: string
+#      responses:
+#        "200":
+#          description: Successful response
+#          schema:
+#            $ref: "#/definitions/Response"
+#  /sms/payment:
+#    x-swagger-router-controller: PaymentController
+#    post:
+#      operationId: smsPayment
+#      tags:
+#        - payment
+#      security:
+#        - passport: []
+#      parameters:
+#        - in: body
+#          name: auth
+#          description: Charge
+#          schema:
+#            type: object
+#            properties:
+#              phone:
+#                type: string
+#      responses:
+#        "200":
+#          description: Successful response
+#          schema:
+#            $ref: "#/definitions/Response"
+  /orange/payment:
+    x-swagger-router-controller: PaymentController
+    post:
+      operationId: orangePayment
+      summary: Get orange payment URL
+      tags:
+        - orange
+      security:
+        - passport: []
+      parameters:
+        - in: body
+          name: amount
+          description: Orange payment
+          schema:
+            type: object
+            properties:
+              amount:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /orange/callback:
+    x-swagger-router-controller: PaymentController
+    get:
+      operationId: orangeCallbackGET
+      summary: orange callback route
+      tags:
+        - orange
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    post:
+      operationId: orangeCallbackPOST
+      summary: orange callback route
+      tags:
+        - orange
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /orange/cancel:
+    x-swagger-router-controller: PaymentController
+    get:
+      operationId: orangeCancelGET
+      summary: orange cancel payment route
+      tags:
+        - orange
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    post:
+      operationId: orangeCancelPOST
+      summary: orange cancel payment route
+      tags:
+        - orange
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /orange/notification:
+    x-swagger-router-controller: PaymentController
+    get:
+      operationId: orangeNotificationGET
+      summary: orange notification route
+      tags:
+        - orange
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    post:
+      operationId: orangeNotificationPOST
+      summary: orange notification route
+      tags:
+        - orange
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /balance:
+    x-swagger-router-controller: BalanceController
+    get:
+      operationId: getUserBalance
+      summary: get user balance
+      tags:
+        - user
+      security:
+        - passport: []
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    post:
+      operationId: setBalance
+      tags:
+        - balance
+      security:
+        - passport: []
+      parameters:
+        - in: body
+          name: balance
+          description: set balance
+          schema:
+            type: object
+            required:
+            - points
+            - user
+            properties:
+              points:
+                type: number
+              user:
+                type: string
+              offlineCompany:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    put:
+      operationId: updateBalance
+      tags:
+        - balance
+      security:
+        - admin: []
+      parameters:
+        - in: body
+          name: balance
+          description: Update balance
+          schema:
+            type: object
+            required:
+            - _id
+            properties:
+              status:
+                type: boolean
+              cashFlow:
+                type: number
+              _id:
+                type: string
+              paymentStatus:
+                type: number
+              offlineCompany:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /balance/admin:
+      x-swagger-router-controller: BalanceController
+      get:
+          operationId: getAllUserBalances
+          summary: get all user balances
+          tags:
+          - balance
+          security:
+          - admin: []
+          parameters:
+          - name: user
+            in: query
+            type: string
+            description: Get quiz
+          responses:
+              "200":
+                  description: Successful response
+                  schema:
+                      $ref: "#/definitions/Response"
+      post:
+          operationId: adminSetBalance
+          tags:
+          - balance
+          security:
+          - admin: []
+          parameters:
+          - in: body
+            name: balance
+            description: set balance
+            schema:
+                type: object
+                required:
+                - points
+                - user
+                properties:
+                    points:
+                        type: number
+                    user:
+                        type: string
+          responses:
+              "200":
+                  description: Successful response
+                  schema:
+                      $ref: "#/definitions/Response"
+  /subscriptions:
+    x-swagger-router-controller: SubscriptionController
+    get:
+      operationId: getSubscriptions
+      summary: Get all subscriptions
+      tags:
+        - subscription
+      security:
+        - passport: []
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /subscriptions/active:
+    x-swagger-router-controller: SubscriptionController
+    get:
+      operationId: activeSubscriptions
+      summary: Get active subscriptions
+      tags:
+        - subscription
+      security:
+        - passport: []
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /subscriptions/ending:
+    x-swagger-router-controller: BalanceController
+    get:
+      operationId: findEnding
+      summary: Get all subscriptions
+      tags:
+        - subscription
+      security:
+        - passport: []
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /subscriptions/manage:
+    x-swagger-router-controller: SubscriptionController
+    get:
+      operationId: getSubscriptionsManage
+      summary: Get all subscriptions
+      tags:
+        - subscription
+      security:
+        - admin: []
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    post:
+      operationId: setSubscription
+      summary: Set subscription
+      tags:
+        - subscription
+      security:
+        - admin: []
+      parameters:
+        - in: body
+          name: subscription
+          description: Subscription set
+          schema:
+            type: object
+            properties:
+              type:
+                type: number
+                minimum: 0
+                maximum: 2
+              duration:
+                type: number
+              validTo:
+                type: string
+              status:
+                type: boolean
+              repeatable:
+                type: boolean
+              currency:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /payment/promocode:
+    x-swagger-router-controller: BalanceController
+    post:
+      operationId: createPaymentPromocode
+      summary: create promo payment check
+      tags:
+        - balance
+      security:
+        - passport: []
+      parameters:
+        - in: body
+          name: subscription
+          description: Subscription create
+          schema:
+            type: object
+            required:
+             - promoCode
+            properties:
+              promoCode:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /payment/offline:
+    x-swagger-router-controller: BalanceController
+    post:
+      operationId: createOfflineCompanyPayment
+      summary: create offline company payment check
+      tags:
+        - balance
+      security:
+        - passport: []
+      parameters:
+        - in: body
+          name: payment
+          description: Offline payment create
+          schema:
+            type: object
+            required:
+             - file
+             - offlineCompany
+            properties:
+              file:
+                type: string
+              offlineCompany:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /admin/payment/offline:
+    x-swagger-router-controller: BalanceController
+    get:
+      operationId: getOfflinePayments
+      summary: Get all offline balances
+      tags:
+        - balance
+      security:
+        - admin: []
+      parameters:
+        - name: status
+          in: query
+          type: boolean
+          description: Select by status
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /admin/payment/orange:
+    x-swagger-router-controller: PaymentController
+    get:
+      operationId: getOrangePayments
+      summary: Get all Orange payments
+      tags:
+        - payment
+      security:
+        - admin: []
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /admin/payment/paypal:
+    x-swagger-router-controller: PaymentController
+    get:
+      operationId: getPaypalPayments
+      summary: Get all Paypal payments
+      tags:
+        - payment
+      security:
+        - admin: []
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /subscription:
+    x-swagger-router-controller: SubscriptionController
+    get:
+      operationId: findSubscription
+      summary: find subscription
+      tags:
+        - subscription
+      security:
+        - passport: []
+      parameters:
+        - name: code
+          in: query
+          type: string
+          description: find subscription
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    put:
+      operationId: updateSubscription
+      summary: Update subscription
+      tags:
+        - subscription
+      security:
+        - admin: []
+      parameters:
+        - in: body
+          name: subscription
+          description: Subscription set
+          schema:
+            type: object
+            properties:
+              _id:
+                type: string
+              user:
+                type: string
+              type:
+                type: number
+                minimum: 0
+                maximum: 2
+              duration:
+                type: number
+              validTo:
+                type: string
+              status:
+                type: number
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    post:
+      operationId: buySubject
+      summary: buy Subject
+      tags:
+        - subscription
+      security:
+        - passport: []
+      parameters:
+        - in: body
+          name: subscription
+          description: buy Subject
+          schema:
+            type: object
+            required:
+              - subject
+              - period
+            properties:
+              subject:
+                type: string
+              period:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    delete:
+      operationId: deleteSubscription
+      summary: Delete subscription
+      security:
+        - admin: []
+      tags:
+        - subscription
+      parameters:
+        - name: ids
+          in: query
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
+          description: Delete subscriptions by ID
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /callbacks:
+    x-swagger-router-controller: CallbackController
+    get:
+      operationId: getCallbacks
+      summary: Get all user callbacks
+      tags:
+        - callback
+      security:
+        - admin: []
+        - teacher: []
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /callbacks/access:
+    x-swagger-router-controller: CallbackController
+    get:
+      operationId: callbackAccess
+      summary: Get callback Access
+      tags:
+        - callback
+      security:
+        - passport: []
+        - teacher: []
+      parameters:
+        - name: subject
+          in: query
+          type: string
+          description: subject
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /callback/decline:
+    x-swagger-router-controller: CallbackController
+    put:
+      operationId: declineCallback
+      tags:
+        - callback
+      security:
+        - passport: []
+      parameters:
+        - in: body
+          name: callback
+          description: callback
+          schema:
+            type: object
+            required:
+               - subject
+            properties:
+              subject:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /callback:
+    x-swagger-router-controller: CallbackController
+    post:
+      operationId: setCallback
+      tags:
+        - callback
+      security:
+        - passport: []
+        - teacher: []
+      parameters:
+        - in: body
+          name: callback
+          description: set callback
+          schema:
+            type: object
+            # required:
+            #   - reason
+            #   - calltime
+            #   - calldate
+            #   - subject
+            properties:
+              _id:
+                type: string
+              reason:
+                type: string
+              calltime:
+                type: string
+              calldate:
+                type: string
+              subject:
+                type: string
+              status:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /callback/status:
+    x-swagger-router-controller: CallbackController
+    get:
+      operationId: userCallbackAccess
+      summary: Get user Callback Access
+      tags:
+        - callback
+      security:
+        - passport: []
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /notifications:
+    x-swagger-router-controller: NotificationController
+    get:
+      operationId: getNotifications
+      summary: Get notifications
+      security:
+        - passport: []
+      tags:
+        - notification
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /notification:
+    x-swagger-router-controller: NotificationController
+    put:
+      operationId: updateNotification
+      summary: Update notifications
+      security:
+        - passport: []
+      tags:
+        - notification
+      parameters:
+        - in: body
+          name: notificationIds
+          description: Notification object
+          schema:
+            $ref: "#/definitions/NotificationPut"
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /settings:
+    x-swagger-router-controller: SettingsController
+    put:
+      operationId: setSettings
+      summary: Update settings
+      security:
+        - passport: []
+        - teacher: []
+        - admin: []
+      tags:
+        - settings
+      parameters:
+        - in: body
+          name: settings
+          description: Settings object
+          schema:
+            $ref: "#/definitions/Settings"
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    get:
+      operationId: getSettings
+      summary: Get all settings
+      tags:
+        - settings
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /company:
+    x-swagger-router-controller: CompanyController
+    post:
+      operationId: setCompany
+      summary: set company
+      security:
+        - passport: []
+      tags:
+        - company
+      parameters:
+        - in: body
+          name: company
+          description: set company
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+              description:
+                type: string
+              icon:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    put:
+      operationId: updateCompany
+      summary: update company
+      security:
+        - passport: []
+      tags:
+        - company
+      parameters:
+        - in: body
+          name: company
+          description: set company
+          schema:
+            type: object
+            properties:
+              _id:
+                type: string
+              name:
+                type: string
+              description:
+                type: string
+              icon:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /companies:
+    x-swagger-router-controller: CompanyController
+    get:
+      operationId: getCompanies
+      summary: Get all companies
+      security:
+        - passport: []
+      tags:
+        - company
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    delete:
+      operationId: deleteCompany
+      summary: Delete company
+      security:
+        - admin: []
+      tags:
+        - company
+      parameters:
+        - name: company
+          in: query
+          type: string
+          description: Delete company by ID
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /idea:
+    x-swagger-router-controller: IdeaController
+    get:
+      operationId: getIdeas
+      summary: Get all ideas
+      security:
+        - passport: []
+      tags:
+        - idea
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    post:
+      operationId: setIdea
+      summary: set idea
+      security:
+        - passport: []
+      tags:
+        - idea
+      parameters:
+        - in: body
+          name: idea
+          description: set idea
+          schema:
+            type: object
+            required:
+              - text
+            properties:
+              text:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /bugreport:
+    x-swagger-router-controller: BugReportController
+    get:
+      operationId: getBugs
+      summary: Get all bug reports
+      security:
+        - passport: []
+      tags:
+        - bug report
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    post:
+      operationId: setBugReport
+      summary: set bug report
+      security:
+        - passport: []
+      tags:
+        - bug report
+      parameters:
+        - in: body
+          name: but report
+          description: set bug report
+          schema:
+            type: object
+            required:
+              - text
+            properties:
+              text:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /notices:
+    x-swagger-router-controller: NoticeBoardController
+    get:
+      operationId: getNoticeBoardMessages
+      summary: Get all notices
+      security:
+        - passport: []
+        - teacher: []
+        - admin: []
+      tags:
+        - notice
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /notice:
+    x-swagger-router-controller: NoticeBoardController
+    post:
+      operationId: setNoticeMessage
+      summary: set notice
+      security:
+        - admin: []
+      tags:
+        - notice
+      parameters:
+        - in: body
+          name: notice
+          description: set notice
+          schema:
+            type: object
+            properties:
+              _id:
+                type: string
+              message:
+                type: string
+              title:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+    delete:
+      operationId: deleteNotice
+      summary: Delete notice
+      security:
+        - admin: []
+      tags:
+        - notice
+      parameters:
+        - name: ids
+          in: query
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
+          description: Delete notices by ID
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+  /device/register:
+    x-swagger-router-controller: DeviceController
+    post:
+      operationId: registerDevice
+      summary: send device info
+      security:
+        - passport: []
+      tags:
+        - push
+      parameters:
+        - in: body
+          name: deviceInfo
+          description: Device info
+          schema:
+            type: object
+            required:
+              - registrationId
+              - platform
+            properties:
+              registrationId:
+                type: string
+              platform:
+                type: string
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: "#/definitions/Response"
+definitions:
+  Response:
+    type: object
+    properties:
+      success:
+        type: boolean
+      errorCode:
+        type: string
+      errorStack:
+        type: array
+        items:
+            type: object
+      message:
+        type: string
+      data:
+        type: object
+    required:
+      - success
+  SetSchool:
+    type: object
+  NotificationPut:
+    type: object
+    required:
+      - ids
+    properties:
+      ids:
+        type: array
+        items:
+          type: string
+  Settings:
+    type: object
+    properties:
+      name:
+        type: string
+      value:
+        type: number
+      _id:
+        type: string

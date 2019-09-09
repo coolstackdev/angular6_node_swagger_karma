@@ -1,0 +1,17 @@
+.page-question.padding(fxLayout="column", fxFlex)
+    div(fxLayout="row", fxLayoutAlign="center center")
+        h3(fxFlex) {{'page.admin.ideas-bugs.title' | translate}}
+    div
+        br
+        mat-tab-group((selectedTabChange)="onTabChanged($event)")
+            mat-tab
+                ng-template(mat-tab-label)
+                    span {{'page.admin.ideas-bugs.ideas' | translate}}
+                .padding
+                    app-table([data]="ideas", [dataHeader]="dataHeader")
+
+            mat-tab
+                ng-template(mat-tab-label)
+                    span {{'page.admin.ideas-bugs.bugs' | translate}}
+                .padding
+                    app-table([data]="bugs", [dataHeader]="dataHeader")

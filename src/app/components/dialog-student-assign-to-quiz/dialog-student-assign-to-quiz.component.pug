@@ -1,0 +1,33 @@
+mat-dialog-content
+    h3 {{(isExams ? 'dialog.exams.title' : 'dialog.homework.title') | translate}}
+    br
+    div([formGroup]="studentForm", fxLayout="column")
+        mat-form-field(fxFlex, fxFlexOffset="5px")
+            mat-select(placeholder="{{'form.quiz'| translate}}", required, [formControlName]="isExams ? 'quizzes' : 'quiz'", [multiple]="isExams")
+                mat-option(*ngFor="let quiz of quizzes", [value]="quiz._id", (blur)="changeFilter(quiz, school)") {{quiz.title}} ({{quiz.grade.level}}
+            mat-error {{'errors.required'|translate}}
+        mat-form-field(fxFlex, fxFlexOffset="5px")
+            mat-select(placeholder="{{'form.school' | translate}}", required, [formControlName]="isExams ? 'school' : 'schools'")
+                mat-option(*ngFor="let school of schools", [value]="school._id", (blur)="changeFilter(quiz, school)") {{school.name}}
+            mat-error {{'errors.required' | translate}}
+        mat-form-field(fxFlex, fxFlexOffset="5px", *ngIf="isExams")
+            mat-select(placeholder="{{'table.grade' | translate}}", required, formControlName="grade", [multiple]="true")
+                mat-option(*ngFor="let grade of grades", [value]="grade._id") {{grade.level}}
+            mat-error {{'errors.required' | translate}}
+        mat-form-field(fxFlex="70", fxFlexOffset="5px", *ngIf="!isExams")
+            input(matInput, placeholder="{{'form.student' | translate}}", required, formControlName="user", type="text", [matAutocomplete]="autoStudent")
+            mat-error {{'errors.required' | translate}}
+            mat-autocomplete(#autoStudent="matAutocomplete", [displayWith]="displayFn.bind(this, 'students')")
+                mat-option(*ngFor="let student of filteredStudents | async", [value]="student._id") {{student.fullName}}
+        mat-form-field(fxFlex="70", fxFlexOffset="5px")
+            input(matInput, placeholder="{{'form.timeForPassing' | translate}}", required, formControlName="timeEstimate", type="number")
+            mat-error {{'errors.required' | translate}}
+        mat-form-field(fxFlex)
+            input(matInput, [matDatepicker]="picker" placeholder="{{'form.dueTo' | translate}}", , formControlName="dueTo")
+            mat-datepicker-toggle(matSuffix [for]="picker")
+            mat-datepicker(#picker)
+            mat-error {{'errors.required' | translate}}
+    br
+mat-dialog-actions
+    button(mat-raised-button, color="primary", [disabled]="!studentForm.valid", (click)="submitForm()") {{'form.save' | translate}}
+    button(mat-button, (click)="selfClose()") {{'form.cancel' | translate}}

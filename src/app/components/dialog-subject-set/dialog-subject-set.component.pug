@@ -1,0 +1,64 @@
+h1(mat-dialog-title) {{'dialog.subject.title' | translate}}
+div(mat-dialog-content, [formGroup]="subjectForm", fxLayout="column")
+    div(fxLayout="row")
+        app-upload-icon(fxFlex="33", (iconOnLoaded)="setIcon($event)", [icon]="subjectForm.get('icon').value")
+        div(fxLayout="column", fxFlexOffset="5px", fxFlex="", formGroupName="name")
+            mat-form-field(fxFlex)
+                input(matInput, placeholder="{{'form.subjectNameEn' | translate}}", required, formControlName="en", type="text")
+                mat-error {{'errors.required' | translate}}
+            mat-form-field(fxFlex)
+                input(matInput, placeholder="{{'form.subjectNameFr' | translate}}", required, formControlName="fr", type="text")
+                mat-error {{'errors.required' | translate}}
+
+        //mat-form-field(fxFlexOffset="15px")
+        //    span(matPrefix, *ngIf="subjectForm.value.icon", style="margin-right: 10px")
+        //        //{{subjectForm.value.icon | json}}
+        //        mat-icon([svgIcon]="subjectForm.value.icon")
+        //    input(matInput, placeholder="{{'form.subjectIcon' | translate}}", formControlName="icon", type="text", [matAutocomplete]="autoIconName")
+        //    mat-error {{'errors.required'|translate}}
+        //    mat-autocomplete(#autoIconName="matAutocomplete")
+        //        mat-option(*ngFor="let icon of filteredIcons | async ", [value]="icon.name")
+        //            mat-icon([svgIcon]="icon.name")
+        //            span {{icon.subject}}
+    div(fxLayout="row" )
+        mat-form-field(fxFlex)
+            mat-select(placeholder="{{'table.grade'| translate}}", required, [multiple]="true", formControlName="accessByGrade" )
+                mat-option(*ngFor="let grade of grades", [value]="grade._id") {{grade.level}}
+            mat-error {{'errors.required'|translate}}
+
+    div(fxLayout="row wrap", fxLayoutGap="5px")
+        mat-form-field(fxFlex)
+            input(matInput, placeholder="{{'form.costWeek' | translate}}", required, formControlName="costWeek", type="number")
+            mat-error {{'errors.required' | translate}}
+        mat-form-field(fxFlex)
+            input(matInput, placeholder="{{'form.costMonth' | translate}}", required, formControlName="costMonth", type="number")
+            mat-error {{'errors.required' | translate}}
+        mat-form-field(fxFlex)
+            input(matInput, placeholder="{{'form.costYear' | translate}}", required, formControlName="costYear", type="number")
+            mat-error {{'errors.required' | translate}}
+    div(fxLayout="row")
+        mat-form-field(fxFlex)
+            input(matInput, placeholder="{{'form.callbackCost' | translate}}", required, formControlName="callbackCost", type="number")
+            mat-error {{'errors.required' | translate}}
+    div(fxLayout="row")
+        mat-form-field(fxFlex)
+            input(matInput, placeholder="{{'form.questionCost' | translate}}", required, formControlName="questionCost", type="number")
+            mat-error {{'errors.required' | translate}}
+    div(fxLayout="row")
+        mat-form-field(fxFlex)
+            textarea(matInput, placeholder="{{'form.description' | translate}}", required, formControlName="description", type="text")
+            mat-error {{'errors.required' | translate}}
+
+    div(fxLayout="row", style="margin-top:7px;")
+        mat-slide-toggle(formControlName="isPrimary" ) Is primary
+
+    div(fxLayout="row", *ngIf="subjectForm.get('isPrimary').value" )
+        mat-form-field(fxFlex)
+            mat-select(placeholder="{{'table.subjects'| translate}}", required, [multiple]="true", formControlName="subjects" )
+                mat-option(*ngFor="let subject of subjects", [value]="subject._id") {{subject?.subjectName}}
+            mat-error {{'errors.required'|translate}}
+
+
+div(mat-dialog-actions)
+    button(mat-raised-button, (click)="submitForm()", color="primary", [disabled]="!subjectForm.valid") {{'form.save' | translate}}
+    button(mat-button, (click)="selfClose()") {{'form.cancel' | translate}}

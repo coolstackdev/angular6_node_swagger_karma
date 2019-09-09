@@ -1,0 +1,20 @@
+.app-page-admin-offline-payments(fxLayout="column", fxFlex)
+    div(fxLayout="row", fxLayoutAlign="center center")
+        h3(fxFlex) {{'page.admin.offline-payments.title' | translate}}
+        div
+            button(mat-button, mat-raised-button, (click)="createCompany()") {{'page.admin.offline-payments.createCompany' | translate}}
+    div
+        app-table([data]="companies", [dataHeader]="companiesHeader", (remove)="deleteCompany($event)", (create)="createCompany($event)")
+        br
+        mat-tab-group((selectedTabChange)="onTabChanged($event)")
+            mat-tab
+                ng-template(mat-tab-label)
+                    span {{'page.admin.offline-payments.nonActivePayments' | translate}}
+                .padding
+                    app-table([data]="nonActivePayments", [dataHeader]="nonActiveOfflinePaymentsDataHeader", (create)="activatePayment($event)")
+            mat-tab
+                ng-template(mat-tab-label)
+                    span {{'page.admin.offline-payments.activePayments' | translate}}
+                .padding
+                    app-table([data]="activePayments", [dataHeader]="activeOfflinePaymentsDataHeader")
+

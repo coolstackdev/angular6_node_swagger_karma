@@ -1,0 +1,137 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+@import 'login-theme';
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300");
+
+.login-theme {
+    @include angular-material-theme($first-theme);
+}
+
+* {
+    outline: none !important;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(#643e95, #237ec5) no-repeat center center fixed;
+    font-family: 'Roboto', sans-serif;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.app-page {
+    min-height: 100vh;
+}
+
+.login-buttons {
+    width: 200px !important;
+    border-radius: 20px !important;
+    padding: 3px !important;
+}
+
+.border {
+    border: 1px solid lightgray;
+    border-radius: 16px;
+    padding: 10px;
+}
+
+a {
+    text-decoration: underline;
+}
+
+.blue-text {
+    color: #1565C0;
+}
+
+.padding {
+    padding: 20px;
+}
+
+.field-group {
+    //margin-left: -5px;
+}
+
+.mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: #1565C0 !important;
+}
+
+.mat-form-field.mat-focused .mat-form-field-label {
+    color: #1565C0 !important;
+}
+
+mat-tab-group {
+    .mat-tab-label {
+        &.mat-tab-label-active {
+            font-weight: bold;
+            opacity: 1;
+            //background-color: rgba(0, 0, 0, 0.1);
+            //border-top-left-radius: 6px;
+            //border-top-right-radius: 6px;
+        }
+
+    }
+    .mat-ink-bar {
+        background-color: rgba(0, 0, 0, 0.8) !important;
+    }
+}
+
+.mat-tab-label-content {
+    //color: red!important;
+}
+
+.mat-dialog-container {
+    //min-width: 480px;
+}
+
+.mat-selected {
+    color: #3f51b5 !important;
+    background-color: white;
+}
+
+.mat-option.mat-active {
+    background: rgba(0, 0, 0, .04)
+}
+
+.mat-primary .mat-pseudo-checkbox-checked, .mat-primary .mat-pseudo-checkbox-indeterminate {
+    background-color: #3f51b5 !important;
+}
+
+.mat-input-element {
+    caret-color: unset;
+}
+
+/deep/ {
+    .mat-primary .mat-pseudo-checkbox-checked, .mat-primary .mat-pseudo-checkbox-indeterminate {
+        background-color: #3f51b5 !important;
+    }
+}
+
+.resize-img img {
+    max-width: 35em;
+    height: auto;
+}
+
+.table {
+    &__icon {
+        width: 20px;
+        border-radius: 50%;
+    }
+    &__img {
+        width: 100px;
+        cursor: pointer;
+    }
+}

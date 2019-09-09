@@ -1,0 +1,19 @@
+.app-page-admin-subjects(fxLayout="column", fxFlex)
+    div(fxLayout="row", fxLayoutAlign="center center")
+        h3(fxFlex) {{'page.admin.subjectManagement.title' | translate}}
+        div
+            button(mat-button, mat-raised-button, (click)="editSubject()", [disabled]="!isLoaded") {{'page.admin.subjectManagement.createSubject' | translate}}
+
+    mat-tab-group((selectedTabChange)="onTabChanged($event)")
+        mat-tab
+            ng-template(mat-tab-label)
+                span {{'page.admin.subjectManagement.subjects' | translate}}
+            .padding
+                app-table([data]="subjects", [dataHeader]="subjectsDataHeader", (create)="editSubject($event)", (remove)="deleteSubject($event)")
+
+        mat-tab
+            ng-template(mat-tab-label)
+                span {{'page.admin.subjectManagement.primarySubjects' | translate}}
+            .padding
+                app-table([data]="primarySubjects", [dataHeader]="primarySubjectsDataHeader", (create)="editSubject($event)", (remove)="deleteSubject($event)")
+

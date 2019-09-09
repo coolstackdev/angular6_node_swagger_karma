@@ -1,0 +1,8 @@
+.app-page-exams.padding(fxLayout="column", fxFlex)
+    div(fxLayout="row", fxLayoutAlign="center center")
+        h3(fxFlex) {{'page.exams.header' | translate}}
+        div
+            button(mat-button, mat-raised-button, (click)="addExams()") {{'page.exams.assignQuiz' | translate}}
+
+    div
+        app-table([data]="homework", [dataHeader]="usersDataHeader", (create)="addExams($event)", (remove)="deleteExams($event)", (copy)="viewQuizResult($event)")

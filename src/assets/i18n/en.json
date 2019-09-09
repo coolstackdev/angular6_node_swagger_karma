@@ -1,0 +1,733 @@
+{
+    "errors": {
+        "invalid_duplicate_mongodb_save": "This email address or username already exists in the database.",
+        "required": "Required",
+        "cityPattern": "City name can't contain numbers",
+        "login": {
+            "required": "This field is required",
+            "invalid_authorization_userNotFound": "User was not found",
+            "invalid_authorization_password": "Wrong password",
+            "null": "",
+            "minMoreThanMaxError": "Minimum age should be less than maximum",
+            "minMaxEqualsError": "Minimum age can't be equal to maximum age"
+        },
+        "forgotPassword": {
+            "error_empty_email_username_fields": "User with this username or email was not found",
+            "invalid_token": "jwt expired"
+        },
+        "subscriptions": {
+            "promo_code_not_found": "Promo Code Not Found",
+            "cancel_promise_chain": "Cancel promise chain",
+            "cancel_enter_pin": "Cancel enter pin"
+        },
+        "invalid_code_is_not_used": "You already have active request",
+        "error_not_enough_points": "Not enough points",
+        "error_email_already_taken": "Email is already in use",
+        "invalid_email": "Please, use correct email",
+        "error_username_already_taken": "That username is already taken",
+        "server_error": "Something went wrong",
+        "invalid_authorization_userDeleted": "User is deleted",
+        "invalid_authorization_userNotFound": "User not found",
+        "invalid_users_not_found": "Users were not found by these filter",
+        "invalid_duplicate_promocode": "You can use one promocode only one time and you have already consumed it.",
+        "payment_success": "Payment Success",
+        "payment_canceled": "Payment Canceled"
+    },
+    "role": {
+        "student": "Student",
+        "teacher": "Teacher",
+        "admin": "Admin"
+    },
+    "form": {
+        "callbackCost": "Callback cost",
+        "questionCost": "Question cost",
+        "headers": {
+            "grade": "Grade Level Management",
+            "callback": "Callback Management",
+            "quizResult": "Student's Quiz Result"
+        },
+        "filterAll": "Filter all columns",
+        "save": "Save",
+        "send": "Send",
+        "cancel": "Cancel",
+        "done": "Done",
+        "title": "Title",
+        "submit": {
+            "title": "Submit",
+            "titleSure": "Are you sure?",
+            "dataLost": "All data will be lost",
+            "undone": "This action cannot be undone"
+        },
+        "variant": {
+            "free": "Free Entry",
+            "options": "Answer from Options",
+            "multiple": "Answers from Options",
+            "boolean": "True or False",
+            "free-multiple": "Fill in Blank",
+            "free-multipleDescription": "Please fill correct answers with ; (Answer1;Answer2;...). Register not sensitive",
+            "match": "Match"
+        },
+        "quizResult": {
+            "question": "Question",
+            "countQuestion": "question",
+            "countQuestions": "questions",
+            "answer": "Answer",
+            "isCorrect": "Is answer correct",
+            "correctAnswer": "Correct answers:",
+            "outOf": "out of total"
+        },
+        "close": "Close",
+        "value": "Value",
+        "yes": "Yes",
+        "no": "No",
+        "username": "Username",
+        "name": "Name",
+        "lastName": "Last Name",
+        "email": "Email",
+        "role": "Role",
+        "school": "School",
+        "number": "Number",
+        "country": "Country",
+        "city": "City",
+        "address": "Address",
+        "contactPerson": "Contact Person",
+        "contactName": "Contact Name",
+        "contactPosition": "Contact Position",
+        "contactPhone": "Contact Phone",
+        "contactEmail": "Contact Email",
+        "subject": "Subject Name",
+        "select-subject": "Select subject",
+        "subjects": "Select Subjects",
+        "description": "Description",
+        "translationKey": "Translation key",
+        "minAge": "Minimum Age",
+        "maxAge": "Maximum Age",
+        "subjectIcon": "Subject Icon",
+        "referral": "Referral",
+        "quiz": "Quiz",
+        "student": "Student",
+        "timeForPassing": "Time for Completing Quiz (in minutes)",
+        "code": "Code",
+        "user": "User",
+        "type": "Type",
+        "duration": "Duration",
+        "validTo": "Valid To",
+        "status": "Status",
+        "costWeek": "Cost for Week",
+        "costMonth": "Cost for Month",
+        "costYear": "Cost for Year",
+        "points": "Points",
+        "promoCode": "Promo Code",
+        "price": "Price",
+        "currency": "Currency",
+        "repeatable": "Repeatable",
+        "dueTo": "Due to",
+        "callback": {
+            "title": "Fill in call back form:",
+            "accessTitle": "You have already requested a call back"
+        },
+        "subjectNameEn": "Subject Name En",
+        "subjectNameFr": "Subject Name Fr",
+        "phone": "Phone",
+        "notice": "Notice",
+        "resolve": "Resolve",
+        "unresolve": "Unresolve",
+        "newPassword": "New password",
+        "confirmPassword": "Confirm password"
+    },
+    "table": {
+        "pageIsLoading": "Page is loading",
+        "noData": "No Data",
+        "id": "ID",
+        "name": "Name",
+        "level": "Level",
+        "email": "Email",
+        "version": "Version",
+        "actions": "Actions",
+        "lastName": "Last Name",
+        "idNumber": "ID Number",
+        "customer": "Customer",
+        "reviewedBy": "Reviewed By",
+        "createdAt": "Creation Date",
+        "updatedAt": "Update Date",
+        "category": "Category",
+        "school-number": "Number",
+        "country": "Country",
+        "city": "City",
+        "address": "Address",
+        "grade": "Grade",
+        "lesson-title": "Title",
+        "lesson-subtitle": "Subtitle",
+        "lesson-content": "Lesson Section Content",
+        "sections": "Lesson Sections",
+        "subject": "Subject",
+        "description": "Description",
+        "quizTitle": "Quiz Title",
+        "quizSubtitle": "Quiz Subtitle",
+        "assignedTo": "Assigned to",
+        "timeForQuiz": "Estimated Time (minutes)",
+        "accessCode": "Access Code",
+        "finished": "Finished",
+        "questions": "Questions",
+        "question": "Question",
+        "respondentAnswer": "Answer",
+        "author": "Author",
+        "code": "Code",
+        "user": "User",
+        "type": "Type",
+        "status": "Status",
+        "statusCallback": "Status",
+        "subjects": "Subjects",
+        "duration": "Duration",
+        "validTo": "Valid To",
+        "username": "Username",
+        "userPhone": "User phone number",
+        "price": "Price",
+        "points": "Points",
+        "promoCode": "Promo code",
+        "cashFlow": "Cash Flow",
+        "currency": "Currency",
+        "repeatable": "Repeatable payment",
+        "offlineCode": "Offline Code",
+        "costWeek": "Cost for Week",
+        "costMonth": "Cost for Month",
+        "costYear": "Cost for Year",
+        "dueTo": "Due to",
+        "received": "Received",
+        "callDate": "Call date & time",
+        "phone": "Phone",
+        "title": "Title",
+        "activatedByUser": "Activated by user",
+        "reason": "Reason",
+        "company": "Company",
+        "notice": "Notice",
+        "icon": "Icon",
+        "isDeleted": "Deleted",
+        "school": "School",
+        "caller": "Caller",
+        "file": "File",
+        "questionsCorrect": "Quiz result, %"
+    },
+    "page": {
+        "signUp": {
+            "title": "Sign Up",
+            "email": "Email",
+            "username": "Username",
+            "password": "Password",
+            "grade": "Grade Level",
+            "signUp": "Signup",
+            "agreementPart1": "By clicking sign up you confirm that you have read and agreed with",
+            "agreementPart2": "Terms and Conditions",
+            "agreementPart3": "and the",
+            "agreementPart4": "Privacy Policy."
+        },
+        "forgotPassword": {
+            "title": "Forgot Password",
+            "successNotification": "We have sent an email to change your password!",
+            "confirmPassword": "Confirm password",
+            "notMatch": "Password not match",
+            "passRequired": "Password field is required",
+            "confirmPassRequired": "Confirm Password field is required",
+            "minLength": "Need more than 4 characters",
+            "usernameRequired": "Field is required",
+            "passwordChanged": "The password was changed"
+        },
+        "admin": {
+            "userManagement": {
+                "title": "User Management",
+                "createUser": "Create User"
+            },
+            "userRankList": {
+                "title": "User Rank"
+            },
+            "schoolManagement": {
+                "title": "School Management",
+                "createSchool": "Create School"
+            },
+            "subjectManagement": {
+                "title": "Subject Management",
+                "createSubject": "Create Subject",
+                "subjects" : "Subjects",
+                "primarySubjects" : "Primary Subjects"
+            },
+            "gradeManagement": {
+                "title": "Grade Level Management",
+                "createGrade": "Create Grade"
+            },
+            "subscriptions": {
+                "title": "Subscription Plans",
+                "createSubscription": "Create Subscription"
+            },
+            "offline-payments": {
+                "title": "Offline Payments",
+                "nonActivePayments": "Non-active payments",
+                "activePayments": "Active payments",
+                "createCompany": "Create company"
+            },
+            "orange-payments": {
+                "title": "Orange Payments",
+                "nonActivePayments": "Non-active payments",
+                "activePayments": "Active payments"
+            },
+            "paypal-payments": {
+                "title": "PayPal Payments",
+                "nonActivePayments": "Non-active payments",
+                "activePayments": "Active payments"
+            },
+            "settings": {
+                "title": "Settings",
+                "save": "Save",
+                "callbackLimit": "Callback limit",
+                "pricePerPoint": "Price per point",
+                "facebookLink": "Facebook link",
+                "twitterLink": "Twitter link",
+                "rateAppAndroid": "Android rate link",
+                "rateAppIOS": "IOS rate link",
+                "recommendApp": "Recommended link",
+                "appVersion": "App version",
+                "value": "Value",
+                "referralCredits": "Referral credits",
+                "points": "Points",
+                "percents": "Percents"
+            },
+            "notice-board": {
+                "title": "Notice board",
+                "create": "Create notice"
+            },
+            "ideas-bugs": {
+                "title": "Ideas and Bugs",
+                "ideas": "Ideas",
+                "bugs": "Bugs"
+            }
+        },
+        "app": {
+            "home": "Home",
+            "admin": "Admin Panel",
+            "lessons": "Lessons",
+            "quizz": "QCM",
+            "quizzes": "Quizzes",
+            "groups": "Groups",
+            "inbox": "Inbox",
+            "students-list": "Students List",
+            "exams": "Exam Management",
+            "homework": "Homework",
+            "question": "Ask Teacher",
+            "ask-teacher": "Ask Teacher",
+            "chat-management": "Chat Management",
+            "comingSoon": "coming soon.."
+        },
+        "dashboard": {
+            "averageScore": "Your average Score",
+            "lessonsDoneToday": "Lessons Done Today",
+            "lessonsDoneTotal": "Total Lessons Done",
+            "scoreTable": {
+                "header": "TOP 10 TODAY",
+                "column1": "Position",
+                "column2": "Name",
+                "column3": "Points"
+            }
+        },
+        "lessons": {
+            "title": "Lessons Management",
+            "createLesson": "Create Lesson"
+        },
+        "lesson-set": {
+            "header": "Create Lesson",
+            "title": "Lesson Title",
+            "subtitle": "Lesson Subtitle",
+            "sections": "Lesson Sections",
+            "sectionsAdd": "Add Section",
+            "homework": "Lesson Section Homework",
+            "homeworkAdd": "Add Homework",
+            "addHomeWorkOption": "Add Answer",
+            "variant": "Question Variant",
+            "subject": "Select Subject",
+            "grade": "Select Grade",
+            "value": "Option Value",
+            "optionDescription": "Option Description",
+            "answer": "Question Answer",
+            "answerDescription": "Answer Description"
+        },
+        "quizzes": {
+            "title": "Quizzes Management",
+            "createQuiz": "Create Quiz"
+        },
+        "quiz-set": {
+            "header": "Create Quiz",
+            "title": "Quiz Title",
+            "subtitle": "Quiz Subtitle",
+            "subject": "Select Subject",
+            "grade": "Select Grade",
+            "grades": "Select Grades",
+            "questions": "Questions",
+            "questionTitle": "Question Title",
+            "questionAdd": "Add Question",
+            "options": "Quiz Section Options",
+            "optionsAdd": "Add Options",
+            "points": "Points for Quiz",
+            "numberOfQuestions": "Amount",
+            "questionsMore": "Add a little more questions"
+        },
+        "homework": {
+            "header": "Homework Assign",
+            "assignQuiz": "Create New Homework"
+        },
+        "exams": {
+            "header": "Exams Assign",
+            "assignQuiz": "Create New Exam"
+        },
+        "question": {
+            "header": "Ask Teacher",
+            "tabSearch": "Search New Questions",
+            "tabResolved": "Resolved questions",
+            "tabHistory": "Review Answers",
+            "update": "Update"
+        },
+        "my-questions": {
+            "send": "Send"
+        },
+        "logout": "Logout",
+        "login": {
+            "username": "Email or Username",
+            "password": "Password",
+            "login": "Login",
+            "loginWith": "Or Login With",
+            "passwordRestore": "Forgot Password?",
+            "noAccount": "Don't have an account?"
+        },
+        "callbackManagement": {
+            "title": "Callback Management",
+            "createCallback": "Create Callback"
+        }
+    },
+    "dialog": {
+        "profile": {
+            "profile_success_updated": "Your profile has been updated",
+            "error": {
+                "school_empty": "School name is mandatory to have your profile complete.",
+                "phone_empty": "Phone name is mandatory to have your profile complete."
+            }
+        },
+        "homework": {
+            "title": "Assign quiz to Student"
+        },
+        "exams": {
+            "title": "Assign quizzes to Student"
+        },
+        "question": {
+            "title": "Response on Question",
+            "authorsName": "Author's name",
+            "answer": "Answer"
+        },
+        "fileUpload": {
+            "success": "File was successfully uploaded!",
+            "failure": "Something went wrong with file uploading. Please, try one more time."
+        },
+        "callback": {
+            "request": {
+                "text-1": "You are going to submit the callback request for ",
+                "text-2": ", this will consume ",
+                "text-3": " points on hold and it will be actually charged after callback."
+            }
+        },
+        "subscription": {
+            "statuses": {
+                "waitingForPayment": "Waiting for the payment",
+                "paymentVerification": "Payment verification is pending",
+                "subscriptionActivated": "Subscription activated"
+            },
+            "subscribe_to_subject": {
+                "text-1": "Are you sure you want to subscribe"
+            },
+            "set": "Create subscription"
+        },
+        "orangePayment": {
+            "header": "Orange Payment",
+            "subHeader": "This will send an SMS to +22790508383",
+            "message": "Payment will be charged if you proceed"
+        },
+        "orangePaymentConfirm": {
+            "header": "Enter PIN"
+        },
+        "alert": {
+            "btn": {
+                "ok": "Ok",
+                "cancel": "Cancel",
+                "send": "Send"
+            }
+        },
+        "school": {
+            "title": "School Settings"
+        },
+        "subject": {
+            "title": "Subject settings"
+        },
+        "company": {
+            "title": "Create company"
+        },
+        "user": {
+            "title": "User Settings"
+        },
+        "notice": {
+            "title": "Create notice"
+        },
+        "userCash": {
+            "balance": "Balance",
+            "canceled": "Canceled",
+            "active": "Active",
+            "setPoints": "Set points"
+        }
+    },
+    "subject": {
+        "math": "Mathematics",
+        "history": "History"
+    },
+    "application": {
+        "tabs": {
+            "tab": {
+                "ask_teacher": "Ask teacher",
+                "lesson": "Lesson",
+                "callback": "Callback",
+                "info": "Info"
+            }
+        },
+        "terms": {
+            "title": "Terms and Conditions"
+        },
+        "privacy": {
+            "title": "Privacy Policy"
+        },
+        "notifications": {
+            "title": "Notifications"
+        },
+        "login": {
+            "username": "Email or Username",
+            "password": "Password",
+            "login": "Login",
+            "loginWith": "Or Login With",
+            "passwordRestore": "Forgot Password?",
+            "noAccount": "Don't have an account?"
+        },
+        "signUp": {
+            "title": "Sign Up",
+            "email": "Email",
+            "username": "Username",
+            "password": "Password",
+            "grade": "Grade",
+            "phoneNumber": "Phone Number",
+            "signUp": "Signup",
+            "language": "Language",
+            "addReferral": "Have you been invited?"
+        },
+        "forgotPassword": {
+            "title": "Forgot Password",
+            "username": "Email or Username",
+            "done": "Done",
+            "success_notification": "We have sent an email to change your password!"
+        },
+        "home": {
+            "title": "Home",
+            "points": "Point(s)",
+            "editProfile": "Edit Profile",
+            "your_average_score": "Your average Score",
+            "lessons_done_today": "Lessons Done Today",
+            "total_lessons_done": "Total Lessons Done",
+            "start_lesson": "Start Lesson",
+            "rating": {
+                "pos": "Pos",
+                "name": "Name",
+                "point": "Point",
+                "score": "Score"
+            },
+            "groups": "My Groups",
+            "seeAll": "See All",
+            "rank": "Rank",
+            "score": "Score"
+        },
+        "homework": {
+            "title": "Homework and Quiz Results",
+            "code": "Homework Code",
+            "submit": "Begin"
+        },
+        "quiz_result": {
+            "title": "Homework and Quiz Results",
+            "time_to_complete_test": "Time taken to complete test",
+            "more_quizzes": "More quizzes"
+        },
+        "quiz": {
+            "notFound": "Homework or Exam not Found",
+            "timeout": "The Time is Over",
+            "homework": "Homework",
+            "exam": "Exam",
+            "question": "Question",
+            "answerInput": "Type your Answer",
+            "answerSelect": "Select your Answer",
+            "answerSubmit": "Submit",
+            "answerNext": "Next",
+            "stop": "Stop"
+        },
+        "quizzes": {
+            "title": "Quizzes Database",
+            "not_active_subscription": "You don’t have any active subscription. Subscribe for one or more subjects to get access for quizzes."
+        },
+        "question": {
+            "title": "Ask Teacher",
+            "titleForm": "Ask Teacher - New Question",
+            "subject": "Subject",
+            "question": "Type Your Question",
+            "submit": "Submit Question",
+            "reviewQuestions": "Review Previous Answers",
+            "not_active_questions": "You don't have any active questions.",
+            "not_active_subscription": "You don’t have subscription for any subject yet. Please, buy some points and subscribe to the related subjects.",
+            "emptyQuestions": "You don’t have any questions. Click on the icon at the top right to ask a question"
+        },
+        "lesson": {
+            "title": "Lesson",
+            "sectionPrevious": "Previous",
+            "sectionNext": "Next",
+            "incompleteLesson": "Uncompleted lessons",
+            "completeLesson": "Complete lesson"
+        },
+        "lessons": {
+            "title": "Lessons",
+            "not_active_lessons": "You don’t have subscription for any subject yet. Please, buy some points and subscribe to the related subjects."
+        },
+        "profile": {
+            "title": "Profile Setup",
+            "username": "Username",
+            "name": "Name",
+            "lastName": "Last Name",
+            "email": "E-mail",
+            "grade": "Grade",
+            "school": "School",
+            "confirm": "Confirm",
+            "language": "Language",
+            "phoneNumber": "Phone"
+        },
+        "subscriptions": {
+            "title": "Subscriptions",
+            "success_paySubscriptionOffline_notification": "We have received your code, wait while we verify it. It may take up to 6 hours. Please, check back later.",
+            "tab": {
+                "history": {
+                    "title": "History",
+                    "balance": "Balance",
+                    "canceled": "Canceled",
+                    "hold": "On Hold",
+                    "verification": "On Verification",
+                    "active": "Active"
+                },
+                "subscriptions": {
+                    "title": "Active Subscriptions",
+                    "balance": "Balance",
+                    "order_new_subscr": "Order new Subscriptions"
+                },
+                "points": {
+                    "title": "Order points",
+                    "payment_method": "Payment method",
+                    "promo_code": "Promo Code",
+                    "offline_code": "Offline Code",
+                    "identifier": "Identifier",
+                    "offlineCompanies": "Offline companies",
+                    "offlinePayment": "Offline payment method",
+                    "company": "Company",
+                    "customPoints": "Order custom number of points",
+                    "numberOfPoints": "Enter the number of points",
+                    "price": "Price",
+                    "pointsCalculator": "Calculate price",
+                    "submit": "Pay now",
+                    "point": "Point",
+                    "points-info": "Please enter the number of points you would like to buy",
+                    "offlinePaymentSuccess": "We have accepted your request to validate your payment. You will get notification when it will be validated. Generally it may take 4-6 hours.",
+                    "promo_code_success_part-1": "Your account has just been credited with",
+                    "promo_code_success_part-2": "Fcfa, you can now subscribe to a subject"
+                }
+            }
+        },
+        "callback": {
+            "title": "Call back",
+            "name": "My name",
+            "email": "My email",
+            "phone": "My phone number",
+            "time": "Best time to call",
+            "date": "Best date to call",
+            "reason": "Reason for call",
+            "timezone": "My time zone",
+            "header1": "You need at least ",
+            "header2": " points to use this feature. Please, either earn points by participating in the quiz or buy some more points.",
+            "cancel_callback": "Cancel callback",
+            "not_active_subscription": "You don’t have any active subscription. Subscribe for one or more subjects to get access for callback.",
+            "callback_sent": {
+                "title": "Please wait",
+                "text": "One of our teachers will call you in a few moments ..."
+            }
+        },
+        "welcome": {
+            "start": "start"
+        },
+        "inbox": {
+            "title": "Inbox"
+        },
+        "groups": {
+            "title": "Groups",
+            "you_navigated_here_from": "You navigated here from"
+        },
+        "add_new_card": {
+            "title": "Add new card"
+        },
+        "more_info": {
+            "title": "More info",
+            "your_feedback": "Your feedback",
+            "ideas": "Ideas and suggestions?",
+            "problem": "Signal a problem",
+            "social": "Social",
+            "follow_fb": "Follow on facebook",
+            "follow_tw": "Follow on twitter",
+            "recommend": "Recommend the app",
+            "rate": "Rate the app"
+        },
+        "send_message": {
+            "idea": "Ideas and suggestions?",
+            "problem": "Signal a problem",
+            "submit": "Send"
+        },
+        "logout": "Logout",
+        "week": "Week",
+        "month": "Month",
+        "year": "Year",
+        "paypal": "Paypal",
+        "orange": "Orange",
+        "correct": "Correct",
+        "wrong": "Wrong",
+        "yes": "Yes",
+        "no": "No",
+        "completed": "Completed",
+        "top": "Top",
+        "today": "Today",
+        "done": "Done",
+        "for": "for",
+        "notification": {
+            "newHomework": "You have a new homework",
+            "newExam": "You have a new exam",
+            "balanceChange": "Your balance was changed",
+            "offlineBalanceChange": "Your balance was changed by offline payment",
+            "questionAnswer": "Your question has new answer",
+            "subscriptionEnd": "Subscription expires soon",
+            "noticeCreated": "There is an important notice for VirtuProfs user"
+        },
+        "customMin": "Maximal number can't be less than minimal",
+        "customMax": "Minimal number can't be more than maximal",
+        "notice_board": {
+            "title": "Notice board"
+        }
+    },
+    "event": {
+        "nothing": "No Updates",
+        "type": {
+            "homework": "Homework",
+            "exam": "Exam"
+        },
+        "action": {
+            "create": "create"
+        }
+    }
+}

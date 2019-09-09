@@ -1,0 +1,32 @@
+mat-dialog-content
+    h3 {{'dialog.subscription.set' | translate}}
+    br
+    div([formGroup]="subscriptionForm", fxLayout="column")
+        mat-form-field(fxFlex)
+            input(matInput, placeholder="{{'form.name' | translate}}", formControlName="name", type="text", required)
+            mat-error {{'errors.required' | translate}}
+        div(fxLayout="row")
+            mat-form-field(fxFlex="40")
+                input(matInput, placeholder="{{'form.currency' | translate}}", formControlName="currency", type="text", [matAutocomplete]="autoCurrency", required)
+                mat-autocomplete(#autoCurrency="matAutocomplete")
+                    mat-option(*ngFor="let currency of filteredCurrency | async", [value]="currency.code") {{currency.name}}
+                mat-error {{'errors.required'|translate}}
+            mat-form-field(fxFlex, fxFlexOffset="5px")
+                input(matInput, placeholder="{{'form.price' | translate}}", formControlName="price", type="number", required)
+                mat-error {{'errors.required' | translate}}
+        mat-form-field(fxFlex)
+            input(matInput, placeholder="{{'form.points' | translate}}", formControlName="points", type="number", required)
+            mat-error {{'errors.required' | translate}}
+        mat-slide-toggle(formControlName="repeatable", , fxFlexOffset="10px") {{'form.repeatable' | translate}}
+        mat-slide-toggle(formControlName="status", , fxFlexOffset="10px") {{'form.status' | translate}}
+        hr
+        mat-form-field(fxFlex)
+            input(matInput, placeholder="{{'form.promoCode' | translate}}", formControlName="promoCode", type="text")
+        mat-form-field(fxFlex)
+            input(matInput, [matDatepicker]="picker" placeholder="{{'form.validTo' | translate}}", , formControlName="validTo")
+            mat-datepicker-toggle(matSuffix [for]="picker")
+            mat-datepicker(#picker)
+    br
+mat-dialog-actions
+    button(mat-raised-button, (click)="createSubscription()", color="primary", [disabled]="!subscriptionForm.valid || !subscriptionForm.dirty") {{'form.save' | translate}}
+    button(mat-button, (click)="selfClose()") {{'form.cancel' | translate}}

@@ -1,0 +1,13 @@
+.payment-status-page {
+    background: linear-gradient(#643e95,#237ec5) center center no-repeat fixed;
+    height: 100vh;
+    .logo {
+        height: 10vh;
+    }
+    h3 {
+        color: #fff;
+        font-size: 2em;
+        flex: unset !important;
+        margin-top: 5vh;
+    }
+}

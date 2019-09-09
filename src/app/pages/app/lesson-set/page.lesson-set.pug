@@ -1,0 +1,56 @@
+.app-page-lesson-set.padding(fxLayout="column", fxFlex, )
+    h3(fxFlex) {{'page.lesson-set.header' | translate}}
+    br
+    div(fxLayout="column", *ngIf="pageLoading")
+        h4 {{'page.loading' | translate}}...
+    div([formGroup]="lessonForm", fxLayout="column", *ngIf="!pageLoading")
+        mat-form-field
+            input(matInput, placeholder="{{'page.lesson-set.title' | translate}}", required, formControlName="title")
+            mat-error {{'errors.required' | translate}}
+        mat-form-field
+            input(matInput, placeholder="{{'page.lesson-set.subtitle' | translate}}", required, formControlName="subtitle")
+            mat-error {{'errors.required' | translate}}
+        .form-row(fxLayout="row")
+            mat-form-field(fxFlex)
+                mat-select(placeholder="{{'page.lesson-set.subject' | translate}}", required, formControlName="subject")
+                    mat-option(*ngFor="let subject of subjects", [value]="subject._id") {{subject.subjectName}}
+                mat-error {{'errors.required' | translate}}
+            mat-form-field(fxFlex, fxFlexOffset="15px")
+                mat-select(placeholder="{{'page.lesson-set.grade' | translate}}", required, [multiple]="true", formControlName="grade" )
+                    mat-option(*ngFor="let grade of grades", [value]="grade._id") {{grade.level}}
+                mat-error {{'errors.required'|translate}}
+        div(fxLayout="row")
+            h4 {{'page.lesson-set.sections' | translate}}
+            button(mat-raised-button, fxFlexOffset="15px", (click)="lessonForm.controls.sections.push(initContent())") {{'page.lesson-set.sectionsAdd' | translate}}
+        mat-accordion(formArrayName="sections", fxFlexOffset="15px")
+            mat-expansion-panel(*ngFor="let section of lessonForm.controls.sections.controls; let secIndex = index;", [expanded]="section.value.expanded")
+                mat-expansion-panel-header
+                    mat-panel-title {{section.value.title || '...'}}
+                    mat-panel-description {{section.value.subtitle}}
+                div([formGroupName]="secIndex")
+                    div(fxLayout="row")
+                        div(fxFlex="90")
+                            div(fxLayout="row")
+                                mat-form-field(fxFlex)
+                                    input(matInput, placeholder="{{'page.lesson-set.title' | translate}}", required, formControlName="title")
+                                    mat-error {{'errors.required' | translate}}
+                                mat-form-field(fxFlex, fxFlexOffset="15px")
+                                    input(matInput, placeholder="{{'page.lesson-set.subtitle' | translate}}", formControlName="subtitle")
+                                    //mat-error {{'errors.required' | translate}}
+                            div([froalaEditor]="editOptions", formControlName="content")
+                        div(fxFlex="10", fxLayoutAlign="center start")
+                            button(mat-fab, (click)="removeFormElement(lessonForm.controls.sections, secIndex)")
+                                mat-icon delete_forever
+                    //br
+                    //div(fxLayout="row")
+                        h4 {{'page.lesson-set.homework' | translate}}
+                        button(mat-raised-button, fxFlexOffset="15px", (click)="section.controls.homework.push(initQuestion())") {{'page.lesson-set.homeworkAdd' | translate}}
+                    //br
+                    //div(formArrayName="homework")
+                        div(*ngFor="let homework of section.controls.homework.controls; let homeIndex = index;", [formGroupName]="homeIndex")
+                            br
+                            app-question-element([questions]="section.controls.homework", [question]="homework", [homeIndex]="homeIndex")
+    div(fxLayout="row", fxFlexOffset="15px")
+        div(fxFlex)
+        div
+            button(mat-raised-button, [disabled]="!lessonForm.valid", (click)="submitForm()") {{'form.save' | translate}}

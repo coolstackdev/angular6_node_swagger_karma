@@ -1,0 +1,73 @@
+div.flex-wrap(fxLayout="row", fxLayoutAlign="start start", [formGroup]="question")
+    mat-form-field
+        mat-select(placeholder="{{'page.lesson-set.variant' | translate}}", required, formControlName="variant")
+            mat-option(*ngFor="let item of homeWorkVariants", [value]="item.variant") {{item.name | translate}}
+        mat-error {{'errors.required' | translate}}
+    div(fxLayout="column", fxFlex, fxFlexOffset="15px")
+        div(fxLayout="row", fxLayoutAlign="start start")
+            div([froalaEditor]="questionOptions", formControlName="title", fxFlex)
+        br
+        div.flex-wrap(fxLayout="row", fxLayoutAlign="start start")
+            div(fxLayout="column", formArrayName="options", *ngIf="question.value.variant === 'options' || question.value.variant === 'multiple' || question.value.variant === 'match'", style="width: 100%;")
+                div(*ngFor="let option of question.controls.options.controls; let optionIndex = index;")
+                    div([formGroupName]="optionIndex")
+                        app-upload-icon.question-element__upload-image((iconOnLoaded)="uploadImg($event, option)", [icon]="option.get('image').value")
+                        mat-form-field(fxFlex)
+                            input(matInput, placeholder="{{'page.lesson-set.value' | translate}}", required, formControlName="value", disabled="true")
+                            mat-error {{'errors.required' | translate}}
+
+                        mat-form-field(fxFlex, fxFlexOffset="15px")
+                            input(matInput, placeholder="{{'page.lesson-set.optionDescription' | translate}}", formControlName="description")
+                            mat-error {{'errors.required' | translate}}
+
+                        button(mat-icon-button, (click)="removeFormElement(question.controls.options, optionIndex)")
+                            mat-icon delete
+                button(mat-button, (click)="question.controls.options.push(initOption())", style="align-self: start; margin-left: 15px;")
+                    mat-icon playlist_add
+                    span &nbsp;{{'page.lesson-set.addHomeWorkOption' | translate}}
+            div(fxFlex)
+                mat-form-field(*ngIf="question.value.variant === 'free' || question.value.variant === 'free-multiple'")
+                    input(matInput, placeholder="{{'page.lesson-set.answer' | translate}}", required, formControlName="answer")
+                    mat-error {{'errors.required' | translate}}
+                mat-form-field(*ngIf="question.value.variant === 'options'", style="margin-left: 15px;")
+                    mat-select(formControlName="answer", required, placeholder="{{'page.lesson-set.answer' | translate}}")
+                        mat-option(*ngFor="let item of question.value.options", [value]="item.value") {{item.value}}
+                    mat-error {{'errors.required' | translate}}
+                mat-form-field(*ngIf="question.value.variant === 'multiple'", style="margin-left: 15px;")
+                    mat-select(formControlName="answer", required, placeholder="{{'page.lesson-set.answer' | translate}}", multiple)
+                        mat-option(*ngFor="let item of question.value.options", [value]="item.value") {{item.value}}
+                    mat-error {{'errors.required' | translate}}
+                mat-form-field(*ngIf="question.value.variant === 'boolean'")
+                    mat-select(formControlName="answer", required, placeholder="{{'page.lesson-set.answer' | translate}}")
+                        mat-option([value]="true") TRUE
+                        mat-option([value]="false") FALSE
+                    mat-error {{'errors.required' | translate}}
+                div(*ngIf="question.value.variant === 'match'", fxLayout="column")
+                    div(*ngFor="let item of question.value.options; let index = index;", fxLayout="row")
+                        b(fxLayout="column", fxLayoutAlign="center center" ) {{index+1}}.&nbsp;
+                        mat-form-field
+                            mat-select(required, placeholder="{{'page.lesson-set.answer' | translate}}", [(ngModel)]="matchArray[index]", (ngModelChange)="matchChange(index, $event)", [ngModelOptions]="{standalone: true}")
+                                mat-option(*ngFor="let item of question.value.options", [value]="item.value") {{item.value}}
+                            mat-error {{'errors.required' | translate}}
+                mat-form-field(fxFlex, fxFlexOffset="15px")
+                    input(matInput, placeholder="{{'page.lesson-set.answerDescription' | translate}}", formControlName="answerDescription")
+                    mat-error {{'errors.required' | translate}}
+            //div(fxFlex)
+                mat-form-field(*ngIf="question.value.variant === 'multiple' || question.value.variant === 'options' || question.value.variant === 'boolean'")
+                    mat-select.multiple-select(placeholder="{{'page.lesson-set.answer' | translate}}", required, formControlName="answer", *ngIf="question.value.variant === 'multiple'", multiple)
+                        mat-option.multiple-select-option(*ngFor="let item of question.controls.options.controls", [value]="item.value.value") {{item?.value?.value}}
+                    mat-select(placeholder="{{'page.lesson-set.answer' | translate}}", required, formControlName="answer", *ngIf="question.value.variant !== 'multiple'")
+                        ng-template([ngIf]="question.value.variant === 'options'")
+                            mat-option(*ngFor="let item of question.controls.options.controls", [value]="item.value.value") {{item?.value?.value}}
+                        ng-template([ngIf]="question.value.variant === 'boolean'")
+                            mat-option([value]="true") True
+                            mat-option([value]="false") False
+                    mat-error {{'errors.required' | translate}}
+                mat-form-field(*ngIf="!(question.value.variant === 'multiple' || question.value.variant === 'options' || question.value.variant === 'boolean')")
+                    input(matInput, placeholder="{{'page.lesson-set.answer' | translate}}", required, formControlName="answer")
+                    mat-error {{'errors.required' | translate}}
+        div(*ngIf="question.value.variant === 'free-multiple'") {{'form.variant.free-multipleDescription' | translate}}
+    div(fxFlex="10", fxLayoutAlign="center start")
+        button(mat-mini-fab, (click)="removeFormElement(questions, index)")
+            mat-icon delete_forever
+hr

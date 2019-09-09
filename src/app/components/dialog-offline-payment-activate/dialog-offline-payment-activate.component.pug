@@ -1,0 +1,21 @@
+mat-dialog-content
+    h3 {{'page.admin.offline-payments.title' | translate}}
+    br
+    div([formGroup]="paymentForm", fxLayout="column")
+        mat-form-field(fxFlex)
+            input(matInput, placeholder="{{'table.offlineCode' | translate}}", formControlName="offlineCode", type="text")
+        mat-form-field(fxFlex)
+            mat-select(placeholder="{{'form.type' | translate}}", required, formControlName="paymentStatus")
+                mat-option(*ngFor="let paymentType of paymentTypes", [value]="paymentType._id") {{paymentType.description}}
+            mat-error {{'errors.required' | translate}}
+        //mat-form-field(fxFlex)
+        //    mat-select(placeholder="{{'form.subscription' | translate}}", formControlName="subscription", [disabled]="paymentForm.value.cashFlow")
+        //        mat-option(value) ---
+        //        mat-option(*ngFor="let sub of subscriptions", [value]="sub._id") {{sub.name}} - {{sub.points}} {{'form.points' | translate}}
+        mat-form-field(fxFlex)
+            input(matInput, placeholder="{{'form.points' | translate}}", formControlName="cashFlow", type="number", [disabled]="paymentForm.value.subscription")
+        //mat-slide-toggle(fxFlexOffset="10px", [disabled]="true") {{'form.status' | translate}}
+    br
+mat-dialog-actions
+    button(mat-raised-button, (click)="activatePayment()", color="primary", [disabled]="!paymentForm.valid || !paymentForm.dirty") {{'form.save' | translate}}
+    button(mat-button, (click)="selfClose()") {{'form.cancel' | translate}}

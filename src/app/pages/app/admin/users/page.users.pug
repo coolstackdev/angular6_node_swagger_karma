@@ -1,0 +1,7 @@
+.app-page-admin-users(fxLayout="column", fxFlex)
+    div(fxLayout="row", fxLayoutAlign="center center")
+        h3(fxFlex) {{'page.admin.userManagement.title' | translate}}
+        div
+            button(mat-button, mat-raised-button, (click)="editUser()") {{'page.admin.userManagement.createUser' | translate}}
+    div
+        app-table([data]="users", [dataHeader]="usersDataHeader", (create)="editUser($event)", (remove)="deleteUser($event)", (setCash)="showUserCash($event)")

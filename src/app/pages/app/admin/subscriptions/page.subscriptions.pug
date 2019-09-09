@@ -1,0 +1,7 @@
+.app-page-admin-subscriptions(fxLayout="column", fxFlex)
+    div(fxLayout="row", fxLayoutAlign="center center")
+        h3(fxFlex) {{'page.admin.subscriptions.title' | translate}}
+        div
+            button(mat-button, mat-raised-button, (click)="editSubscription()") {{'page.admin.subscriptions.createSubscription' | translate}}
+    div
+        app-table([data]="subscriptions", [dataHeader]="subscriptionsDataHeader", (create)="editSubscription($event)", (remove)="deleteSubscription($event)")

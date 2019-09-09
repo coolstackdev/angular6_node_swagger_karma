@@ -1,0 +1,8 @@
+.app-page-admin-users(fxLayout="column", fxFlex)
+    div(fxLayout="row", fxLayoutAlign="center center")
+        h3(fxFlex) {{'page.admin.schoolManagement.title' | translate}}
+        div
+            button(mat-button, mat-raised-button, (click)="editSchool()") {{'page.admin.schoolManagement.createSchool' | translate}}
+
+    div
+        app-table([data]="schools", [dataHeader]="schoolsDataHeader", (create)="editSchool($event)", (remove)="deleteSchool($event)")

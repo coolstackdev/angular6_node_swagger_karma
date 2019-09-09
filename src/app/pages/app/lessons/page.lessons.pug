@@ -1,0 +1,7 @@
+.app-page-lessons.padding(fxLayout="column", fxFlex)
+    div(fxLayout="row", fxLayoutAlign="center center")
+        h3(fxFlex) {{'page.lessons.title' | translate}}
+        div
+            button(mat-button, mat-raised-button, routerLink="/app/lesson/create") {{'page.lessons.createLesson' | translate}}
+    div
+        app-table([data]="lessons", [dataHeader]="lessonsDataHeader", (create)="editLesson($event)", (remove)="deleteLesson($event)")

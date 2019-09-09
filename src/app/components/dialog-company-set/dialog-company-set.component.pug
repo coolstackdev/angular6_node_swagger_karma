@@ -1,0 +1,12 @@
+h2(mat-dialog-title) {{'dialog.company.title' | translate}}
+mat-dialog-content
+    form([formGroup]="companyForm", fxLayout="column")
+        app-upload-icon((iconOnLoaded)="setIcon($event)", [icon]="companyForm.get('icon').value")
+        mat-form-field(fxFlex)
+            input(matInput, placeholder="{{'form.name' | translate}}", formControlName="name", type="text", required)
+            mat-error {{'errors.required' | translate}}
+
+        div([froalaEditor]="editOptions", formControlName="description", fxFlex)
+mat-dialog-actions
+    button(mat-raised-button, color="primary", (click)="selfClose(true, companyForm.value)", [disabled]="!companyForm.valid || !companyForm.dirty") {{'form.save' | translate}}
+    button(mat-button, (click)="selfClose(false, companyForm.value)") {{'form.cancel' | translate}}

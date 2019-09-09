@@ -1,0 +1,10 @@
+.app-page(fxLayout="column")
+    app-header([user]="user", [currentLang]="translate.currentLang", [langs]="langs", (changeLanguage)="changeLanguage($event)", )
+    .content-container(fxLayout="row")
+        mat-nav-list.navigation-container(fxFlex="20")
+            mat-list-item(*ngFor="let item of menu; let i = index", [routerLink]="item.link", routerLinkActive="active")
+                mat-icon(color="primary") {{item.icon}}
+                span(fxFlexOffset="15px") {{item.name | translate}}
+                mat-icon(color="primary", [ngClass]="{'arrow': !item.nested}") arrow_right
+        div(fxFlex="80")
+            router-outlet

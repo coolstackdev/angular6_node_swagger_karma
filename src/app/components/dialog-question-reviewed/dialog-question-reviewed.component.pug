@@ -1,0 +1,17 @@
+mat-dialog-content
+    h3 {{'dialog.question.title' | translate}}
+    br
+    div(fxLayout="column")
+        b {{'dialog.question.authorsName' | translate}}: {{question.author.lastName}} {{question.author.name}}
+        div(fxLayout="row")
+            div(fxFlex) {{'table.subject' |translate}}: {{question.subject.name[translate.currentLang]}}
+            div(fxFlex, *ngIf="question.grade") {{'table.grade' |translate}}: {{question.grade?.category}} ({{question.grade?.level}})
+        h4 Question:
+            p(fxFlexOffset="15px", [innerHtml]="question.question")
+        h5(fxFlexOffset="15px", *ngFor='let answer of question.answers')
+            b(style="") {{answer.updatedAt | date:'dd-MM-yyyy, HH:mm'}} {{answer.sender.name}} {{answer.sender.lastName}}:
+                span([innerHtml]="answer.message")
+        br
+mat-dialog-actions
+    button(mat-button, (click)="selfClose()") {{'form.cancel' | translate}}
+    button(mat-raised-button, color="primary", (click)="unresolveQuestion()") {{'form.unresolve' | translate}}

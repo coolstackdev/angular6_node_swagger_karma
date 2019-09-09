@@ -1,0 +1,4 @@
+form([formGroup]="form", (ngSubmit)="submitForm()", fxLayout="row", fxLayoutAlign="start center")
+    mat-form-field(fxFlex="100")
+        input(matInput, placeholder="{{'page.admin.settings.' + key | translate}}", required, formControlName="value", type="text")
+    button(fxFlexOffset="15px", mat-button, mat-raised-button, color="primary", type="submit") {{'page.admin.settings.save' | translate}}

@@ -1,0 +1,43 @@
+mat-nav-list {
+    padding: 0;
+}
+
+.wrap-container {
+    padding: 20px;
+}
+
+.navigation-container {
+    background-color: #fff;
+    color: rgba(158, 158, 158, 1);
+    border-right: 1px solid rgba(226, 226, 226, 1);
+    mat-list-item {
+        position: relative;
+        color: rgba(158, 158, 158, 1);
+        height: 60px;
+        mat-icon {
+            color: rgba(158, 158, 158, 1);
+            &.active {
+                color: rgba(91, 81, 159, 1);
+            }
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -1px;
+            width: 1px;
+            background-color: rgba(226, 226, 226, 1);
+        }
+        &.active {
+            color: rgba(0, 0, 0, 1);
+            background-color: #f5f5f5;
+            &:after {
+                //background-color: #ffffff;
+            }
+            mat-icon {
+                color: rgba(91, 81, 159, 1);
+            }
+        }
+    }
+}

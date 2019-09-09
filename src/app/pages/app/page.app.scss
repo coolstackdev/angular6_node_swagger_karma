@@ -1,0 +1,93 @@
+.content-container {
+    background-color: #fff;
+    min-height: 500px;
+
+    .wrap-container {
+        padding: 20px;
+    }
+}
+
+mat-nav-list {
+    padding: 0;
+}
+
+.arrow {
+    display: none;
+}
+
+.navigation-container {
+    background-color: rgba(242, 242, 242, 1);
+    color: rgba(158, 158, 158, 1);
+    border-right: 1px solid rgba(226, 226, 226, 1);
+    mat-list-item {
+        position: relative;
+        color: rgba(158, 158, 158, 1);
+        border-bottom: 1px solid rgba(226, 226, 226, 1);
+        height: 60px;
+        mat-icon {
+            color: rgba(158, 158, 158, 1);
+            &.active {
+                color: rgba(91, 81, 159, 1);
+            }
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -1px;
+            width: 1px;
+            background-color: rgba(226, 226, 226, 1);
+        }
+        &.active {
+            color: rgba(0, 0, 0, 1);
+            background-color: rgba(255, 255, 255, 1);
+            &:after {
+                background-color: #ffffff;
+            }
+            mat-icon {
+                color: rgba(91, 81, 159, 1);
+            }
+        }
+    }
+}
+
+/deep/ {
+    data-table {
+        .data-table {
+            font-size: 14px;
+            &-box {
+                overflow: auto;
+                margin-bottom: 10px;
+            }
+            &.table {
+                max-width: none;
+                width: auto;
+                min-width: 100%;
+                margin-bottom: 10px;
+                tr {
+                    height: 30px;
+                }
+                .substitute-rows {
+                    display: none;
+                }
+            }
+        }
+        .data-table-header {
+            .button-panel {
+                //margin-bottom: 10px;
+            }
+        }
+        &-pagination {
+            .pagination-controllers .pagination-limit {
+                display: none;
+            }
+            .pagination-pages > * {
+                margin-left: 5px;
+            }
+        }
+    }
+
+}
+
+

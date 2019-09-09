@@ -1,0 +1,18 @@
+h2(mat-dialog-title) {{'dialog.userCash.balance' | translate}}
+mat-dialog-content
+    .transactions(style="max-height: 45vh;overflow-y: scroll;")
+        .item(*ngFor="let item of transactions", style="margin-bottom: 25px;")
+            p {{item.updatedAt | date: 'dd-MM-yyyy'}} &nbsp;&nbsp;&nbsp;
+                b {{(item.status ? 'dialog.userCash.active' : 'dialog.userCash.canceled') | translate}}
+            p {{getTransactionType(item.type)}} &nbsp;&nbsp;&nbsp;
+                b {{item.cashFlow > 0 ? '+' : ''}}{{item.cashFlow}}
+
+    form(fxLayout="column", style="matgin-top: 25px;")
+        h4 {{'dialog.userCash.setPoints' | translate}}
+        mat-form-field(fxFlex)
+            input(matInput, placeholder="{{'form.points' | translate}}", [formControl]="balanceControl", type="number")
+
+
+mat-dialog-actions(fxLayoutAlign="space-between center" )
+    button(mat-button, [mat-dialog-close]) {{'form.cancel'|translate}}
+    button(mat-button, mat-raised-button, (click)="save()") {{'form.save'|translate}}

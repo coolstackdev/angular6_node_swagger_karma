@@ -1,0 +1,19 @@
+mat-toolbar.app-header(fxLayout="row")
+    mat-toolbar-row
+        object.logo(type="image/svg+xml", data="./assets/icons/logo.svg")
+    mat-toolbar-row(fxFlex)
+    mat-toolbar-row(fxLayout="row", fxFlexOffset="15px")
+        .lang-info([matMenuTriggerFor]="langMenu", fxLayout="row", fxLayoutAlign="center center")
+            span {{currentLang}}
+        mat-menu(#langMenu="matMenu")
+            button(mat-menu-item, (click)="changeLanguage.emit(lan._id)", *ngFor="let lan of langs") {{lan.name}}
+        .profile-info([matMenuTriggerFor]="userMenu", fxLayout="row", fxLayoutAlign="center center", fxFlexOffset="15px")
+            div(fxLayout="column", fxFlexAlign="center", fxFlexOffset="15px")
+                span {{user.name}} {{user.lastName}}
+                span.role {{user.role.translation | translate}}
+            button(mat-icon-button)
+                mat-icon(color="primary") expand_more
+        mat-menu(#userMenu="matMenu")
+            //button(mat-menu-item, routerLink="profile-edit") Edit profile
+            button(mat-menu-item, (click)="userLogout()") {{'page.logout' | translate}}
+

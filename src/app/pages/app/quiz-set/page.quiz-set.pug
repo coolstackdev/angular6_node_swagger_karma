@@ -1,0 +1,46 @@
+.app-page-quiz-set.padding(fxLayout="column", fxFlex, style="width:100%;")
+    h3(fxFlex) {{'page.quiz-set.header' | translate}}
+    br
+    div(fxLayout="column", *ngIf="pageLoading")
+        h4 {{'page.loading' | translate}}...
+    div([formGroup]="quizForm", fxLayout="column", *ngIf="!pageLoading")
+        mat-form-field
+            input(matInput, placeholder="{{'page.quiz-set.title' | translate}}", required, formControlName="title")
+            mat-error {{'errors.required' | translate}}
+        mat-form-field
+            input(matInput, placeholder="{{'page.quiz-set.subtitle' | translate}}", required, formControlName="subtitle")
+            mat-error {{'errors.required' | translate}}
+        .form-row(fxLayout="row")
+            mat-form-field(fxFlex)
+                mat-select(placeholder="{{'page.quiz-set.subject' | translate}}", required, formControlName="subject")
+                    mat-option(*ngFor="let subject of subjects", [value]="subject._id") {{subject.subjectName}}
+                mat-error {{'errors.required' | translate}}
+            mat-form-field(fxFlex, fxFlexOffset="15px")
+                mat-select(placeholder="{{'page.quiz-set.grade' | translate}}", required, formControlName="grade")
+                    mat-option(*ngFor="let grade of grades", [value]="grade._id") {{grade.level}}
+                mat-error {{'errors.required' | translate}}
+            mat-form-field(fxFlex, fxFlexOffset="15px")
+                mat-select(placeholder="{{'page.quiz-set.grades' | translate}}", required, formControlName="grades", multiple)
+                    mat-option(*ngFor="let grade of grades", [value]="grade._id") {{grade.level}}
+                mat-error {{'errors.required' | translate}}
+        .form-row(fxLayout="row")
+            mat-form-field(fxFlex="32")
+                input(matInput, type="number", placeholder="{{'page.quiz-set.points' | translate}}", required, formControlName="points")
+                mat-error {{'errors.required' | translate}}
+        div(fxLayout="row", fxLayoutAlign="start center")
+            h4 {{'page.quiz-set.questions' | translate}}
+            div
+                button(mat-raised-button, fxFlexOffset="15px", (click)="setNumberOfQuestions()") {{'page.quiz-set.questionAdd' | translate}}
+            mat-form-field(fxFlexOffset="15px", style="width: 70px;")
+                input(matInput, type="number", [(ngModel)]="numberOfQuestions", [ngModelOptions]="{standalone: true}", placeholder="{{'page.quiz-set.numberOfQuestions' | translate}}")
+                mat-error {{'errors.required' | translate}}
+        br
+        div(formArrayName="questions")
+            div(*ngFor="let question of quizForm.controls.questions.controls; let qIndex = index;", [formGroupName]="qIndex")
+                br
+                app-question-element([questions]="quizForm.controls.questions", [question]="question", [index]="qIndex")
+        div(fxLayout="row", *ngIf="quizForm.controls.questions.length")
+            button(mat-raised-button, fxFlexOffset="15px", (click)="quizForm.controls.questions.push(initQuestion())") {{'page.quiz-set.questionAdd' | translate}}
+    div(fxLayout="row", fxLayoutAlign="end end", fxLayoutGap="20px", (click)="getForm()")
+        button(mat-raised-button, (click)="cancelForm()") {{'form.cancel' | translate}}
+        button(mat-raised-button, [disabled]="!quizForm.valid", (click)="submitForm()") {{'form.save' | translate}}

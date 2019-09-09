@@ -1,0 +1,39 @@
+//
+///deep/ .mat-primary mat-option.multiple-select-option {
+//    &.mat-selected:not(.mat-option-disabled) {
+//        color: #000 !important;
+//    }
+//    .mat-pseudo-checkbox-checked {
+//        background: #000 !important;
+//    }
+//}
+
+mat-option {
+    &.mat-selected {
+        background: rgba(0, 0, 0, 0.3) !important;
+    }
+    /deep/ {
+        .mat-pseudo-checkbox-checked {
+            background: rgba(0, 0, 0, 0.2) !important;
+        }
+    }
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.question-element {
+    &__upload-image {
+        margin-right: 10px;
+        /deep/ {
+            .upload-icon {
+                &__img {
+                    border-radius: 0;
+                    border: none;
+                    height: 57px;
+                }
+            }
+        }
+    }
+}

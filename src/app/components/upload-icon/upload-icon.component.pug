@@ -1,0 +1,3 @@
+.upload-icon
+    input.upload-icon__input(type='file', #fileInput, (change)='processWebImage()')
+    .upload-icon__img([style.backgroundImage]="icon ? 'url(' + icon + ')' : 'url(../../assets/icons/photo-camera.svg)'", [style.backgroundSize]="icon ? 'contain':''", (click)='getIcon()')

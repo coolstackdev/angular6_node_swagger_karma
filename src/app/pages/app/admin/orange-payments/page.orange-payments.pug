@@ -1,0 +1,9 @@
+.app-page-admin-orange-payments(fxLayout="column", fxFlex)
+    div(fxLayout="row", fxLayoutAlign="center center")
+        h3(fxFlex) {{'page.admin.orange-payments.title' | translate}}
+    div
+        ng-template(mat-tab-label)
+            span {{'page.admin.orange-payments.activePayments' | translate}}
+        .padding
+            app-table([data]="activePayments", [dataHeader]="OrangePaymentsDataHeader")
+

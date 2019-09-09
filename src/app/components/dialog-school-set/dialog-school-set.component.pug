@@ -1,0 +1,41 @@
+mat-dialog-content
+    h3 {{'dialog.school.title' | translate}}
+    br
+    div([formGroup]="schoolForm", fxLayout="column")
+        .field-group(fxLayout="row")
+            mat-form-field(fxFlex="70")
+                input(matInput, placeholder="{{'form.name' | translate}}", required, formControlName="name", type="text")
+                mat-error {{'errors.required' | translate}}
+            mat-form-field(fxFlex="30", fxFlexOffset="5px")
+                input(matInput, placeholder="{{'form.number' | translate}}", formControlName="number", type="number")
+                mat-error {{'errors.required' | translate}}
+        .field-group(fxLayout="row")
+            mat-form-field(fxFlex)
+                mat-select(placeholder="{{'form.country'|translate}}", required, formControlName="country")
+                    mat-option(*ngFor="let country of countries", [value]="country['alpha-3']") {{country.name | translate}}
+                mat-error {{'errors.required'|translate}}
+            mat-form-field(fxFlex, fxFlexOffset="5px")
+                input(matInput, placeholder="{{'form.city' | translate}}", required, formControlName="city", type="text")
+                mat-error(*ngIf="cityControl.invalid") {{getCityErrorMessage()}}
+        mat-form-field(fxFlex)
+            input(matInput, placeholder="{{'form.address' | translate}}", required, formControlName="address", type="text")
+            mat-error {{'errors.required' | translate}}
+        h4 {{'form.contactPerson' | translate}}
+        .field-group(fxLayout="row")
+            mat-form-field(fxFlex)
+                input(matInput, placeholder="{{'form.contactName' | translate}}", formControlName="contactName", type="text")
+                mat-error {{'errors.required' | translate}}
+            mat-form-field(fxFlex, fxFlexOffset="5px")
+                input(matInput, placeholder="{{'form.contactPosition' | translate}}", formControlName="contactPosition", type="text")
+                mat-error {{'errors.required' | translate}}
+        .field-group(fxLayout="row")
+            mat-form-field(fxFlex)
+                input(matInput, placeholder="{{'form.contactPhone' | translate}}", formControlName="contactPhone", type="text")
+                mat-error {{'errors.required' | translate}}
+            mat-form-field(fxFlex, fxFlexOffset="5px")
+                input(matInput, placeholder="{{'form.contactEmail' | translate}}", formControlName="contactEmail", type="text")
+                mat-error {{'errors.required' | translate}}
+        br
+mat-dialog-actions
+    button(mat-raised-button, color="primary", [disabled]="!schoolForm.valid || !schoolForm.dirty", (click)="submitForm()") {{'form.save' | translate}}
+    button(mat-button, (click)="selfClose()") {{'form.cancel' | translate}}

@@ -1,0 +1,4 @@
+form([formGroup]="form", name="refillPointsForm", (ngSubmit)="submitForm()", fxLayout="row", fxLayoutAlign="start center")
+    mat-form-field(fxFlex="100")
+        input(matInput, placeholder="{{'page.admin.settings.pricePerPoint' | translate}}", required, formControlName="pricePerPoint", type="number")
+    button(fxFlexOffset="15px", mat-button, mat-raised-button, color="primary", type="submit") {{'page.admin.settings.save' | translate}}

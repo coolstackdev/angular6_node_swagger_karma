@@ -1,0 +1,31 @@
+.sign-up-page
+    form(fxLayout="column", fxLayoutAlign="center center", [formGroup]="form", name="signUpForm", (ngSubmit)="register()")
+        img(src="assets/images/virtuprofs-logo.png")
+        .div(fxLayout="row", fxLayoutAlign="center center")
+            mat-icon mail_outline
+            mat-form-field(fxFlexOffset="10px", class="white-input")
+                input(matInput,  placeholder="{{ 'page.signUp.username' | translate}}", required, formControlName="username", style="border-color: white; color: white;")
+                //mat-error {{loginValidationErr('username') | translate}}
+        .div(fxLayout="row", fxLayoutAlign="center center")
+            mat-icon lock
+            mat-form-field(fxFlexOffset="10px")
+                input(matInput, placeholder="{{ 'page.signUp.password' | translate}}", required, formControlName="password", type="password")
+                //mat-error {{loginValidationErr('password') | translate}}
+        .div(fxLayout="row", fxLayoutAlign="center center")
+            mat-icon person_pin
+            mat-form-field(fxFlexOffset="10px")
+                mat-select(placeholder="{{ 'page.signUp.role' | translate}}", formControlName="role")
+                    mat-option(*ngFor="let role of rolesList", [value]="role.value") {{role.name | translate}}
+                //mat-error {{loginValidationErr('password') | translate}}
+        .div(fxLayout="row", fxLayoutAlign="center center")
+            mat-icon school
+            mat-form-field(fxFlexOffset="10px")
+                mat-select(placeholder="{{ 'page.signUp.level' | translate}}", formControlName="level")
+                    mat-option(*ngFor="let level of levelsList", [value]="level.value") {{level.name | translate}}
+                    //mat-error {{loginValidationErr('password') | translate}}
+        button(fxFlexOffset="30px", mat-button, mat-raised-button, type="submit", class="login-buttons") {{ 'page.signUp.signUp' | translate}}
+        .agreement(fxLayout="row", fxLayoutAlign="center center")
+            p(translate="page.signUp.agreementPart1")
+            a(translate="page.signUp.agreementPart2", style="text-decoration: underline;", fxFlexOffset="5px")
+            p(translate="page.signUp.agreementPart3", fxFlexOffset="5px")
+            a(translate="page.signUp.agreementPart4", style="text-decoration: underline;", fxFlexOffset="5px")

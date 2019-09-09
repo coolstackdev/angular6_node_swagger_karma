@@ -1,0 +1,22 @@
+.logo {
+    height: 35px;
+    padding: 5px 10px 0;
+}
+
+.app-header {
+    color: #ffffff;
+    padding: 5px;
+    //border-bottom: 1px solid transparent;
+    .lang-info {
+        font-size: 16px;
+        cursor: pointer;
+        text-transform: capitalize;
+    }
+    .profile-info {
+        font-size: 16px;
+        cursor: pointer;
+        .role {
+            font-size: 12px;
+        }
+    }
+}

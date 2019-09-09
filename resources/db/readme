@@ -1,0 +1,4 @@
+mongodump -h ds159661.mlab.com:59661 -d heroku_nqst1lm2 -u heroku_nqst1lm2 -p f9351qsds59uvirq7va7tso1hh -o dump-dir
+heroku addons:destroy mongolab
+heroku addons:create mongolab:shared-cluster-1
+mongorestore -h ds111955.mlab.com:11955 -d heroku_46md6x5c -u heroku_46md6x5c -p dgoe25lr4tcptl8l4lmgb35bma dump-dir/heroku_nqst1lm2

@@ -1,0 +1,4737 @@
+[
+    {
+        "name": "Afghanistan",
+        "alpha-2": "AF",
+        "alpha-3": "AFG",
+        "country-code": "004",
+        "iso_3166-2": "ISO 3166-2:AF",
+        "region": "Asia",
+        "sub-region": "Southern Asia",
+        "region-code": "142",
+        "sub-region-code": "034",
+        "west-north": {
+            "lng": "60.50000000",
+            "lat": "38.36666667"
+        },
+        "east-south": {
+            "lng": "75.00000000",
+            "lat": "29.38333333"
+        }
+    },
+    {
+        "name": "Åland Islands",
+        "alpha-2": "AX",
+        "alpha-3": "ALA",
+        "country-code": "248",
+        "iso_3166-2": "ISO 3166-2:AX",
+        "sub-region-code": "154",
+        "region-code": "150",
+        "sub-region": "Northern Europe",
+        "region": "Europe",
+        "west-north": {
+            "lng": "19.405517",
+            "lat": "60.585956"
+        },
+        "east-south": {
+            "lng": "21.361198",
+            "lat": "59.87975"
+        }
+    },
+    {
+        "name": "Albania",
+        "alpha-2": "AL",
+        "alpha-3": "ALB",
+        "country-code": "008",
+        "iso_3166-2": "ISO 3166-2:AL",
+        "region": "Europe",
+        "sub-region": "Southern Europe",
+        "region-code": "150",
+        "sub-region-code": "039",
+        "west-north": {
+            "lng": "19.27555556",
+            "lat": "42.50000000"
+        },
+        "east-south": {
+            "lng": "21.06833333",
+            "lat": "39.65000000"
+        }
+    },
+    {
+        "name": "Algeria",
+        "alpha-2": "DZ",
+        "alpha-3": "DZA",
+        "country-code": "012",
+        "iso_3166-2": "ISO 3166-2:DZ",
+        "region": "Africa",
+        "sub-region": "Northern Africa",
+        "region-code": "002",
+        "sub-region-code": "015",
+        "west-north": {
+            "lng": "-9.389191",
+            "lat": "37.241991"
+        },
+        "east-south": {
+            "lng": "12.00000000",
+            "lat": "18.96666667"
+        }
+    },
+    {
+        "name": "American Samoa",
+        "alpha-2": "AS",
+        "alpha-3": "ASM",
+        "country-code": "016",
+        "iso_3166-2": "ISO 3166-2:AS",
+        "region": "Oceania",
+        "sub-region": "Polynesia",
+        "region-code": "009",
+        "sub-region-code": "061",
+        "west-north": {
+            "lng": "-172.85511",
+            "lat": "-13.407433"
+        },
+        "east-south": {
+            "lng": "-169.416389",
+            "lat": "-14.52687"
+        }
+    },
+    {
+        "name": "Andorra",
+        "alpha-2": "AD",
+        "alpha-3": "AND",
+        "country-code": "020",
+        "iso_3166-2": "ISO 3166-2:AD",
+        "region": "Europe",
+        "sub-region": "Southern Europe",
+        "region-code": "150",
+        "sub-region-code": "039",
+        "west-north": {
+            "lng": "1.40888889",
+            "lat": "42.65000000"
+        },
+        "east-south": {
+            "lng": "1.78611111",
+            "lat": "42.43333333"
+        }
+    },
+    {
+        "name": "Angola",
+        "alpha-2": "AO",
+        "alpha-3": "AGO",
+        "country-code": "024",
+        "iso_3166-2": "ISO 3166-2:AO",
+        "region": "Africa",
+        "sub-region": "Middle Africa",
+        "region-code": "002",
+        "sub-region-code": "017",
+        "west-north": {
+            "lng": "11.089325",
+            "lat": "-5.163897"
+        },
+        "east-south": {
+            "lng": "24.492645",
+            "lat": "-18.549064"
+        }
+    },
+    {
+        "name": "Anguilla",
+        "alpha-2": "AI",
+        "alpha-3": "AIA",
+        "country-code": "660",
+        "iso_3166-2": "ISO 3166-2:AI",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "-63.296785",
+            "lat": "18.326717"
+        },
+        "east-south": {
+            "lng": "-62.744722",
+            "lat": "17.882916"
+        }
+    },
+    {
+        "name": "Antarctica",
+        "alpha-2": "AQ",
+        "alpha-3": "ATA",
+        "country-code": "010",
+        "iso_3166-2": "ISO 3166-2:AQ",
+        "sub-region-code": null,
+        "region-code": null,
+        "sub-region": null,
+        "region": null,
+        "west-north": {
+            "lng": "-179.527588",
+            "lat": "-64.270093"
+        },
+        "east-south": {
+            "lng": "178.363037",
+            "lat": "-84.949008"
+        }
+    },
+    {
+        "name": "Antigua and Barbuda",
+        "alpha-2": "AG",
+        "alpha-3": "ATG",
+        "country-code": "028",
+        "iso_3166-2": "ISO 3166-2:AG",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "-61.978426",
+            "lat": "17.775715"
+        },
+        "east-south": {
+            "lng": "-61.599398",
+            "lat": "16.973616"
+        }
+    },
+    {
+        "name": "Argentina",
+        "alpha-2": "AR",
+        "alpha-3": "ARG",
+        "country-code": "032",
+        "iso_3166-2": "ISO 3166-2:AR",
+        "region": "Americas",
+        "sub-region": "South America",
+        "region-code": "019",
+        "sub-region-code": "005",
+        "west-north": {
+            "lng": "-73.182678",
+            "lat": "-21.098194"
+        },
+        "east-south": {
+            "lng": "-51.210022",
+            "lat": "-52.891228"
+        }
+    },
+    {
+        "name": "Armenia",
+        "alpha-2": "AM",
+        "alpha-3": "ARM",
+        "country-code": "051",
+        "iso_3166-2": "ISO 3166-2:AM",
+        "region": "Asia",
+        "sub-region": "Western Asia",
+        "region-code": "142",
+        "sub-region-code": "145",
+        "west-north": {
+            "lng": "43.45000000",
+            "lat": "41.28333333"
+        },
+        "east-south": {
+            "lng": "46.61666667",
+            "lat": "38.83333333"
+        }
+    },
+    {
+        "name": "Aruba",
+        "alpha-2": "AW",
+        "alpha-3": "ABW",
+        "country-code": "533",
+        "iso_3166-2": "ISO 3166-2:AW",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "-70.082688",
+            "lat": "12.642125"
+        },
+        "east-south": {
+            "lng": "-69.856095",
+            "lat": "12.414225"
+        }
+    },
+    {
+        "name": "Australia",
+        "alpha-2": "AU",
+        "alpha-3": "AUS",
+        "country-code": "036",
+        "iso_3166-2": "ISO 3166-2:AU",
+        "region": "Oceania",
+        "sub-region": "Australia and New Zealand",
+        "region-code": "009",
+        "sub-region-code": "053",
+        "west-north": {
+            "lng": "112.002869",
+            "lat": "-9.766803"
+        },
+        "east-south": {
+            "lng": "154.102478",
+            "lat": "-44.003349"
+        }
+    },
+    {
+        "name": "Austria",
+        "alpha-2": "AT",
+        "alpha-3": "AUT",
+        "country-code": "040",
+        "iso_3166-2": "ISO 3166-2:AT",
+        "region": "Europe",
+        "sub-region": "Western Europe",
+        "region-code": "150",
+        "sub-region-code": "155",
+        "west-north": {
+            "lng": "9.148178",
+            "lat": "49.272584"
+        },
+        "east-south": {
+            "lng": "17.475815",
+            "lat": "46.215318"
+        }
+    },
+    {
+        "name": "Azerbaijan",
+        "alpha-2": "AZ",
+        "alpha-3": "AZE",
+        "country-code": "031",
+        "iso_3166-2": "ISO 3166-2:AZ",
+        "region": "Asia",
+        "sub-region": "Western Asia",
+        "region-code": "142",
+        "sub-region-code": "145",
+        "west-north": {
+            "lng": "44.718132",
+            "lat": "42.06017"
+        },
+        "east-south": {
+            "lng": "50.716667",
+            "lat": "38.387599"
+        }
+    },
+    {
+        "name": "Bahamas",
+        "alpha-2": "BS",
+        "alpha-3": "BHS",
+        "country-code": "044",
+        "iso_3166-2": "ISO 3166-2:BS",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "-78.570442",
+            "lat": "25.436661"
+        },
+        "east-south": {
+            "lng": "-76.988411",
+            "lat": "23.738422"
+        }
+    },
+    {
+        "name": "Bahrain",
+        "alpha-2": "BH",
+        "alpha-3": "BHR",
+        "country-code": "048",
+        "iso_3166-2": "ISO 3166-2:BH",
+        "region": "Asia",
+        "sub-region": "Western Asia",
+        "region-code": "142",
+        "sub-region-code": "145",
+        "west-north": {
+            "lng": "50.337553",
+            "lat": "26.355779"
+        },
+        "east-south": {
+            "lng": "50.76602",
+            "lat": "25.793297"
+        }
+    },
+    {
+        "name": "Bangladesh",
+        "alpha-2": "BD",
+        "alpha-3": "BGD",
+        "country-code": "050",
+        "iso_3166-2": "ISO 3166-2:BD",
+        "region": "Asia",
+        "sub-region": "Southern Asia",
+        "region-code": "142",
+        "sub-region-code": "034",
+        "west-north": {
+            "lng": "87.795525",
+            "lat": "26.837142"
+        },
+        "east-south": {
+            "lng": "92.728386",
+            "lat": "21.497371"
+        }
+    },
+    {
+        "name": "Barbados",
+        "alpha-2": "BB",
+        "alpha-3": "BRB",
+        "country-code": "052",
+        "iso_3166-2": "ISO 3166-2:BB",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "-59.672005",
+            "lat": "13.342411"
+        },
+        "east-south": {
+            "lng": "-59.40284",
+            "lat": "13.044251"
+        }
+    },
+    {
+        "name": "Belarus",
+        "alpha-2": "BY",
+        "alpha-3": "BLR",
+        "country-code": "112",
+        "iso_3166-2": "ISO 3166-2:BY",
+        "region": "Europe",
+        "sub-region": "Eastern Europe",
+        "region-code": "150",
+        "sub-region-code": "151",
+        "west-north": {
+            "lng": "23.16666667",
+            "lat": "56.13333333"
+        },
+        "east-south": {
+            "lng": "32.76666667",
+            "lat": "51.25000000"
+        }
+    },
+    {
+        "name": "Belgium",
+        "alpha-2": "BE",
+        "alpha-3": "BEL",
+        "country-code": "056",
+        "iso_3166-2": "ISO 3166-2:BE",
+        "region": "Europe",
+        "sub-region": "Western Europe",
+        "region-code": "150",
+        "sub-region-code": "155",
+        "west-north": {
+            "lng": "2.58333333",
+            "lat": "51.50000000"
+        },
+        "east-south": {
+            "lng": "6.36666667",
+            "lat": "49.50000000"
+        }
+    },
+    {
+        "name": "Belize",
+        "alpha-2": "BZ",
+        "alpha-3": "BLZ",
+        "country-code": "084",
+        "iso_3166-2": "ISO 3166-2:BZ",
+        "region": "Americas",
+        "sub-region": "Central America",
+        "region-code": "019",
+        "sub-region-code": "013",
+        "west-north": {
+            "lng": "-89.30048",
+            "lat": "18.580305"
+        },
+        "east-south": {
+            "lng": "-87.811832",
+            "lat": "15.852151"
+        }
+    },
+    {
+        "name": "Benin",
+        "alpha-2": "BJ",
+        "alpha-3": "BEN",
+        "country-code": "204",
+        "iso_3166-2": "ISO 3166-2:BJ",
+        "region": "Africa",
+        "sub-region": "Western Africa",
+        "region-code": "002",
+        "sub-region-code": "011",
+        "west-north": {
+            "lng": "0.83333333",
+            "lat": "12.41666667"
+        },
+        "east-south": {
+            "lng": "3.83333333",
+            "lat": "6.23333333"
+        }
+    },
+    {
+        "name": "Bermuda",
+        "alpha-2": "BM",
+        "alpha-3": "BMU",
+        "country-code": "060",
+        "iso_3166-2": "ISO 3166-2:BM",
+        "region": "Americas",
+        "sub-region": "Northern America",
+        "region-code": "019",
+        "sub-region-code": "021",
+        "west-north": {
+            "lng": "-64.897377",
+            "lat": "32.403347"
+        },
+        "east-south": {
+            "lng": "-64.622719",
+            "lat": "32.243199"
+        }
+    },
+    {
+        "name": "Bhutan",
+        "alpha-2": "BT",
+        "alpha-3": "BTN",
+        "country-code": "064",
+        "iso_3166-2": "ISO 3166-2:BT",
+        "region": "Asia",
+        "sub-region": "Southern Asia",
+        "region-code": "142",
+        "sub-region-code": "034",
+        "west-north": {
+            "lng": "88.75000000",
+            "lat": "28.33333333"
+        },
+        "east-south": {
+            "lng": "92.08333333",
+            "lat": "26.71666667"
+        }
+    },
+    {
+        "name": "Bolivia (Plurinational State of)",
+        "alpha-2": "BO",
+        "alpha-3": "BOL",
+        "country-code": "068",
+        "iso_3166-2": "ISO 3166-2:BO",
+        "region": "Americas",
+        "sub-region": "South America",
+        "region-code": "019",
+        "sub-region-code": "005",
+        "west-north": {
+            "lng": "-70.121613",
+            "lat": "-9.131027"
+        },
+        "east-south": {
+            "lng": "-56.938019",
+            "lat": "-23.106684"
+        }
+    },
+    {
+        "name": "Bonaire, Sint Eustatius and Saba",
+        "alpha-2": "BQ",
+        "alpha-3": "BES",
+        "country-code": "535",
+        "iso_3166-2": "ISO 3166-2:BQ",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "-68.45212",
+            "lat": "12.354311"
+        },
+        "east-south": {
+            "lng": "-68.103304",
+            "lat": "11.989174"
+        }
+    },
+    {
+        "name": "Bosnia and Herzegovina",
+        "alpha-2": "BA",
+        "alpha-3": "BIH",
+        "country-code": "070",
+        "iso_3166-2": "ISO 3166-2:BA",
+        "region": "Europe",
+        "sub-region": "Southern Europe",
+        "region-code": "150",
+        "sub-region-code": "039",
+        "west-north": {
+            "lng": "15.83333333",
+            "lat": "45.26666667"
+        },
+        "east-south": {
+            "lng": "19.50000000",
+            "lat": "42.56666667"
+        }
+    },
+    {
+        "name": "Botswana",
+        "alpha-2": "BW",
+        "alpha-3": "BWA",
+        "country-code": "072",
+        "iso_3166-2": "ISO 3166-2:BW",
+        "region": "Africa",
+        "sub-region": "Southern Africa",
+        "region-code": "002",
+        "sub-region-code": "018",
+        "west-north": {
+            "lng": "19.519272",
+            "lat": "-17.343649"
+        },
+        "east-south": {
+            "lng": "29.560776",
+            "lat": "-26.856748"
+        }
+    },
+    {
+        "name": "Bouvet Island",
+        "alpha-2": "BV",
+        "alpha-3": "BVT",
+        "country-code": "074",
+        "iso_3166-2": "ISO 3166-2:BV",
+        "sub-region-code": null,
+        "region-code": null,
+        "sub-region": null,
+        "region": null,
+        "west-north": {
+            "lng": "3.276908",
+            "lat": "-54.376825"
+        },
+        "east-south": {
+            "lng": "3.441703",
+            "lat": "-54.453142"
+        }
+    },
+    {
+        "name": "Brazil",
+        "alpha-2": "BR",
+        "alpha-3": "BRA",
+        "country-code": "076",
+        "iso_3166-2": "ISO 3166-2:BR",
+        "region": "Americas",
+        "sub-region": "South America",
+        "region-code": "019",
+        "sub-region-code": "005",
+        "west-north": {
+            "lng": "-74.149475",
+            "lat": "6.431755"
+        },
+        "east-south": {
+            "lng": "-32.752991",
+            "lat": "-33.626823"
+        }
+    },
+    {
+        "name": "British Indian Ocean Territory",
+        "alpha-2": "IO",
+        "alpha-3": "IOT",
+        "country-code": "086",
+        "iso_3166-2": "ISO 3166-2:IO",
+        "sub-region-code": null,
+        "region-code": null,
+        "sub-region": null,
+        "region": null,
+        "west-north": {
+            "lng": "72.337654",
+            "lat": "-7.208311"
+        },
+        "east-south": {
+            "lng": "72.527168",
+            "lat": "-7.463014"
+        }
+    },
+    {
+        "name": "Brunei Darussalam",
+        "alpha-2": "BN",
+        "alpha-3": "BRN",
+        "country-code": "096",
+        "iso_3166-2": "ISO 3166-2:BN",
+        "region": "Asia",
+        "sub-region": "South-Eastern Asia",
+        "region-code": "142",
+        "sub-region-code": "035",
+        "west-north": {
+            "lng": "114.082975",
+            "lat": "5.154775"
+        },
+        "east-south": {
+            "lng": "115.412321",
+            "lat": "3.972034"
+        }
+    },
+    {
+        "name": "Bulgaria",
+        "alpha-2": "BG",
+        "alpha-3": "BGR",
+        "country-code": "100",
+        "iso_3166-2": "ISO 3166-2:BG",
+        "region": "Europe",
+        "sub-region": "Eastern Europe",
+        "region-code": "150",
+        "sub-region-code": "151",
+        "west-north": {
+            "lng": "22.35000000",
+            "lat": "44.21666667"
+        },
+        "east-south": {
+            "lng": "28.60000000",
+            "lat": "41.25000000"
+        }
+    },
+    {
+        "name": "Burkina Faso",
+        "alpha-2": "BF",
+        "alpha-3": "BFA",
+        "country-code": "854",
+        "iso_3166-2": "ISO 3166-2:BF",
+        "region": "Africa",
+        "sub-region": "Western Africa",
+        "region-code": "002",
+        "sub-region-code": "011",
+        "west-north": {
+            "lng": "-5.862923",
+            "lat": "15.245322"
+        },
+        "east-south": {
+            "lng": "2.651482",
+            "lat": "9.376805"
+        }
+    },
+    {
+        "name": "Burundi",
+        "alpha-2": "BI",
+        "alpha-3": "BDI",
+        "country-code": "108",
+        "iso_3166-2": "ISO 3166-2:BI",
+        "region": "Africa",
+        "sub-region": "Eastern Africa",
+        "region-code": "002",
+        "sub-region-code": "014",
+        "west-north": {
+            "lng": "28.939877",
+            "lat": "-2.233321"
+        },
+        "east-south": {
+            "lng": "30.906429",
+            "lat": "-4.470555"
+        }
+    },
+    {
+        "name": "Cambodia",
+        "alpha-2": "KH",
+        "alpha-3": "KHM",
+        "country-code": "116",
+        "iso_3166-2": "ISO 3166-2:KH",
+        "region": "Asia",
+        "sub-region": "South-Eastern Asia",
+        "region-code": "142",
+        "sub-region-code": "035",
+        "west-north": {
+            "lng": "102.187614",
+            "lat": "14.82091"
+        },
+        "east-south": {
+            "lng": "107.878532",
+            "lat": "9.994096"
+        }
+    },
+    {
+        "name": "Cameroon",
+        "alpha-2": "CM",
+        "alpha-3": "CMR",
+        "country-code": "120",
+        "iso_3166-2": "ISO 3166-2:CM",
+        "region": "Africa",
+        "sub-region": "Middle Africa",
+        "region-code": "002",
+        "sub-region-code": "017",
+        "west-north": {
+            "lng": "7.573065",
+            "lat": "13.353238"
+        },
+        "east-south": {
+            "lng": "16.268921",
+            "lat": "1.661564"
+        }
+    },
+    {
+        "name": "Canada",
+        "alpha-2": "CA",
+        "alpha-3": "CAN",
+        "country-code": "124",
+        "iso_3166-2": "ISO 3166-2:CA",
+        "region": "Americas",
+        "sub-region": "Northern America",
+        "region-code": "019",
+        "sub-region-code": "021",
+        "west-north": {
+            "lng": "-140.213013",
+            "lat": "83.263972"
+        },
+        "east-south": {
+            "lng": "-49.803772",
+            "lat": "42.509897"
+        }
+    },
+    {
+        "name": "Cabo Verde",
+        "alpha-2": "CV",
+        "alpha-3": "CPV",
+        "country-code": "132",
+        "iso_3166-2": "ISO 3166-2:CV",
+        "region": "Africa",
+        "sub-region": "Western Africa",
+        "region-code": "002",
+        "sub-region-code": "011",
+        "west-north": {
+            "lng": "-25.472536",
+            "lat": "17.319969"
+        },
+        "east-south": {
+            "lng": "-22.550172",
+            "lat": "14.743814"
+        }
+    },
+    {
+        "name": "Cayman Islands",
+        "alpha-2": "KY",
+        "alpha-3": "CYM",
+        "country-code": "136",
+        "iso_3166-2": "ISO 3166-2:KY",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "-81.495055",
+            "lat": "19.792631"
+        },
+        "east-south": {
+            "lng": "-79.635755",
+            "lat": "19.215146"
+        }
+    },
+    {
+        "name": "Central African Republic",
+        "alpha-2": "CF",
+        "alpha-3": "CAF",
+        "country-code": "140",
+        "iso_3166-2": "ISO 3166-2:CF",
+        "region": "Africa",
+        "sub-region": "Middle Africa",
+        "region-code": "002",
+        "sub-region-code": "017",
+        "west-north": {
+            "lng": "14.33333333",
+            "lat": "11.01666667"
+        },
+        "east-south": {
+            "lng": "27.46666667",
+            "lat": "2.21666667"
+        }
+    },
+    {
+        "name": "Chad",
+        "alpha-2": "TD",
+        "alpha-3": "TCD",
+        "country-code": "148",
+        "iso_3166-2": "ISO 3166-2:TD",
+        "region": "Africa",
+        "sub-region": "Middle Africa",
+        "region-code": "002",
+        "sub-region-code": "017",
+        "west-north": {
+            "lng": "13.66666667",
+            "lat": "23.43333333"
+        },
+        "east-south": {
+            "lng": "24.00000000",
+            "lat": "7.45000000"
+        }
+    },
+    {
+        "name": "Chile",
+        "alpha-2": "CL",
+        "alpha-3": "CHL",
+        "country-code": "152",
+        "iso_3166-2": "ISO 3166-2:CL",
+        "region": "Americas",
+        "sub-region": "South America",
+        "region-code": "019",
+        "sub-region-code": "005",
+        "west-north": {
+            "lng": "-75.656305",
+            "lat": "-16.910195"
+        },
+        "east-south": {
+            "lng": "-66.339900",
+            "lat": "-55.838613"
+        }
+    },
+    {
+        "name": "China",
+        "alpha-2": "CN",
+        "alpha-3": "CHN",
+        "country-code": "156",
+        "iso_3166-2": "ISO 3166-2:CN",
+        "region": "Asia",
+        "sub-region": "Eastern Asia",
+        "region-code": "142",
+        "sub-region-code": "030",
+        "west-north": {
+            "lng": "73.55805556",
+            "lat": "53.56666667"
+        },
+        "east-south": {
+            "lng": "134.77361111",
+            "lat": "20.23333333"
+        }
+    },
+    {
+        "name": "Christmas Island",
+        "alpha-2": "CX",
+        "alpha-3": "CXR",
+        "country-code": "162",
+        "iso_3166-2": "ISO 3166-2:CX",
+        "sub-region-code": null,
+        "region-code": null,
+        "sub-region": null,
+        "region": null,
+        "west-north": {
+            "lng": "105.527672",
+            "lat": "-10.411815"
+        },
+        "east-south": {
+            "lng": "105.715127",
+            "lat": "-10.571154"
+        }
+    },
+    {
+        "name": "Cocos (Keeling) Islands",
+        "alpha-2": "CC",
+        "alpha-3": "CCK",
+        "country-code": "166",
+        "iso_3166-2": "ISO 3166-2:CC",
+        "sub-region-code": null,
+        "region-code": null,
+        "sub-region": null,
+        "region": null,
+        "west-north": {
+            "lng": "96.814002",
+            "lat": "-12.069936"
+        },
+        "east-south": {
+            "lng": "96.935538",
+            "lat": "-12.207551"
+        }
+    },
+    {
+        "name": "Colombia",
+        "alpha-2": "CO",
+        "alpha-3": "COL",
+        "country-code": "170",
+        "iso_3166-2": "ISO 3166-2:CO",
+        "region": "Americas",
+        "sub-region": "South America",
+        "region-code": "019",
+        "sub-region-code": "005",
+        "west-north": {
+            "lng": "-79.363502",
+            "lat": "13.130570"
+        },
+        "east-south": {
+            "lng": "-66.622188",
+            "lat": "-4.775029"
+        }
+    },
+    {
+        "name": "Comoros",
+        "alpha-2": "KM",
+        "alpha-3": "COM",
+        "country-code": "174",
+        "iso_3166-2": "ISO 3166-2:KM",
+        "region": "Africa",
+        "sub-region": "Eastern Africa",
+        "region-code": "002",
+        "sub-region-code": "014",
+        "west-north": {
+            "lng": "43.22206",
+            "lat": "-11.354387"
+        },
+        "east-south": {
+            "lng": "43.54341",
+            "lat": "-11.948871"
+        }
+    },
+    {
+        "name": "Congo",
+        "alpha-2": "CG",
+        "alpha-3": "COG",
+        "country-code": "178",
+        "iso_3166-2": "ISO 3166-2:CG",
+        "region": "Africa",
+        "sub-region": "Middle Africa",
+        "region-code": "002",
+        "sub-region-code": "017",
+        "west-north": {
+            "lng": "10.949936",
+            "lat": "3.849639"
+        },
+        "east-south": {
+            "lng": "18.947983",
+            "lat": "-4.974208"
+        }
+    },
+    {
+        "name": "Congo (Democratic Republic of the)",
+        "alpha-2": "CD",
+        "alpha-3": "COD",
+        "country-code": "180",
+        "iso_3166-2": "ISO 3166-2:CD",
+        "region": "Africa",
+        "sub-region": "Middle Africa",
+        "region-code": "002",
+        "sub-region-code": "017",
+        "west-north": {
+            "lng": "12.33333333",
+            "lat": "5.36666667"
+        },
+        "east-south": {
+            "lng": "31.523439",
+            "lat": "-13.888745"
+        }
+    },
+    {
+        "name": "Cook Islands",
+        "alpha-2": "CK",
+        "alpha-3": "COK",
+        "country-code": "184",
+        "iso_3166-2": "ISO 3166-2:CK",
+        "region": "Oceania",
+        "sub-region": "Polynesia",
+        "region-code": "009",
+        "sub-region-code": "061",
+        "west-north": {
+            "lng": "-159.83997",
+            "lat": "-21.189107"
+        },
+        "east-south": {
+            "lng": "-159.715687",
+            "lat": "-21.28319"
+        }
+    },
+    {
+        "name": "Costa Rica",
+        "alpha-2": "CR",
+        "alpha-3": "CRI",
+        "country-code": "188",
+        "iso_3166-2": "ISO 3166-2:CR",
+        "region": "Americas",
+        "sub-region": "Central America",
+        "region-code": "019",
+        "sub-region-code": "013",
+        "west-north": {
+            "lng": "-85.977116",
+            "lat": "11.331048"
+        },
+        "east-south": {
+            "lng": "-82.527409",
+            "lat": "7.935929"
+        }
+    },
+    {
+        "name": "Côte d'Ivoire",
+        "alpha-2": "CI",
+        "alpha-3": "CIV",
+        "country-code": "384",
+        "iso_3166-2": "ISO 3166-2:CI",
+        "region": "Africa",
+        "sub-region": "Western Africa",
+        "region-code": "002",
+        "sub-region-code": "011",
+        "west-north": {
+            "lng": "8.58333333",
+            "lat": "10.73333333"
+        },
+        "east-south": {
+            "lng": "-2.255861",
+            "lat": "4.232747"
+        }
+    },
+    {
+        "name": "Croatia",
+        "alpha-2": "HR",
+        "alpha-3": "HRV",
+        "country-code": "191",
+        "iso_3166-2": "ISO 3166-2:HR",
+        "region": "Europe",
+        "sub-region": "Southern Europe",
+        "region-code": "150",
+        "sub-region-code": "039",
+        "west-north": {
+            "lng": "13.50000000",
+            "lat": "46.55000000"
+        },
+        "east-south": {
+            "lng": "19.45000000",
+            "lat": "42.38333333"
+        }
+    },
+    {
+        "name": "Cuba",
+        "alpha-2": "CU",
+        "alpha-3": "CUB",
+        "country-code": "192",
+        "iso_3166-2": "ISO 3166-2:CU",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "-85.004654",
+            "lat": "23.75183"
+        },
+        "east-south": {
+            "lng": "-71.667252",
+            "lat": "17.46246"
+        }
+    },
+    {
+        "name": "Curaçao",
+        "alpha-2": "CW",
+        "alpha-3": "CUW",
+        "country-code": "531",
+        "iso_3166-2": "ISO 3166-2:CW",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "-69.223909",
+            "lat": "12.440153"
+        },
+        "east-south": {
+            "lng": "-68.704805",
+            "lat": "12.018726"
+        }
+    },
+    {
+        "name": "Cyprus",
+        "alpha-2": "CY",
+        "alpha-3": "CYP",
+        "country-code": "196",
+        "iso_3166-2": "ISO 3166-2:CY",
+        "region": "Asia",
+        "sub-region": "Western Asia",
+        "region-code": "142",
+        "sub-region-code": "145",
+        "west-north": {
+            "lng": "32.17535",
+            "lat": "35.734623"
+        },
+        "east-south": {
+            "lng": "34.581356",
+            "lat": "34.539746"
+        }
+    },
+    {
+        "name": "Czech Republic",
+        "alpha-2": "CZ",
+        "alpha-3": "CZE",
+        "country-code": "203",
+        "iso_3166-2": "ISO 3166-2:CZ",
+        "region": "Europe",
+        "sub-region": "Eastern Europe",
+        "region-code": "150",
+        "sub-region-code": "151",
+        "west-north": {
+            "lng": "12.09138889",
+            "lat": "51.03333333"
+        },
+        "east-south": {
+            "lng": "18.85888889",
+            "lat": "48.55000000"
+        }
+    },
+    {
+        "name": "Denmark",
+        "alpha-2": "DK",
+        "alpha-3": "DNK",
+        "country-code": "208",
+        "iso_3166-2": "ISO 3166-2:DK",
+        "region": "Europe",
+        "sub-region": "Northern Europe",
+        "region-code": "150",
+        "sub-region-code": "154",
+        "west-north": {
+            "lng": "8.049545",
+            "lat": "57.918738"
+        },
+        "east-south": {
+            "lng": "15.36644",
+            "lat": "54.842881"
+        }
+    },
+    {
+        "name": "Djibouti",
+        "alpha-2": "DJ",
+        "alpha-3": "DJI",
+        "country-code": "262",
+        "iso_3166-2": "ISO 3166-2:DJ",
+        "region": "Africa",
+        "sub-region": "Eastern Africa",
+        "region-code": "002",
+        "sub-region-code": "014",
+        "west-north": {
+            "lng": "41.695004",
+            "lat": "12.760017"
+        },
+        "east-south": {
+            "lng": "43.535213",
+            "lat": "10.964562"
+        }
+    },
+    {
+        "name": "Dominica",
+        "alpha-2": "DM",
+        "alpha-3": "DMA",
+        "country-code": "212",
+        "iso_3166-2": "ISO 3166-2:DM",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "-61.500993",
+            "lat": "15.659183"
+        },
+        "east-south": {
+            "lng": "-61.224961",
+            "lat": "15.207779"
+        }
+    },
+    {
+        "name": "Dominican Republic",
+        "alpha-2": "DO",
+        "alpha-3": "DOM",
+        "country-code": "214",
+        "iso_3166-2": "ISO 3166-2:DO",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "-72.002506",
+            "lat": "20.011204"
+        },
+        "east-south": {
+            "lng": "-68.250675",
+            "lat": "17.504375"
+        }
+    },
+    {
+        "name": "Ecuador",
+        "alpha-2": "EC",
+        "alpha-3": "ECU",
+        "country-code": "218",
+        "iso_3166-2": "ISO 3166-2:EC",
+        "region": "Americas",
+        "sub-region": "South America",
+        "region-code": "019",
+        "sub-region-code": "005",
+        "west-north": {
+            "lng": "-81.086311",
+            "lat": "1.53058"
+        },
+        "east-south": {
+            "lng": "-75.175667",
+            "lat": "-5.163893"
+        }
+    },
+    {
+        "name": "Egypt",
+        "alpha-2": "EG",
+        "alpha-3": "EGY",
+        "country-code": "818",
+        "iso_3166-2": "ISO 3166-2:EG",
+        "region": "Africa",
+        "sub-region": "Northern Africa",
+        "region-code": "002",
+        "sub-region-code": "015",
+        "west-north": {
+            "lng": "24.66666667",
+            "lat": "31.60000000"
+        },
+        "east-south": {
+            "lng": "35.75000000",
+            "lat": "22.00000000"
+        }
+    },
+    {
+        "name": "El Salvador",
+        "alpha-2": "SV",
+        "alpha-3": "SLV",
+        "country-code": "222",
+        "iso_3166-2": "ISO 3166-2:SV",
+        "region": "Americas",
+        "sub-region": "Central America",
+        "region-code": "019",
+        "sub-region-code": "013",
+        "west-north": {
+            "lng": "-90.179386",
+            "lat": "14.510917"
+        },
+        "east-south": {
+            "lng": "-87.636051",
+            "lat": "13.118713"
+        }
+    },
+    {
+        "name": "Equatorial Guinea",
+        "alpha-2": "GQ",
+        "alpha-3": "GNQ",
+        "country-code": "226",
+        "iso_3166-2": "ISO 3166-2:GQ",
+        "region": "Africa",
+        "sub-region": "Middle Africa",
+        "region-code": "002",
+        "sub-region-code": "017",
+        "west-north": {
+            "lng": "9.296322",
+            "lat": "2.445546"
+        },
+        "east-south": {
+            "lng": "11.338835",
+            "lat": "0.981397"
+        }
+    },
+    {
+        "name": "Eritrea",
+        "alpha-2": "ER",
+        "alpha-3": "ERI",
+        "country-code": "232",
+        "iso_3166-2": "ISO 3166-2:ER",
+        "region": "Africa",
+        "sub-region": "Eastern Africa",
+        "region-code": "002",
+        "sub-region-code": "014",
+        "west-north": {
+            "lng": "36.83333333",
+            "lat": "18.00000000"
+        },
+        "east-south": {
+            "lng": "43.11666667",
+            "lat": "12.36666667"
+        }
+    },
+    {
+        "name": "Estonia",
+        "alpha-2": "EE",
+        "alpha-3": "EST",
+        "country-code": "233",
+        "iso_3166-2": "ISO 3166-2:EE",
+        "region": "Europe",
+        "sub-region": "Northern Europe",
+        "region-code": "150",
+        "sub-region-code": "154",
+        "west-north": {
+            "lng": "23.40416667",
+            "lat": "59.66666667"
+        },
+        "east-south": {
+            "lng": "28.21000000",
+            "lat": "57.51666667"
+        }
+    },
+    {
+        "name": "Ethiopia",
+        "alpha-2": "ET",
+        "alpha-3": "ETH",
+        "country-code": "231",
+        "iso_3166-2": "ISO 3166-2:ET",
+        "region": "Africa",
+        "sub-region": "Eastern Africa",
+        "region-code": "002",
+        "sub-region-code": "014",
+        "west-north": {
+            "lng": "33.01000000",
+            "lat": "14.88333333"
+        },
+        "east-south": {
+            "lng": "48.01000000",
+            "lat": "3.40000000"
+        }
+    },
+    {
+        "name": "Falkland Islands (Malvinas)",
+        "alpha-2": "FK",
+        "alpha-3": "FLK",
+        "country-code": "238",
+        "iso_3166-2": "ISO 3166-2:FK",
+        "region": "Americas",
+        "sub-region": "South America",
+        "region-code": "019",
+        "sub-region-code": "005",
+        "west-north": {
+            "lng": "-61.38422",
+            "lat": "-50.936508"
+        },
+        "east-south": {
+            "lng": "-57.577457",
+            "lat": "-52.471628"
+        }
+    },
+    {
+        "name": "Faroe Islands",
+        "alpha-2": "FO",
+        "alpha-3": "FRO",
+        "country-code": "234",
+        "iso_3166-2": "ISO 3166-2:FO",
+        "region": "Europe",
+        "sub-region": "Northern Europe",
+        "region-code": "150",
+        "sub-region-code": "154",
+        "west-north": {
+            "lng": "-7.73798",
+            "lat": "62.411577"
+        },
+        "east-south": {
+            "lng": "-6.166935",
+            "lat": "61.387075"
+        }
+    },
+    {
+        "name": "Fiji",
+        "alpha-2": "FJ",
+        "alpha-3": "FJI",
+        "country-code": "242",
+        "iso_3166-2": "ISO 3166-2:FJ",
+        "region": "Oceania",
+        "sub-region": "Melanesia",
+        "region-code": "009",
+        "sub-region-code": "054",
+        "west-north": {
+            "lng": "176.938591",
+            "lat": "-15.947245"
+        },
+        "east-south": {
+            "lng": "-178.589973",
+            "lat": "-18.632365"
+        }
+    },
+    {
+        "name": "Finland",
+        "alpha-2": "FI",
+        "alpha-3": "FIN",
+        "country-code": "246",
+        "iso_3166-2": "ISO 3166-2:FI",
+        "region": "Europe",
+        "sub-region": "Northern Europe",
+        "region-code": "150",
+        "sub-region-code": "154",
+        "west-north": {
+            "lng": "20.53333333",
+            "lat": "70.08333333"
+        },
+        "east-south": {
+            "lng": "31.58805556",
+            "lat": "59.80000000"
+        }
+    },
+    {
+        "name": "France",
+        "alpha-2": "FR",
+        "alpha-3": "FRA",
+        "country-code": "250",
+        "iso_3166-2": "ISO 3166-2:FR",
+        "region": "Europe",
+        "sub-region": "Western Europe",
+        "region-code": "150",
+        "sub-region-code": "155",
+        "west-north": {
+            "lng": "-5.002442",
+            "lat": "51.218067"
+        },
+        "east-south": {
+            "lng": "8.532714",
+            "lat": "42.290517"
+        }
+    },
+    {
+        "name": "French Guiana",
+        "alpha-2": "GF",
+        "alpha-3": "GUF",
+        "country-code": "254",
+        "iso_3166-2": "ISO 3166-2:GF",
+        "region": "Americas",
+        "sub-region": "South America",
+        "region-code": "019",
+        "sub-region-code": "005",
+        "west-north": {
+            "lng": "-54.653206",
+            "lat": "5.925687"
+        },
+        "east-south": {
+            "lng": "-51.478157",
+            "lat": "2.156473"
+        }
+    },
+    {
+        "name": "French Polynesia",
+        "alpha-2": "PF",
+        "alpha-3": "PYF",
+        "country-code": "258",
+        "iso_3166-2": "ISO 3166-2:PF",
+        "region": "Oceania",
+        "sub-region": "Polynesia",
+        "region-code": "009",
+        "sub-region-code": "061",
+        "west-north": {
+            "lng": "-149.64705",
+            "lat": "-17.466826"
+        },
+        "east-south": {
+            "lng": "-149.107347",
+            "lat": "-17.897292"
+        }
+    },
+    {
+        "name": "French Southern Territories",
+        "alpha-2": "TF",
+        "alpha-3": "ATF",
+        "country-code": "260",
+        "iso_3166-2": "ISO 3166-2:TF",
+        "sub-region-code": null,
+        "region-code": null,
+        "sub-region": null,
+        "region": null,
+        "west-north": {
+            "lng": "68.567562",
+            "lat": "-48.569944"
+        },
+        "east-south": {
+            "lng": "70.622005",
+            "lat": "-49.741048"
+        }
+    },
+    {
+        "name": "Gabon",
+        "alpha-2": "GA",
+        "alpha-3": "GAB",
+        "country-code": "266",
+        "iso_3166-2": "ISO 3166-2:GA",
+        "region": "Africa",
+        "sub-region": "Middle Africa",
+        "region-code": "002",
+        "sub-region-code": "017",
+        "west-north": {
+            "lng": "8.55114",
+            "lat": "2.452864"
+        },
+        "east-south": {
+            "lng": "14.681511",
+            "lat": "-3.981168"
+        }
+    },
+    {
+        "name": "Gambia",
+        "alpha-2": "GM",
+        "alpha-3": "GMB",
+        "country-code": "270",
+        "iso_3166-2": "ISO 3166-2:GM",
+        "region": "Africa",
+        "sub-region": "Western Africa",
+        "region-code": "002",
+        "sub-region-code": "011",
+        "west-north": {
+            "lng": "-16.862125",
+            "lat": "13.893189"
+        },
+        "east-south": {
+            "lng": "-13.725529",
+            "lat": "13.059858"
+        }
+    },
+    {
+        "name": "Georgia",
+        "alpha-2": "GE",
+        "alpha-3": "GEO",
+        "country-code": "268",
+        "iso_3166-2": "ISO 3166-2:GE",
+        "region": "Asia",
+        "sub-region": "Western Asia",
+        "region-code": "142",
+        "sub-region-code": "145",
+        "west-north": {
+            "lng": "41.50000000",
+            "lat": "43.58333333"
+        },
+        "east-south": {
+            "lng": "46.66666667",
+            "lat": "41.05000000"
+        }
+    },
+    {
+        "name": "Germany",
+        "alpha-2": "DE",
+        "alpha-3": "DEU",
+        "country-code": "276",
+        "iso_3166-2": "ISO 3166-2:DE",
+        "region": "Europe",
+        "sub-region": "Western Europe",
+        "region-code": "150",
+        "sub-region-code": "155",
+        "west-north": {
+            "lng": "5.88333333",
+            "lat": "54.90000000"
+        },
+        "east-south": {
+            "lng": "15.03333333",
+            "lat": "47.28333333"
+        }
+    },
+    {
+        "name": "Ghana",
+        "alpha-2": "GH",
+        "alpha-3": "GHA",
+        "country-code": "288",
+        "iso_3166-2": "ISO 3166-2:GH",
+        "region": "Africa",
+        "sub-region": "Western Africa",
+        "region-code": "002",
+        "sub-region-code": "011",
+        "west-north": {
+            "lng": "-3.292122",
+            "lat": "11.354387"
+        },
+        "east-south": {
+            "lng": "1.39904",
+            "lat": "4.722427"
+        }
+    },
+    {
+        "name": "Gibraltar",
+        "alpha-2": "GI",
+        "alpha-3": "GIB",
+        "country-code": "292",
+        "iso_3166-2": "ISO 3166-2:GI",
+        "region": "Europe",
+        "sub-region": "Southern Europe",
+        "region-code": "150",
+        "sub-region-code": "039",
+        "west-north": {
+            "lng": "-5.369852",
+            "lat": "36.157327"
+        },
+        "east-south": {
+            "lng": "-5.339125",
+            "lat": "36.108941"
+        }
+    },
+    {
+        "name": "Greece",
+        "alpha-2": "GR",
+        "alpha-3": "GRC",
+        "country-code": "300",
+        "iso_3166-2": "ISO 3166-2:GR",
+        "region": "Europe",
+        "sub-region": "Southern Europe",
+        "region-code": "150",
+        "sub-region-code": "039",
+        "west-north": {
+            "lng": "19.98333333",
+            "lat": "41.71666667"
+        },
+        "east-south": {
+            "lng": "26.63333333",
+            "lat": "36.38333333"
+        }
+    },
+    {
+        "name": "Greenland",
+        "alpha-2": "GL",
+        "alpha-3": "GRL",
+        "country-code": "304",
+        "iso_3166-2": "ISO 3166-2:GL",
+        "region": "Americas",
+        "sub-region": "Northern America",
+        "region-code": "019",
+        "sub-region-code": "021",
+        "west-north": {
+            "lng": "-73.358459",
+            "lat": "83.737953"
+        },
+        "east-south": {
+            "lng": "-13.29895",
+            "lat": "60.268881"
+        }
+    },
+    {
+        "name": "Grenada",
+        "alpha-2": "GD",
+        "alpha-3": "GRD",
+        "country-code": "308",
+        "iso_3166-2": "ISO 3166-2:GD",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "-61.815712",
+            "lat": "12.248983"
+        },
+        "east-south": {
+            "lng": "-61.602166",
+            "lat": "11.992532"
+        }
+    },
+    {
+        "name": "Guadeloupe",
+        "alpha-2": "GP",
+        "alpha-3": "GLP",
+        "country-code": "312",
+        "iso_3166-2": "ISO 3166-2:GP",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "-61.819596",
+            "lat": "16.523438"
+        },
+        "east-south": {
+            "lng": "-61.167283",
+            "lat": "15.951206"
+        }
+    },
+    {
+        "name": "Guam",
+        "alpha-2": "GU",
+        "alpha-3": "GUM",
+        "country-code": "316",
+        "iso_3166-2": "ISO 3166-2:GU",
+        "region": "Oceania",
+        "sub-region": "Micronesia",
+        "region-code": "009",
+        "sub-region-code": "057",
+        "west-north": {
+            "lng": "144.614882",
+            "lat": "13.669117"
+        },
+        "east-south": {
+            "lng": "144.966445",
+            "lat": "13.241728"
+        }
+    },
+    {
+        "name": "Guatemala",
+        "alpha-2": "GT",
+        "alpha-3": "GTM",
+        "country-code": "320",
+        "iso_3166-2": "ISO 3166-2:GT",
+        "region": "Americas",
+        "sub-region": "Central America",
+        "region-code": "019",
+        "sub-region-code": "013",
+        "west-north": {
+            "lng": "-92.347298",
+            "lat": "17.888144"
+        },
+        "east-south": {
+            "lng": "-88.205452",
+            "lat": "13.766953"
+        }
+    },
+    {
+        "name": "Guernsey",
+        "alpha-2": "GG",
+        "alpha-3": "GGY",
+        "country-code": "831",
+        "iso_3166-2": "ISO 3166-2:GG",
+        "region": "Europe",
+        "sub-region": "Northern Europe",
+        "region-code": "150",
+        "sub-region-code": "154",
+        "west-north": {
+            "lng": "-2.685921",
+            "lat": "49.515105"
+        },
+        "east-south": {
+            "lng": "-2.322686",
+            "lat": "49.40308"
+        }
+    },
+    {
+        "name": "Guinea",
+        "alpha-2": "GN",
+        "alpha-3": "GIN",
+        "country-code": "324",
+        "iso_3166-2": "ISO 3166-2:GN",
+        "region": "Africa",
+        "sub-region": "Western Africa",
+        "region-code": "002",
+        "sub-region-code": "011",
+        "west-north": {
+            "lng": "-15.285416",
+            "lat": "12.88321"
+        },
+        "east-south": {
+            "lng": "-7.331314",
+            "lat": "7.129964"
+        }
+    },
+    {
+        "name": "Guinea-Bissau",
+        "alpha-2": "GW",
+        "alpha-3": "GNB",
+        "country-code": "624",
+        "iso_3166-2": "ISO 3166-2:GW",
+        "region": "Africa",
+        "sub-region": "Western Africa",
+        "region-code": "002",
+        "sub-region-code": "011",
+        "west-north": {
+            "lng": "-16.774235",
+            "lat": "12.738587"
+        },
+        "east-south": {
+            "lng": "-13.637638",
+            "lat": "10.959169"
+        }
+    },
+    {
+        "name": "Guyana",
+        "alpha-2": "GY",
+        "alpha-3": "GUY",
+        "country-code": "328",
+        "iso_3166-2": "ISO 3166-2:GY",
+        "region": "Americas",
+        "sub-region": "South America",
+        "region-code": "019",
+        "sub-region-code": "005",
+        "west-north": {
+            "lng": "-61.486702",
+            "lat": "8.638955"
+        },
+        "east-south": {
+            "lng": "-56.46595",
+            "lat": "1.135179"
+        }
+    },
+    {
+        "name": "Haiti",
+        "alpha-2": "HT",
+        "alpha-3": "HTI",
+        "country-code": "332",
+        "iso_3166-2": "ISO 3166-2:HT",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Heard Island and McDonald Islands",
+        "alpha-2": "HM",
+        "alpha-3": "HMD",
+        "country-code": "334",
+        "iso_3166-2": "ISO 3166-2:HM",
+        "sub-region-code": null,
+        "region-code": null,
+        "sub-region": null,
+        "region": null,
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Holy See",
+        "alpha-2": "VA",
+        "alpha-3": "VAT",
+        "country-code": "336",
+        "iso_3166-2": "ISO 3166-2:VA",
+        "region": "Europe",
+        "sub-region": "Southern Europe",
+        "region-code": "150",
+        "sub-region-code": "039",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Honduras",
+        "alpha-2": "HN",
+        "alpha-3": "HND",
+        "country-code": "340",
+        "iso_3166-2": "ISO 3166-2:HN",
+        "region": "Americas",
+        "sub-region": "Central America",
+        "region-code": "019",
+        "sub-region-code": "013",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Hong Kong",
+        "alpha-2": "HK",
+        "alpha-3": "HKG",
+        "country-code": "344",
+        "iso_3166-2": "ISO 3166-2:HK",
+        "region": "Asia",
+        "sub-region": "Eastern Asia",
+        "region-code": "142",
+        "sub-region-code": "030",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Hungary",
+        "alpha-2": "HU",
+        "alpha-3": "HUN",
+        "country-code": "348",
+        "iso_3166-2": "ISO 3166-2:HU",
+        "region": "Europe",
+        "sub-region": "Eastern Europe",
+        "region-code": "150",
+        "sub-region-code": "151",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Iceland",
+        "alpha-2": "IS",
+        "alpha-3": "ISL",
+        "country-code": "352",
+        "iso_3166-2": "ISO 3166-2:IS",
+        "region": "Europe",
+        "sub-region": "Northern Europe",
+        "region-code": "150",
+        "sub-region-code": "154",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "India",
+        "alpha-2": "IN",
+        "alpha-3": "IND",
+        "country-code": "356",
+        "iso_3166-2": "ISO 3166-2:IN",
+        "region": "Asia",
+        "sub-region": "Southern Asia",
+        "region-code": "142",
+        "sub-region-code": "034",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Indonesia",
+        "alpha-2": "ID",
+        "alpha-3": "IDN",
+        "country-code": "360",
+        "iso_3166-2": "ISO 3166-2:ID",
+        "region": "Asia",
+        "sub-region": "South-Eastern Asia",
+        "region-code": "142",
+        "sub-region-code": "035",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Iran (Islamic Republic of)",
+        "alpha-2": "IR",
+        "alpha-3": "IRN",
+        "country-code": "364",
+        "iso_3166-2": "ISO 3166-2:IR",
+        "region": "Asia",
+        "sub-region": "Southern Asia",
+        "region-code": "142",
+        "sub-region-code": "034",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Iraq",
+        "alpha-2": "IQ",
+        "alpha-3": "IRQ",
+        "country-code": "368",
+        "iso_3166-2": "ISO 3166-2:IQ",
+        "region": "Asia",
+        "sub-region": "Western Asia",
+        "region-code": "142",
+        "sub-region-code": "145",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Ireland",
+        "alpha-2": "IE",
+        "alpha-3": "IRL",
+        "country-code": "372",
+        "iso_3166-2": "ISO 3166-2:IE",
+        "region": "Europe",
+        "sub-region": "Northern Europe",
+        "region-code": "150",
+        "sub-region-code": "154",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Isle of Man",
+        "alpha-2": "IM",
+        "alpha-3": "IMN",
+        "country-code": "833",
+        "iso_3166-2": "ISO 3166-2:IM",
+        "region": "Europe",
+        "sub-region": "Northern Europe",
+        "region-code": "150",
+        "sub-region-code": "154",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Israel",
+        "alpha-2": "IL",
+        "alpha-3": "ISR",
+        "country-code": "376",
+        "iso_3166-2": "ISO 3166-2:IL",
+        "region": "Asia",
+        "sub-region": "Western Asia",
+        "region-code": "142",
+        "sub-region-code": "145",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Italy",
+        "alpha-2": "IT",
+        "alpha-3": "ITA",
+        "country-code": "380",
+        "iso_3166-2": "ISO 3166-2:IT",
+        "region": "Europe",
+        "sub-region": "Southern Europe",
+        "region-code": "150",
+        "sub-region-code": "039",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Jamaica",
+        "alpha-2": "JM",
+        "alpha-3": "JAM",
+        "country-code": "388",
+        "iso_3166-2": "ISO 3166-2:JM",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Japan",
+        "alpha-2": "JP",
+        "alpha-3": "JPN",
+        "country-code": "392",
+        "iso_3166-2": "ISO 3166-2:JP",
+        "region": "Asia",
+        "sub-region": "Eastern Asia",
+        "region-code": "142",
+        "sub-region-code": "030",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Jersey",
+        "alpha-2": "JE",
+        "alpha-3": "JEY",
+        "country-code": "832",
+        "iso_3166-2": "ISO 3166-2:JE",
+        "region": "Europe",
+        "sub-region": "Northern Europe",
+        "region-code": "150",
+        "sub-region-code": "154",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Jordan",
+        "alpha-2": "JO",
+        "alpha-3": "JOR",
+        "country-code": "400",
+        "iso_3166-2": "ISO 3166-2:JO",
+        "region": "Asia",
+        "sub-region": "Western Asia",
+        "region-code": "142",
+        "sub-region-code": "145",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Kazakhstan",
+        "alpha-2": "KZ",
+        "alpha-3": "KAZ",
+        "country-code": "398",
+        "iso_3166-2": "ISO 3166-2:KZ",
+        "region": "Asia",
+        "sub-region": "Central Asia",
+        "region-code": "142",
+        "sub-region-code": "143",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Kenya",
+        "alpha-2": "KE",
+        "alpha-3": "KEN",
+        "country-code": "404",
+        "iso_3166-2": "ISO 3166-2:KE",
+        "region": "Africa",
+        "sub-region": "Eastern Africa",
+        "region-code": "002",
+        "sub-region-code": "014",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Kiribati",
+        "alpha-2": "KI",
+        "alpha-3": "KIR",
+        "country-code": "296",
+        "iso_3166-2": "ISO 3166-2:KI",
+        "region": "Oceania",
+        "sub-region": "Micronesia",
+        "region-code": "009",
+        "sub-region-code": "057",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Korea (Democratic People's Republic of)",
+        "alpha-2": "KP",
+        "alpha-3": "PRK",
+        "country-code": "408",
+        "iso_3166-2": "ISO 3166-2:KP",
+        "region": "Asia",
+        "sub-region": "Eastern Asia",
+        "region-code": "142",
+        "sub-region-code": "030",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Korea (Republic of)",
+        "alpha-2": "KR",
+        "alpha-3": "KOR",
+        "country-code": "410",
+        "iso_3166-2": "ISO 3166-2:KR",
+        "region": "Asia",
+        "sub-region": "Eastern Asia",
+        "region-code": "142",
+        "sub-region-code": "030",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Kuwait",
+        "alpha-2": "KW",
+        "alpha-3": "KWT",
+        "country-code": "414",
+        "iso_3166-2": "ISO 3166-2:KW",
+        "region": "Asia",
+        "sub-region": "Western Asia",
+        "region-code": "142",
+        "sub-region-code": "145",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Kyrgyzstan",
+        "alpha-2": "KG",
+        "alpha-3": "KGZ",
+        "country-code": "417",
+        "iso_3166-2": "ISO 3166-2:KG",
+        "region": "Asia",
+        "sub-region": "Central Asia",
+        "region-code": "142",
+        "sub-region-code": "143",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Lao People's Democratic Republic",
+        "alpha-2": "LA",
+        "alpha-3": "LAO",
+        "country-code": "418",
+        "iso_3166-2": "ISO 3166-2:LA",
+        "region": "Asia",
+        "sub-region": "South-Eastern Asia",
+        "region-code": "142",
+        "sub-region-code": "035",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Latvia",
+        "alpha-2": "LV",
+        "alpha-3": "LVA",
+        "country-code": "428",
+        "iso_3166-2": "ISO 3166-2:LV",
+        "region": "Europe",
+        "sub-region": "Northern Europe",
+        "region-code": "150",
+        "sub-region-code": "154",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Lebanon",
+        "alpha-2": "LB",
+        "alpha-3": "LBN",
+        "country-code": "422",
+        "iso_3166-2": "ISO 3166-2:LB",
+        "region": "Asia",
+        "sub-region": "Western Asia",
+        "region-code": "142",
+        "sub-region-code": "145",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Lesotho",
+        "alpha-2": "LS",
+        "alpha-3": "LSO",
+        "country-code": "426",
+        "iso_3166-2": "ISO 3166-2:LS",
+        "region": "Africa",
+        "sub-region": "Southern Africa",
+        "region-code": "002",
+        "sub-region-code": "018",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Liberia",
+        "alpha-2": "LR",
+        "alpha-3": "LBR",
+        "country-code": "430",
+        "iso_3166-2": "ISO 3166-2:LR",
+        "region": "Africa",
+        "sub-region": "Western Africa",
+        "region-code": "002",
+        "sub-region-code": "011",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Libya",
+        "alpha-2": "LY",
+        "alpha-3": "LBY",
+        "country-code": "434",
+        "iso_3166-2": "ISO 3166-2:LY",
+        "region": "Africa",
+        "sub-region": "Northern Africa",
+        "region-code": "002",
+        "sub-region-code": "015",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Liechtenstein",
+        "alpha-2": "LI",
+        "alpha-3": "LIE",
+        "country-code": "438",
+        "iso_3166-2": "ISO 3166-2:LI",
+        "region": "Europe",
+        "sub-region": "Western Europe",
+        "region-code": "150",
+        "sub-region-code": "155",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Lithuania",
+        "alpha-2": "LT",
+        "alpha-3": "LTU",
+        "country-code": "440",
+        "iso_3166-2": "ISO 3166-2:LT",
+        "region": "Europe",
+        "sub-region": "Northern Europe",
+        "region-code": "150",
+        "sub-region-code": "154",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Luxembourg",
+        "alpha-2": "LU",
+        "alpha-3": "LUX",
+        "country-code": "442",
+        "iso_3166-2": "ISO 3166-2:LU",
+        "region": "Europe",
+        "sub-region": "Western Europe",
+        "region-code": "150",
+        "sub-region-code": "155",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Macao",
+        "alpha-2": "MO",
+        "alpha-3": "MAC",
+        "country-code": "446",
+        "iso_3166-2": "ISO 3166-2:MO",
+        "region": "Asia",
+        "sub-region": "Eastern Asia",
+        "region-code": "142",
+        "sub-region-code": "030",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Macedonia (the former Yugoslav Republic of)",
+        "alpha-2": "MK",
+        "alpha-3": "MKD",
+        "country-code": "807",
+        "iso_3166-2": "ISO 3166-2:MK",
+        "region": "Europe",
+        "sub-region": "Southern Europe",
+        "region-code": "150",
+        "sub-region-code": "039",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Madagascar",
+        "alpha-2": "MG",
+        "alpha-3": "MDG",
+        "country-code": "450",
+        "iso_3166-2": "ISO 3166-2:MG",
+        "region": "Africa",
+        "sub-region": "Eastern Africa",
+        "region-code": "002",
+        "sub-region-code": "014",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Malawi",
+        "alpha-2": "MW",
+        "alpha-3": "MWI",
+        "country-code": "454",
+        "iso_3166-2": "ISO 3166-2:MW",
+        "region": "Africa",
+        "sub-region": "Eastern Africa",
+        "region-code": "002",
+        "sub-region-code": "014",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Malaysia",
+        "alpha-2": "MY",
+        "alpha-3": "MYS",
+        "country-code": "458",
+        "iso_3166-2": "ISO 3166-2:MY",
+        "region": "Asia",
+        "sub-region": "South-Eastern Asia",
+        "region-code": "142",
+        "sub-region-code": "035",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Maldives",
+        "alpha-2": "MV",
+        "alpha-3": "MDV",
+        "country-code": "462",
+        "iso_3166-2": "ISO 3166-2:MV",
+        "region": "Asia",
+        "sub-region": "Southern Asia",
+        "region-code": "142",
+        "sub-region-code": "034",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Mali",
+        "alpha-2": "ML",
+        "alpha-3": "MLI",
+        "country-code": "466",
+        "iso_3166-2": "ISO 3166-2:ML",
+        "region": "Africa",
+        "sub-region": "Western Africa",
+        "region-code": "002",
+        "sub-region-code": "011",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Malta",
+        "alpha-2": "MT",
+        "alpha-3": "MLT",
+        "country-code": "470",
+        "iso_3166-2": "ISO 3166-2:MT",
+        "region": "Europe",
+        "sub-region": "Southern Europe",
+        "region-code": "150",
+        "sub-region-code": "039",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Marshall Islands",
+        "alpha-2": "MH",
+        "alpha-3": "MHL",
+        "country-code": "584",
+        "iso_3166-2": "ISO 3166-2:MH",
+        "region": "Oceania",
+        "sub-region": "Micronesia",
+        "region-code": "009",
+        "sub-region-code": "057",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Martinique",
+        "alpha-2": "MQ",
+        "alpha-3": "MTQ",
+        "country-code": "474",
+        "iso_3166-2": "ISO 3166-2:MQ",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Mauritania",
+        "alpha-2": "MR",
+        "alpha-3": "MRT",
+        "country-code": "478",
+        "iso_3166-2": "ISO 3166-2:MR",
+        "region": "Africa",
+        "sub-region": "Western Africa",
+        "region-code": "002",
+        "sub-region-code": "011",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Mauritius",
+        "alpha-2": "MU",
+        "alpha-3": "MUS",
+        "country-code": "480",
+        "iso_3166-2": "ISO 3166-2:MU",
+        "region": "Africa",
+        "sub-region": "Eastern Africa",
+        "region-code": "002",
+        "sub-region-code": "014",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Mayotte",
+        "alpha-2": "YT",
+        "alpha-3": "MYT",
+        "country-code": "175",
+        "iso_3166-2": "ISO 3166-2:YT",
+        "region": "Africa",
+        "sub-region": "Eastern Africa",
+        "region-code": "002",
+        "sub-region-code": "014",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Mexico",
+        "alpha-2": "MX",
+        "alpha-3": "MEX",
+        "country-code": "484",
+        "iso_3166-2": "ISO 3166-2:MX",
+        "region": "Americas",
+        "sub-region": "Central America",
+        "region-code": "019",
+        "sub-region-code": "013",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Micronesia (Federated States of)",
+        "alpha-2": "FM",
+        "alpha-3": "FSM",
+        "country-code": "583",
+        "iso_3166-2": "ISO 3166-2:FM",
+        "region": "Oceania",
+        "sub-region": "Micronesia",
+        "region-code": "009",
+        "sub-region-code": "057",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Moldova (Republic of)",
+        "alpha-2": "MD",
+        "alpha-3": "MDA",
+        "country-code": "498",
+        "iso_3166-2": "ISO 3166-2:MD",
+        "region": "Europe",
+        "sub-region": "Eastern Europe",
+        "region-code": "150",
+        "sub-region-code": "151",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Monaco",
+        "alpha-2": "MC",
+        "alpha-3": "MCO",
+        "country-code": "492",
+        "iso_3166-2": "ISO 3166-2:MC",
+        "region": "Europe",
+        "sub-region": "Western Europe",
+        "region-code": "150",
+        "sub-region-code": "155",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Mongolia",
+        "alpha-2": "MN",
+        "alpha-3": "MNG",
+        "country-code": "496",
+        "iso_3166-2": "ISO 3166-2:MN",
+        "region": "Asia",
+        "sub-region": "Eastern Asia",
+        "region-code": "142",
+        "sub-region-code": "030",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Montenegro",
+        "alpha-2": "ME",
+        "alpha-3": "MNE",
+        "country-code": "499",
+        "iso_3166-2": "ISO 3166-2:ME",
+        "region": "Europe",
+        "sub-region": "Southern Europe",
+        "region-code": "150",
+        "sub-region-code": "039",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Montserrat",
+        "alpha-2": "MS",
+        "alpha-3": "MSR",
+        "country-code": "500",
+        "iso_3166-2": "ISO 3166-2:MS",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Morocco",
+        "alpha-2": "MA",
+        "alpha-3": "MAR",
+        "country-code": "504",
+        "iso_3166-2": "ISO 3166-2:MA",
+        "region": "Africa",
+        "sub-region": "Northern Africa",
+        "region-code": "002",
+        "sub-region-code": "015",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Mozambique",
+        "alpha-2": "MZ",
+        "alpha-3": "MOZ",
+        "country-code": "508",
+        "iso_3166-2": "ISO 3166-2:MZ",
+        "region": "Africa",
+        "sub-region": "Eastern Africa",
+        "region-code": "002",
+        "sub-region-code": "014",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Myanmar",
+        "alpha-2": "MM",
+        "alpha-3": "MMR",
+        "country-code": "104",
+        "iso_3166-2": "ISO 3166-2:MM",
+        "region": "Asia",
+        "sub-region": "South-Eastern Asia",
+        "region-code": "142",
+        "sub-region-code": "035",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Namibia",
+        "alpha-2": "NA",
+        "alpha-3": "NAM",
+        "country-code": "516",
+        "iso_3166-2": "ISO 3166-2:NA",
+        "region": "Africa",
+        "sub-region": "Southern Africa",
+        "region-code": "002",
+        "sub-region-code": "018",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Nauru",
+        "alpha-2": "NR",
+        "alpha-3": "NRU",
+        "country-code": "520",
+        "iso_3166-2": "ISO 3166-2:NR",
+        "region": "Oceania",
+        "sub-region": "Micronesia",
+        "region-code": "009",
+        "sub-region-code": "057",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Nepal",
+        "alpha-2": "NP",
+        "alpha-3": "NPL",
+        "country-code": "524",
+        "iso_3166-2": "ISO 3166-2:NP",
+        "region": "Asia",
+        "sub-region": "Southern Asia",
+        "region-code": "142",
+        "sub-region-code": "034",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Netherlands",
+        "alpha-2": "NL",
+        "alpha-3": "NLD",
+        "country-code": "528",
+        "iso_3166-2": "ISO 3166-2:NL",
+        "region": "Europe",
+        "sub-region": "Western Europe",
+        "region-code": "150",
+        "sub-region-code": "155",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "New Caledonia",
+        "alpha-2": "NC",
+        "alpha-3": "NCL",
+        "country-code": "540",
+        "iso_3166-2": "ISO 3166-2:NC",
+        "region": "Oceania",
+        "sub-region": "Melanesia",
+        "region-code": "009",
+        "sub-region-code": "054",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "New Zealand",
+        "alpha-2": "NZ",
+        "alpha-3": "NZL",
+        "country-code": "554",
+        "iso_3166-2": "ISO 3166-2:NZ",
+        "region": "Oceania",
+        "sub-region": "Australia and New Zealand",
+        "region-code": "009",
+        "sub-region-code": "053",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Nicaragua",
+        "alpha-2": "NI",
+        "alpha-3": "NIC",
+        "country-code": "558",
+        "iso_3166-2": "ISO 3166-2:NI",
+        "region": "Americas",
+        "sub-region": "Central America",
+        "region-code": "019",
+        "sub-region-code": "013",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Niger",
+        "alpha-2": "NE",
+        "alpha-3": "NER",
+        "country-code": "562",
+        "iso_3166-2": "ISO 3166-2:NE",
+        "region": "Africa",
+        "sub-region": "Western Africa",
+        "region-code": "002",
+        "sub-region-code": "011",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Nigeria",
+        "alpha-2": "NG",
+        "alpha-3": "NGA",
+        "country-code": "566",
+        "iso_3166-2": "ISO 3166-2:NG",
+        "region": "Africa",
+        "sub-region": "Western Africa",
+        "region-code": "002",
+        "sub-region-code": "011",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Niue",
+        "alpha-2": "NU",
+        "alpha-3": "NIU",
+        "country-code": "570",
+        "iso_3166-2": "ISO 3166-2:NU",
+        "region": "Oceania",
+        "sub-region": "Polynesia",
+        "region-code": "009",
+        "sub-region-code": "061",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Norfolk Island",
+        "alpha-2": "NF",
+        "alpha-3": "NFK",
+        "country-code": "574",
+        "iso_3166-2": "ISO 3166-2:NF",
+        "region": "Oceania",
+        "sub-region": "Australia and New Zealand",
+        "region-code": "009",
+        "sub-region-code": "053",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Northern Mariana Islands",
+        "alpha-2": "MP",
+        "alpha-3": "MNP",
+        "country-code": "580",
+        "iso_3166-2": "ISO 3166-2:MP",
+        "region": "Oceania",
+        "sub-region": "Micronesia",
+        "region-code": "009",
+        "sub-region-code": "057",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Norway",
+        "alpha-2": "NO",
+        "alpha-3": "NOR",
+        "country-code": "578",
+        "iso_3166-2": "ISO 3166-2:NO",
+        "region": "Europe",
+        "sub-region": "Northern Europe",
+        "region-code": "150",
+        "sub-region-code": "154",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Oman",
+        "alpha-2": "OM",
+        "alpha-3": "OMN",
+        "country-code": "512",
+        "iso_3166-2": "ISO 3166-2:OM",
+        "region": "Asia",
+        "sub-region": "Western Asia",
+        "region-code": "142",
+        "sub-region-code": "145",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Pakistan",
+        "alpha-2": "PK",
+        "alpha-3": "PAK",
+        "country-code": "586",
+        "iso_3166-2": "ISO 3166-2:PK",
+        "region": "Asia",
+        "sub-region": "Southern Asia",
+        "region-code": "142",
+        "sub-region-code": "034",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Palau",
+        "alpha-2": "PW",
+        "alpha-3": "PLW",
+        "country-code": "585",
+        "iso_3166-2": "ISO 3166-2:PW",
+        "region": "Oceania",
+        "sub-region": "Micronesia",
+        "region-code": "009",
+        "sub-region-code": "057",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Palestine, State of",
+        "alpha-2": "PS",
+        "alpha-3": "PSE",
+        "country-code": "275",
+        "iso_3166-2": "ISO 3166-2:PS",
+        "region": "Asia",
+        "sub-region": "Western Asia",
+        "region-code": "142",
+        "sub-region-code": "145",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Panama",
+        "alpha-2": "PA",
+        "alpha-3": "PAN",
+        "country-code": "591",
+        "iso_3166-2": "ISO 3166-2:PA",
+        "region": "Americas",
+        "sub-region": "Central America",
+        "region-code": "019",
+        "sub-region-code": "013",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Papua New Guinea",
+        "alpha-2": "PG",
+        "alpha-3": "PNG",
+        "country-code": "598",
+        "iso_3166-2": "ISO 3166-2:PG",
+        "region": "Oceania",
+        "sub-region": "Melanesia",
+        "region-code": "009",
+        "sub-region-code": "054",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Paraguay",
+        "alpha-2": "PY",
+        "alpha-3": "PRY",
+        "country-code": "600",
+        "iso_3166-2": "ISO 3166-2:PY",
+        "region": "Americas",
+        "sub-region": "South America",
+        "region-code": "019",
+        "sub-region-code": "005",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Peru",
+        "alpha-2": "PE",
+        "alpha-3": "PER",
+        "country-code": "604",
+        "iso_3166-2": "ISO 3166-2:PE",
+        "region": "Americas",
+        "sub-region": "South America",
+        "region-code": "019",
+        "sub-region-code": "005",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Philippines",
+        "alpha-2": "PH",
+        "alpha-3": "PHL",
+        "country-code": "608",
+        "iso_3166-2": "ISO 3166-2:PH",
+        "region": "Asia",
+        "sub-region": "South-Eastern Asia",
+        "region-code": "142",
+        "sub-region-code": "035",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Pitcairn",
+        "alpha-2": "PN",
+        "alpha-3": "PCN",
+        "country-code": "612",
+        "iso_3166-2": "ISO 3166-2:PN",
+        "region": "Oceania",
+        "sub-region": "Polynesia",
+        "region-code": "009",
+        "sub-region-code": "061",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Poland",
+        "alpha-2": "PL",
+        "alpha-3": "POL",
+        "country-code": "616",
+        "iso_3166-2": "ISO 3166-2:PL",
+        "region": "Europe",
+        "sub-region": "Eastern Europe",
+        "region-code": "150",
+        "sub-region-code": "151",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Portugal",
+        "alpha-2": "PT",
+        "alpha-3": "PRT",
+        "country-code": "620",
+        "iso_3166-2": "ISO 3166-2:PT",
+        "region": "Europe",
+        "sub-region": "Southern Europe",
+        "region-code": "150",
+        "sub-region-code": "039",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Puerto Rico",
+        "alpha-2": "PR",
+        "alpha-3": "PRI",
+        "country-code": "630",
+        "iso_3166-2": "ISO 3166-2:PR",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Qatar",
+        "alpha-2": "QA",
+        "alpha-3": "QAT",
+        "country-code": "634",
+        "iso_3166-2": "ISO 3166-2:QA",
+        "region": "Asia",
+        "sub-region": "Western Asia",
+        "region-code": "142",
+        "sub-region-code": "145",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Réunion",
+        "alpha-2": "RE",
+        "alpha-3": "REU",
+        "country-code": "638",
+        "iso_3166-2": "ISO 3166-2:RE",
+        "region": "Africa",
+        "sub-region": "Eastern Africa",
+        "region-code": "002",
+        "sub-region-code": "014",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Romania",
+        "alpha-2": "RO",
+        "alpha-3": "ROU",
+        "country-code": "642",
+        "iso_3166-2": "ISO 3166-2:RO",
+        "region": "Europe",
+        "sub-region": "Eastern Europe",
+        "region-code": "150",
+        "sub-region-code": "151",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Russian Federation",
+        "alpha-2": "RU",
+        "alpha-3": "RUS",
+        "country-code": "643",
+        "iso_3166-2": "ISO 3166-2:RU",
+        "region": "Europe",
+        "sub-region": "Eastern Europe",
+        "region-code": "150",
+        "sub-region-code": "151",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Rwanda",
+        "alpha-2": "RW",
+        "alpha-3": "RWA",
+        "country-code": "646",
+        "iso_3166-2": "ISO 3166-2:RW",
+        "region": "Africa",
+        "sub-region": "Eastern Africa",
+        "region-code": "002",
+        "sub-region-code": "014",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Saint Barthélemy",
+        "alpha-2": "BL",
+        "alpha-3": "BLM",
+        "country-code": "652",
+        "iso_3166-2": "ISO 3166-2:BL",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Saint Helena, Ascension and Tristan da Cunha",
+        "alpha-2": "SH",
+        "alpha-3": "SHN",
+        "country-code": "654",
+        "iso_3166-2": "ISO 3166-2:SH",
+        "region": "Africa",
+        "sub-region": "Western Africa",
+        "region-code": "002",
+        "sub-region-code": "011",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Saint Kitts and Nevis",
+        "alpha-2": "KN",
+        "alpha-3": "KNA",
+        "country-code": "659",
+        "iso_3166-2": "ISO 3166-2:KN",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Saint Lucia",
+        "alpha-2": "LC",
+        "alpha-3": "LCA",
+        "country-code": "662",
+        "iso_3166-2": "ISO 3166-2:LC",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Saint Martin (French part)",
+        "alpha-2": "MF",
+        "alpha-3": "MAF",
+        "country-code": "663",
+        "iso_3166-2": "ISO 3166-2:MF",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Saint Pierre and Miquelng",
+        "alpha-2": "PM",
+        "alpha-3": "SPM",
+        "country-code": "666",
+        "iso_3166-2": "ISO 3166-2:PM",
+        "region": "Americas",
+        "sub-region": "Northern America",
+        "region-code": "019",
+        "sub-region-code": "021",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Saint Vincent and the Grenadines",
+        "alpha-2": "VC",
+        "alpha-3": "VCT",
+        "country-code": "670",
+        "iso_3166-2": "ISO 3166-2:VC",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Samoa",
+        "alpha-2": "WS",
+        "alpha-3": "WSM",
+        "country-code": "882",
+        "iso_3166-2": "ISO 3166-2:WS",
+        "region": "Oceania",
+        "sub-region": "Polynesia",
+        "region-code": "009",
+        "sub-region-code": "061",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "San Marino",
+        "alpha-2": "SM",
+        "alpha-3": "SMR",
+        "country-code": "674",
+        "iso_3166-2": "ISO 3166-2:SM",
+        "region": "Europe",
+        "sub-region": "Southern Europe",
+        "region-code": "150",
+        "sub-region-code": "039",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Sao Tome and Principe",
+        "alpha-2": "ST",
+        "alpha-3": "STP",
+        "country-code": "678",
+        "iso_3166-2": "ISO 3166-2:ST",
+        "region": "Africa",
+        "sub-region": "Middle Africa",
+        "region-code": "002",
+        "sub-region-code": "017",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Saudi Arabia",
+        "alpha-2": "SA",
+        "alpha-3": "SAU",
+        "country-code": "682",
+        "iso_3166-2": "ISO 3166-2:SA",
+        "region": "Asia",
+        "sub-region": "Western Asia",
+        "region-code": "142",
+        "sub-region-code": "145",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Senegal",
+        "alpha-2": "SN",
+        "alpha-3": "SEN",
+        "country-code": "686",
+        "iso_3166-2": "ISO 3166-2:SN",
+        "region": "Africa",
+        "sub-region": "Western Africa",
+        "region-code": "002",
+        "sub-region-code": "011",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Serbia",
+        "alpha-2": "RS",
+        "alpha-3": "SRB",
+        "country-code": "688",
+        "iso_3166-2": "ISO 3166-2:RS",
+        "region": "Europe",
+        "sub-region": "Southern Europe",
+        "region-code": "150",
+        "sub-region-code": "039",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Seychelles",
+        "alpha-2": "SC",
+        "alpha-3": "SYC",
+        "country-code": "690",
+        "iso_3166-2": "ISO 3166-2:SC",
+        "region": "Africa",
+        "sub-region": "Eastern Africa",
+        "region-code": "002",
+        "sub-region-code": "014",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Sierra Leone",
+        "alpha-2": "SL",
+        "alpha-3": "SLE",
+        "country-code": "694",
+        "iso_3166-2": "ISO 3166-2:SL",
+        "region": "Africa",
+        "sub-region": "Western Africa",
+        "region-code": "002",
+        "sub-region-code": "011",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Singapore",
+        "alpha-2": "SG",
+        "alpha-3": "SGP",
+        "country-code": "702",
+        "iso_3166-2": "ISO 3166-2:SG",
+        "region": "Asia",
+        "sub-region": "South-Eastern Asia",
+        "region-code": "142",
+        "sub-region-code": "035",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Sint Maarten (Dutch part)",
+        "alpha-2": "SX",
+        "alpha-3": "SXM",
+        "country-code": "534",
+        "iso_3166-2": "ISO 3166-2:SX",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Slovakia",
+        "alpha-2": "SK",
+        "alpha-3": "SVK",
+        "country-code": "703",
+        "iso_3166-2": "ISO 3166-2:SK",
+        "region": "Europe",
+        "sub-region": "Eastern Europe",
+        "region-code": "150",
+        "sub-region-code": "151",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Slovenia",
+        "alpha-2": "SI",
+        "alpha-3": "SVN",
+        "country-code": "705",
+        "iso_3166-2": "ISO 3166-2:SI",
+        "region": "Europe",
+        "sub-region": "Southern Europe",
+        "region-code": "150",
+        "sub-region-code": "039",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Solomon Islands",
+        "alpha-2": "SB",
+        "alpha-3": "SLB",
+        "country-code": "090",
+        "iso_3166-2": "ISO 3166-2:SB",
+        "region": "Oceania",
+        "sub-region": "Melanesia",
+        "region-code": "009",
+        "sub-region-code": "054",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Somalia",
+        "alpha-2": "SO",
+        "alpha-3": "SOM",
+        "country-code": "706",
+        "iso_3166-2": "ISO 3166-2:SO",
+        "region": "Africa",
+        "sub-region": "Eastern Africa",
+        "region-code": "002",
+        "sub-region-code": "014",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "South Africa",
+        "alpha-2": "ZA",
+        "alpha-3": "ZAF",
+        "country-code": "710",
+        "iso_3166-2": "ISO 3166-2:ZA",
+        "region": "Africa",
+        "sub-region": "Southern Africa",
+        "region-code": "002",
+        "sub-region-code": "018",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "South Georgia and the South Sandwich Islands",
+        "alpha-2": "GS",
+        "alpha-3": "SGS",
+        "country-code": "239",
+        "iso_3166-2": "ISO 3166-2:GS",
+        "sub-region-code": null,
+        "region-code": null,
+        "sub-region": null,
+        "region": null,
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "South Sudan",
+        "alpha-2": "SS",
+        "alpha-3": "SSD",
+        "country-code": "728",
+        "iso_3166-2": "ISO 3166-2:SS",
+        "region": "Africa",
+        "sub-region": "Eastern Africa",
+        "region-code": "002",
+        "sub-region-code": "014",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Spain",
+        "alpha-2": "ES",
+        "alpha-3": "ESP",
+        "country-code": "724",
+        "iso_3166-2": "ISO 3166-2:ES",
+        "region": "Europe",
+        "sub-region": "Southern Europe",
+        "region-code": "150",
+        "sub-region-code": "039",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Sri Lanka",
+        "alpha-2": "LK",
+        "alpha-3": "LKA",
+        "country-code": "144",
+        "iso_3166-2": "ISO 3166-2:LK",
+        "region": "Asia",
+        "sub-region": "Southern Asia",
+        "region-code": "142",
+        "sub-region-code": "034",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Sudan",
+        "alpha-2": "SD",
+        "alpha-3": "SDN",
+        "country-code": "729",
+        "iso_3166-2": "ISO 3166-2:SD",
+        "region": "Africa",
+        "sub-region": "Northern Africa",
+        "region-code": "002",
+        "sub-region-code": "015",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Suriname",
+        "alpha-2": "SR",
+        "alpha-3": "SUR",
+        "country-code": "740",
+        "iso_3166-2": "ISO 3166-2:SR",
+        "region": "Americas",
+        "sub-region": "South America",
+        "region-code": "019",
+        "sub-region-code": "005",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Svalbard and Jan Mayen",
+        "alpha-2": "SJ",
+        "alpha-3": "SJM",
+        "country-code": "744",
+        "iso_3166-2": "ISO 3166-2:SJ",
+        "region": "Europe",
+        "sub-region": "Northern Europe",
+        "region-code": "150",
+        "sub-region-code": "154",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Swaziland",
+        "alpha-2": "SZ",
+        "alpha-3": "SWZ",
+        "country-code": "748",
+        "iso_3166-2": "ISO 3166-2:SZ",
+        "region": "Africa",
+        "sub-region": "Southern Africa",
+        "region-code": "002",
+        "sub-region-code": "018",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Sweden",
+        "alpha-2": "SE",
+        "alpha-3": "SWE",
+        "country-code": "752",
+        "iso_3166-2": "ISO 3166-2:SE",
+        "region": "Europe",
+        "sub-region": "Northern Europe",
+        "region-code": "150",
+        "sub-region-code": "154",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Switzerland",
+        "alpha-2": "CH",
+        "alpha-3": "CHE",
+        "country-code": "756",
+        "iso_3166-2": "ISO 3166-2:CH",
+        "region": "Europe",
+        "sub-region": "Western Europe",
+        "region-code": "150",
+        "sub-region-code": "155",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Syrian Arab Republic",
+        "alpha-2": "SY",
+        "alpha-3": "SYR",
+        "country-code": "760",
+        "iso_3166-2": "ISO 3166-2:SY",
+        "region": "Asia",
+        "sub-region": "Western Asia",
+        "region-code": "142",
+        "sub-region-code": "145",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Taiwan, Province of China",
+        "alpha-2": "TW",
+        "alpha-3": "TWN",
+        "country-code": "158",
+        "iso_3166-2": "ISO 3166-2:TW",
+        "region": "Asia",
+        "sub-region": "Eastern Asia",
+        "region-code": "142",
+        "sub-region-code": "030",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Tajikistan",
+        "alpha-2": "TJ",
+        "alpha-3": "TJK",
+        "country-code": "762",
+        "iso_3166-2": "ISO 3166-2:TJ",
+        "region": "Asia",
+        "sub-region": "Central Asia",
+        "region-code": "142",
+        "sub-region-code": "143",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Tanzania, United Republic of",
+        "alpha-2": "TZ",
+        "alpha-3": "TZA",
+        "country-code": "834",
+        "iso_3166-2": "ISO 3166-2:TZ",
+        "region": "Africa",
+        "sub-region": "Eastern Africa",
+        "region-code": "002",
+        "sub-region-code": "014",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Thailand",
+        "alpha-2": "TH",
+        "alpha-3": "THA",
+        "country-code": "764",
+        "iso_3166-2": "ISO 3166-2:TH",
+        "region": "Asia",
+        "sub-region": "South-Eastern Asia",
+        "region-code": "142",
+        "sub-region-code": "035",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Timor-Leste",
+        "alpha-2": "TL",
+        "alpha-3": "TLS",
+        "country-code": "626",
+        "iso_3166-2": "ISO 3166-2:TL",
+        "region": "Asia",
+        "sub-region": "South-Eastern Asia",
+        "region-code": "142",
+        "sub-region-code": "035",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Togo",
+        "alpha-2": "TG",
+        "alpha-3": "TGO",
+        "country-code": "768",
+        "iso_3166-2": "ISO 3166-2:TG",
+        "region": "Africa",
+        "sub-region": "Western Africa",
+        "region-code": "002",
+        "sub-region-code": "011",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Tokelau",
+        "alpha-2": "TK",
+        "alpha-3": "TKL",
+        "country-code": "772",
+        "iso_3166-2": "ISO 3166-2:TK",
+        "region": "Oceania",
+        "sub-region": "Polynesia",
+        "region-code": "009",
+        "sub-region-code": "061",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Tonga",
+        "alpha-2": "TO",
+        "alpha-3": "TON",
+        "country-code": "776",
+        "iso_3166-2": "ISO 3166-2:TO",
+        "region": "Oceania",
+        "sub-region": "Polynesia",
+        "region-code": "009",
+        "sub-region-code": "061",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Trinidad and Tobago",
+        "alpha-2": "TT",
+        "alpha-3": "TTO",
+        "country-code": "780",
+        "iso_3166-2": "ISO 3166-2:TT",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Tunisia",
+        "alpha-2": "TN",
+        "alpha-3": "TUN",
+        "country-code": "788",
+        "iso_3166-2": "ISO 3166-2:TN",
+        "region": "Africa",
+        "sub-region": "Northern Africa",
+        "region-code": "002",
+        "sub-region-code": "015",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Turkey",
+        "alpha-2": "TR",
+        "alpha-3": "TUR",
+        "country-code": "792",
+        "iso_3166-2": "ISO 3166-2:TR",
+        "region": "Asia",
+        "sub-region": "Western Asia",
+        "region-code": "142",
+        "sub-region-code": "145",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Turkmenistan",
+        "alpha-2": "TM",
+        "alpha-3": "TKM",
+        "country-code": "795",
+        "iso_3166-2": "ISO 3166-2:TM",
+        "region": "Asia",
+        "sub-region": "Central Asia",
+        "region-code": "142",
+        "sub-region-code": "143",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Turks and Caicos Islands",
+        "alpha-2": "TC",
+        "alpha-3": "TCA",
+        "country-code": "796",
+        "iso_3166-2": "ISO 3166-2:TC",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Tuvalu",
+        "alpha-2": "TV",
+        "alpha-3": "TUV",
+        "country-code": "798",
+        "iso_3166-2": "ISO 3166-2:TV",
+        "region": "Oceania",
+        "sub-region": "Polynesia",
+        "region-code": "009",
+        "sub-region-code": "061",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Uganda",
+        "alpha-2": "UG",
+        "alpha-3": "UGA",
+        "country-code": "800",
+        "iso_3166-2": "ISO 3166-2:UG",
+        "region": "Africa",
+        "sub-region": "Eastern Africa",
+        "region-code": "002",
+        "sub-region-code": "014",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Ukraine",
+        "alpha-2": "UA",
+        "alpha-3": "UKR",
+        "country-code": "804",
+        "iso_3166-2": "ISO 3166-2:UA",
+        "region": "Europe",
+        "sub-region": "Eastern Europe",
+        "region-code": "150",
+        "sub-region-code": "151",
+        "west-north": {
+            "lng": 22.25000000,
+            "lat": 52.36666667
+        },
+        "east-south": {
+            "lng": 40.25000000,
+            "lat": 45.33333333
+        },
+        "center": {
+            "lng": 31.617816,
+            "lat": 49.365697
+        }
+    },
+    {
+        "name": "United Arab Emirates",
+        "alpha-2": "AE",
+        "alpha-3": "ARE",
+        "country-code": "784",
+        "iso_3166-2": "ISO 3166-2:AE",
+        "region": "Asia",
+        "sub-region": "Western Asia",
+        "region-code": "142",
+        "sub-region-code": "145",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "United Kingdom of Great Britain and Northern Ireland",
+        "alpha-2": "GB",
+        "alpha-3": "GBR",
+        "country-code": "826",
+        "iso_3166-2": "ISO 3166-2:GB",
+        "region": "Europe",
+        "sub-region": "Northern Europe",
+        "region-code": "150",
+        "sub-region-code": "154",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "United States of America",
+        "alpha-2": "US",
+        "alpha-3": "USA",
+        "country-code": "840",
+        "iso_3166-2": "ISO 3166-2:US",
+        "region": "Americas",
+        "sub-region": "Northern America",
+        "region-code": "019",
+        "sub-region-code": "021",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "United States Minor Outlying Islands",
+        "alpha-2": "UM",
+        "alpha-3": "UMI",
+        "country-code": "581",
+        "iso_3166-2": "ISO 3166-2:UM",
+        "sub-region-code": null,
+        "region-code": null,
+        "sub-region": null,
+        "region": null,
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Uruguay",
+        "alpha-2": "UY",
+        "alpha-3": "URY",
+        "country-code": "858",
+        "iso_3166-2": "ISO 3166-2:UY",
+        "region": "Americas",
+        "sub-region": "South America",
+        "region-code": "019",
+        "sub-region-code": "005",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Uzbekistan",
+        "alpha-2": "UZ",
+        "alpha-3": "UZB",
+        "country-code": "860",
+        "iso_3166-2": "ISO 3166-2:UZ",
+        "region": "Asia",
+        "sub-region": "Central Asia",
+        "region-code": "142",
+        "sub-region-code": "143",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Vanuatu",
+        "alpha-2": "VU",
+        "alpha-3": "VUT",
+        "country-code": "548",
+        "iso_3166-2": "ISO 3166-2:VU",
+        "region": "Oceania",
+        "sub-region": "Melanesia",
+        "region-code": "009",
+        "sub-region-code": "054",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Venezuela (Bolivarian Republic of)",
+        "alpha-2": "VE",
+        "alpha-3": "VEN",
+        "country-code": "862",
+        "iso_3166-2": "ISO 3166-2:VE",
+        "region": "Americas",
+        "sub-region": "South America",
+        "region-code": "019",
+        "sub-region-code": "005",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Viet Nam",
+        "alpha-2": "VN",
+        "alpha-3": "VNM",
+        "country-code": "704",
+        "iso_3166-2": "ISO 3166-2:VN",
+        "region": "Asia",
+        "sub-region": "South-Eastern Asia",
+        "region-code": "142",
+        "sub-region-code": "035",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Virgin Islands (British)",
+        "alpha-2": "VG",
+        "alpha-3": "VGB",
+        "country-code": "092",
+        "iso_3166-2": "ISO 3166-2:VG",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Virgin Islands (U.S.)",
+        "alpha-2": "VI",
+        "alpha-3": "VIR",
+        "country-code": "850",
+        "iso_3166-2": "ISO 3166-2:VI",
+        "region": "Americas",
+        "sub-region": "Caribbean",
+        "region-code": "019",
+        "sub-region-code": "029",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Wallis and Futuna",
+        "alpha-2": "WF",
+        "alpha-3": "WLF",
+        "country-code": "876",
+        "iso_3166-2": "ISO 3166-2:WF",
+        "region": "Oceania",
+        "sub-region": "Polynesia",
+        "region-code": "009",
+        "sub-region-code": "061",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Western Sahara",
+        "alpha-2": "EH",
+        "alpha-3": "ESH",
+        "country-code": "732",
+        "iso_3166-2": "ISO 3166-2:EH",
+        "region": "Africa",
+        "sub-region": "Northern Africa",
+        "region-code": "002",
+        "sub-region-code": "015",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Yemen",
+        "alpha-2": "YE",
+        "alpha-3": "YEM",
+        "country-code": "887",
+        "iso_3166-2": "ISO 3166-2:YE",
+        "region": "Asia",
+        "sub-region": "Western Asia",
+        "region-code": "142",
+        "sub-region-code": "145",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Zambia",
+        "alpha-2": "ZM",
+        "alpha-3": "ZMB",
+        "country-code": "894",
+        "iso_3166-2": "ISO 3166-2:ZM",
+        "region": "Africa",
+        "sub-region": "Eastern Africa",
+        "region-code": "002",
+        "sub-region-code": "014",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    },
+    {
+        "name": "Zimbabwe",
+        "alpha-2": "ZW",
+        "alpha-3": "ZWE",
+        "country-code": "716",
+        "iso_3166-2": "ISO 3166-2:ZW",
+        "region": "Africa",
+        "sub-region": "Eastern Africa",
+        "region-code": "002",
+        "sub-region-code": "014",
+        "west-north": {
+            "lng": "",
+            "lat": ""
+        },
+        "east-south": {
+            "lng": "",
+            "lat": ""
+        }
+    }
+]

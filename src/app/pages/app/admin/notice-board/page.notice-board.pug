@@ -1,0 +1,10 @@
+.app-page-admin-notice-board(fxLayout="column", fxFlex)
+    div(fxLayout="row", fxLayoutAlign="center center")
+        h3(fxFlex) {{'page.admin.notice-board.title' | translate}}
+        div
+            button(mat-button, mat-raised-button, (click)="editNotice()") {{'page.admin.notice-board.create' | translate}}
+    div
+        ng-template(mat-tab-label)
+            span {{'page.admin.notice-board.title' | translate}}
+        .padding
+            app-table([data]="notices", [dataHeader]="noticesDataHeader", (remove)="deleteNotice($event)", (create)="editNotice($event)")

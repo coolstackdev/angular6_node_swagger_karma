@@ -1,0 +1,13 @@
+.app-page-quiz-list.padding(fxLayout="column", fxFlex)
+    div(fxLayout="row", fxLayoutAlign="center center")
+        h3(fxFlex) {{'page.quizzes.title' | translate}}
+        div
+            .file-upload
+                input.file-upload__input(type='file', #excelInput, (change)='processFile()')
+                button.file-upload__btn(mat-button, mat-raised-button, (click)="getFile()", [disabled]="isFileLoading")
+                    mat-icon cloud_upload_outline
+                    span {{isFileLoading ? 'Processing...' : 'Excel file'}}
+            button(mat-button, mat-raised-button, fxFlexOffset="10px" , [routerLink]="['/app/quiz/create']") {{'page.quizzes.createQuiz' | translate}}
+
+    div
+        app-table([data]="quizzes", [dataHeader]="quizzesDataHeader", (create)="editQuiz($event)", (remove)="deleteQuiz($event)")

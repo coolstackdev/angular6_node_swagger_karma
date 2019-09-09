@@ -1,0 +1,9 @@
+.app-page-admin-paypal-payments(fxLayout="column", fxFlex)
+    div(fxLayout="row", fxLayoutAlign="center center")
+        h3(fxFlex) {{'page.admin.paypal-payments.title' | translate}}
+    div
+        ng-template(mat-tab-label)
+            span {{'page.admin.paypal-payments.activePayments' | translate}}
+        .padding
+            app-table([data]="activePayments", [dataHeader]="PayPalPaymentsDataHeader")
+

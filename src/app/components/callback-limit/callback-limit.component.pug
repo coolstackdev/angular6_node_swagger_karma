@@ -1,0 +1,4 @@
+form([formGroup]="form", name="callbackForm", (ngSubmit)="submitForm()", fxLayout="row", fxLayoutAlign="start center")
+    mat-form-field
+        input(matInput, placeholder="{{'page.admin.settings.callbackLimit' | translate}}", required, formControlName="callbackLimit", type="number")
+    button(fxFlexOffset="15px", mat-button, mat-raised-button, color="primary", type="submit") {{'page.admin.settings.save' | translate}}

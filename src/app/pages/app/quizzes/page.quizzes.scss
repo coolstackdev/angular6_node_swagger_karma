@@ -1,0 +1,12 @@
+.file-upload {
+    &__input {
+        visibility: hidden;
+        position: absolute;
+        height: 0;
+    }
+    &__btn {
+        mat-icon {
+            margin-right: 5px;
+        }
+    }
+}
